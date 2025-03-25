@@ -1,0 +1,31 @@
+export default `<!doctype html>
+<html lang="en" data-beasties-container="">
+<head>
+  <meta charset="utf-8">
+  <title>Galaxy House 銀河會所</title>
+  <base href="/Ivan-Webpage/GalaxyHouse/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+  <link rel="canonical" href="https://marketingliveincode.com">
+  <meta name="author" content="Ivan Yang">
+  <meta name="copyright" content="Ivan Yang,  All Rights Reserved">
+  <meta name="title" content="行銷搬進大程式">
+  <meta name="og:title" content="行銷搬進大程式">
+  <meta name="og:site_name" content="Marketing Live in Code">
+  <meta name="twitter:title" content="行銷搬進大程式">
+  <meta name="keywords" content="python 基礎 免費課程 pandas 商業分析">
+  <meta name="description" content="免費Python基礎課程，內容包含Python的變數與基本控制操作，如for、while、if等等，並加上Pandas套件，教您如何進行資料處理、資料清洗、ETL，另外有Matplotlib套件教您如何使用Python進行數據視覺化，Jieba切詞抓取想要的關鍵字">
+  <meta name="og:description" content="免費Python基礎課程，內容包含Python的變數與基本控制操作，如for、while、if等等，並加上Pandas套件，教您如何進行資料處理、資料清洗、ETL，另外有Matplotlib套件教您如何使用Python進行數據視覺化，Jieba切詞抓取想要的關鍵字">
+  <meta name="og:image" content="assets/images/logo.png">
+  <meta name="twitter:title" content="行銷搬進大程式">
+  <meta name="og:url" content="https://marketingliveincode.com/">
+  <meta name="al:web:url" content="https://marketingliveincode.com/">
+  <meta name="article:publisher" content="https://marketingliveincode.com/">
+
+<style>*{box-sizing:border-box;margin:0;outline:0 none;padding:0}html{height:100%}body{margin:0;font-size:15px;font-family:Microsoft JhengHei,DFKai-sb,Arial,\\65b0\\7d30\\660e\\9ad4,sans-serif}</style><link rel="stylesheet" href="styles-5IIVQG2Z.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-5IIVQG2Z.css"></noscript></head>
+<body ngcm="">
+  <app-root></app-root>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-2XOYVVUQ.js" type="module"></script></body>
+</html>
+`;

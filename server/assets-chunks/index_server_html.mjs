@@ -1,0 +1,32 @@
+export default `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Galaxy House 銀河會所</title>
+  <base href="/Ivan-Webpage/GalaxyHouse/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+  <link rel="canonical" href="https://marketingliveincode.com">
+  <meta name="author" content="Ivan Yang">
+  <meta name="copyright" content="Ivan Yang,  All Rights Reserved">
+  <meta name="title" content="行銷搬進大程式">
+  <meta name="og:title" content="行銷搬進大程式">
+  <meta name="og:site_name" content="Marketing Live in Code">
+  <meta name="twitter:title" content="行銷搬進大程式">
+  <meta name="keywords" content="python 基礎 免費課程 pandas 商業分析">
+  <meta name="description" content="免費Python基礎課程，內容包含Python的變數與基本控制操作，如for、while、if等等，並加上Pandas套件，教您如何進行資料處理、資料清洗、ETL，另外有Matplotlib套件教您如何使用Python進行數據視覺化，Jieba切詞抓取想要的關鍵字">
+  <meta name="og:description" content="免費Python基礎課程，內容包含Python的變數與基本控制操作，如for、while、if等等，並加上Pandas套件，教您如何進行資料處理、資料清洗、ETL，另外有Matplotlib套件教您如何使用Python進行數據視覺化，Jieba切詞抓取想要的關鍵字">
+  <meta name="og:image" content="assets/images/logo.png">
+  <meta name="twitter:title" content="行銷搬進大程式">
+  <meta name="og:url" content="https://marketingliveincode.com/">
+  <meta name="al:web:url" content="https://marketingliveincode.com/">
+  <meta name="article:publisher" content="https://marketingliveincode.com/">
+
+<link rel="stylesheet" href="styles-5IIVQG2Z.css"></head>
+<body><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script>
+  <app-root></app-root>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-2XOYVVUQ.js" type="module"></script></body>
+</html>
+`;

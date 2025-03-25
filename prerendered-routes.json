@@ -1,0 +1,11 @@
+{
+  "routes": {
+    "/Ivan-Webpage/GalaxyHouse": {},
+    "/Ivan-Webpage/GalaxyHouse/about_us": {},
+    "/Ivan-Webpage/GalaxyHouse/apply": {},
+    "/Ivan-Webpage/GalaxyHouse/branchShop_Songshan": {},
+    "/Ivan-Webpage/GalaxyHouse/branchShop_Tianmu": {},
+    "/Ivan-Webpage/GalaxyHouse/home": {},
+    "/Ivan-Webpage/GalaxyHouse/news": {}
+  }
+}
