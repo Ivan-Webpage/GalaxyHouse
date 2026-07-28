@@ -1,0 +1,99 @@
+@if(!loading && branchData){
+<lib-triangle-slideshow [showIntroduce]="true" [showArrow]="false" [introduceTitle]="branchData.shop.title"
+    [introduceContent]="'#私人會所 #私密空間 #商業空間'" [logoSize]=50 [height]="'60vh'" [filterColer]="'rgba(27,27,27,0.5)'"
+    [ballColor]="'rgba(239, 208, 127)'" [geometryColor]="'rgba(255, 255, 255)'"
+    [slides]="slides"></lib-triangle-slideshow>
+
+<lib-loading [show]="loading"></lib-loading>
+
+
+<div class="container back-black-ten" style="position: relative;">
+    <div class="row" style="padding: 30px 20px 30px 20px;">
+        <div class="col-5 center p-5">
+            <div class="row">
+                <h1 class="text-yellow title">詳細資訊</h1>
+            </div>
+            <div class="row">
+                @if(branchData.shop.instagramID){
+                <a class="soialButton" [href]="'https://www.instagram.com/'+branchData.shop.instagramID"><fa-icon
+                        [icon]="faInstagram" class="text-yellow"></fa-icon></a>
+                }
+                @if(branchData.shop.facebookID){
+                <a class="soialButton" [href]="'https://www.facebook.com/'+branchData.shop.facebookID"><fa-icon
+                        [icon]="faFacebookF" class="text-yellow"></fa-icon></a>
+                }
+                @if(branchData.shop.lineID){
+                <a class="soialButton" [href]="'https://line.me/ti/p/'+branchData.shop.lineID"><fa-icon [icon]="faLine"
+                        class="text-yellow"></fa-icon></a>
+                }
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h3>電話：</h3>
+                </div>
+                <div class="col-9">
+                    <p class="text-white content">{{branchData.shop.phone}}</p>
+                </div>
+                <div class="col-3">
+                    <h3>地址：</h3>
+                </div>
+                <div class="col-9">
+                    <p class="text-white content">{{branchData.shop.location}}</p>
+                </div>
+                <div class="col-3">
+                    <h3>營業時間：</h3>
+                </div>
+                <div class="col-9">
+                    <p class="text-white content">{{branchData.shop.openTime}}</p>
+                </div>
+                <div class="col-3">
+                    <h3>消費方式：</h3>
+                </div>
+                <div class="col-9">
+                    <p class="text-white content">{{branchData.shop.consumptionPattern}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <a [href]="branchData.shop.bookingUrl" libAnimationInto
+                    class="highlineButton back-yellow-ten text-black">馬上訂位</a>
+            </div>
+        </div>
+        <div class="col-7" style="height: 400px; overflow: hidden; position: relative;">
+            <iframe [src]="branchData.shop.googleMapUrl" width="100%" height="100%" style="border:0;" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row title-box">
+        <h1 class="text-yellow title">菜單</h1>
+    </div>
+    <div class="row" style="padding: 20px 20px 100px 20px; justify-content: center;">
+        @for (menu of branchData.menus; track $index) {
+        <div class="col-3 back-white-ten card">
+            <div class="row" style="position: relative; padding: 0;">
+                <div clase="img-box">
+                    <img [src]="menu.image" [alt]="'Galaxy House '+menu.title" style="width: 100%;">
+                </div>
+                <div class="text-white"
+                    style="position: absolute;transform: translate(-50%, -50%);  top: 50%;  left: 50%;">
+                    <h2 libAnimationInto>{{menu.title}}</h2>
+                </div>
+            </div>
+            <div class="row card-content">
+                @for (subMenu of menu.subMenu; track $index) {
+                <div class="row" style="padding: 5px 20px;">
+                    <p class="prodect">{{subMenu.subTitle}}</p>
+                    <p class="price">$ {{subMenu.price}}</p>
+                </div>
+                }
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+<lib-floating-block [imageData]="branchData.gallery" [backgroundColer]="'rgb(140, 79, 40)'"></lib-floating-block>
+}

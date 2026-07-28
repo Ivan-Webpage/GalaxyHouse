@@ -1,0 +1,103 @@
+@if (!loading) {
+<lib-triangle-slideshow [showIntroduce]="true" [showArrow]="false" [introduceTitle]="'精緻外燴'"
+    [introduceContent]="'#外燴 #客製化 #派對宴客'" [logoSize]="50" [height]="'60vh'" [filterColer]="'rgba(27,27,27,0.5)'"
+    [ballColor]="'rgba(239, 208, 127)'" [geometryColor]="'rgba(255, 255, 255)'"
+    [slides]="slides"></lib-triangle-slideshow>
+
+
+<lib-loading [show]="loading"></lib-loading>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 30px 20px 30px 20px; display: flex;">
+        <div class="col-2 cigar-experience-img" style="height: 400px; overflow: hidden;">
+            <img libAnimationInto libImageFilter src="images/外燴/整桌外燴.jpg" alt="Galaxy House 銀河會所 Buffer" class="imgshow" style="height: 400px;">
+        </div>
+        <div class="col-3 center p-5  back-brown-five">
+            <div class="row">
+                <h1 class="text-yellow title">我們的服務</h1>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="text-white">提供必要的台桌與桌巾</li>
+                    <li class="text-white">用餐免洗碗筷</li>
+                    <li class="text-white">客製化餐點</li>
+                </ul>
+            </div>
+            <div class="row">
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+        </div>
+        <div class="col-7 cigar-experience-img" style="height: 400px; overflow: hidden;">
+            <img libAnimationInto libImageFilter src="images/Buffet/Buffer.jpg" alt="Galaxy House 銀河會所 Buffer" class="imgshow">
+        </div>
+    </div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 50px 20px 20px 20px; justify-content: center;">
+        <h1 class="text-yellow title" id="branchShop">菜色選擇</h1>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <p class="text-white" >
+            若有其他菜色需求，可以來電洽詢(02)2766-2882
+        </p>
+    </div>
+    <div class="row" style="padding: 20px 20px 100px 20px; justify-content: center;">
+        <div class="col-5 cente p-5" style="position: relative;">
+            <img libImageFilter [filterIntensity]="'40%'" src="images/Buffet/中式餐點.jpg" alt="Galaxy House 銀河會所 中式餐點" class="imgshow">
+            <div class="food-hero">
+                <h1 libAnimationInto>中式</h1>
+                <h2 libAnimationInto class="text-yellow">換算單人費用</h2>
+                <ul>
+                    <li class="text-white">400元/5道菜</li>
+                    <li class="text-white">401-600/7道菜</li>
+                    <li class="text-white">601-800/8道菜</li>
+                    <li class="text-white">800元以上另洽</li>
+                    <li class="text-white">(水果盤另外贈送)</li>
+                </ul>
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+        </div>
+        <div class="col-5 center p-5" style="position: relative;">
+            <img libImageFilter [filterIntensity]="'40%'" src="images/Buffet/西式餐點.jpg" alt="Galaxy House 銀河會所 西式餐點" class="imgshow">
+            <div class="food-hero">
+                <h1 libAnimationInto>西式</h1>
+                <h2 libAnimationInto class="text-yellow">換算單人費用</h2>
+                <ul>
+                    <li class="text-white">400元/7道菜</li>
+                    <li class="text-white">401-600/8道菜</li>
+                    <li class="text-white">601以上10道菜</li>
+                    <li class="text-white">(水果盤另外贈送)</li>
+                </ul>
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 30px 20px 30px 20px; display: flex;">
+        <div class="col-7 cigar-experience-img" style="height: 400px; overflow: hidden;">
+            <img libAnimationInto libImageFilter src="images/Buffet/Buffer.jpg" alt="Galaxy House 銀河會所 Buffer" class="imgshow">
+        </div>
+        <div class="col-5 center p-5">
+            <div class="row">
+                <h1 class="text-yellow title">退訂方式</h1>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="text-white">前15～10天，退50%</li>
+                    <li class="text-white">前10～7天，退30%</li>
+                    <li class="text-white">7天內恕不退款</li>
+                </ul>
+            </div>
+            <div class="row">
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+}

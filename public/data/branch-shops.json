@@ -1,0 +1,733 @@
+{
+  "Songshan": {
+    "shop": {
+      "id": 1,
+      "title": "松山店",
+      "englishName": "Songshan",
+      "images_list": [
+        "images/uploads/branch-cover/12dc56a0-c11a-4e8c-8e0c-31329819589d.jpg",
+        "images/uploads/branch-cover/019e5863-5643-4d22-b940-5fdd891baae1.jpg",
+        "images/uploads/branch-cover/89385e8d-46f1-4b26-a6ad-5b3c3868ab9b.jpg"
+      ],
+      "phone": "(02) 2766-2882",
+      "location": "台北市松山區南京東路五段66巷12弄3號",
+      "openTime": "星期一公休，星期二~星期五14:00~24:00，六日13:00~24:00",
+      "consumptionPattern": "👉若訂位雪茄包廂，每人需消費一支雪茄 👉最低基本消費每位400元 👉開瓶費每瓶1,000元 👉開茄費每支500元or購買店內1支雪茄 👉外食清潔費1,000元。",
+      "googleMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5186874201086!2d121.55803657515855!3d25.050403177805734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aba83097e2ef%3A0xc526e0ccd55c8abc!2zR2FsYXh5IEhvdXNlIOadvuWxsemKgOays-acg-aJgC3pnZ7lj6Tlt7Tpm6rojITvvZzppJDphZLppKjvvZzllYbli5nnqbrplpM!5e0!3m2!1szh-TW!2stw!4v1742736358109!5m2!1szh-TW!2stw",
+      "bookingUrl": "https://shop.ichefpos.com/store/as6CWxam/reserve",
+      "instagramID": "thegalaxyhouse.3",
+      "facebookID": "galaxyhouse2024",
+      "lineID": "@392kgxba"
+    },
+    "menus": [
+      {
+        "title": "咖啡",
+        "image": "images/uploads/menu-types/1746868944166_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "美式咖啡",
+            "price": 180
+          },
+          {
+            "subTitle": "拿鐵咖啡",
+            "price": 240
+          },
+          {
+            "subTitle": "熱可可",
+            "price": 200
+          }
+        ]
+      },
+      {
+        "title": "茶",
+        "image": "images/uploads/menu-types/1746868944131_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "蜜香鮮奶綠",
+            "price": 200
+          },
+          {
+            "subTitle": "銀河鮮奶茶",
+            "price": 200
+          },
+          {
+            "subTitle": "抹茶拿鐵",
+            "price": 240
+          },
+          {
+            "subTitle": "皇家伯爵茶",
+            "price": 220
+          },
+          {
+            "subTitle": "桂花烏龍茶",
+            "price": 220
+          },
+          {
+            "subTitle": "水果伯爵茶",
+            "price": 230
+          },
+          {
+            "subTitle": "柚香蜜茶",
+            "price": 150
+          },
+          {
+            "subTitle": "蜜香綠茶",
+            "price": 150
+          }
+        ]
+      },
+      {
+        "title": "奶昔",
+        "image": "images/uploads/menu-types/1746868944045_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "焦糖堅果奶昔",
+            "price": 250
+          },
+          {
+            "subTitle": "香蕉餅乾奶昔",
+            "price": 250
+          },
+          {
+            "subTitle": "OREO脆餅奶昔",
+            "price": 250
+          },
+          {
+            "subTitle": "香草奶昔",
+            "price": 250
+          },
+          {
+            "subTitle": "草莓奶昔",
+            "price": 250
+          }
+        ]
+      },
+      {
+        "title": "氣泡飲",
+        "image": "images/uploads/menu-types/1746868944079_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "可樂",
+            "price": 120
+          },
+          {
+            "subTitle": "雪碧",
+            "price": 120
+          },
+          {
+            "subTitle": "通寧水",
+            "price": 120
+          },
+          {
+            "subTitle": "檸檬氣泡飲",
+            "price": 120
+          },
+          {
+            "subTitle": "柚香檸檬氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "芒果蜜香器泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "洛神花釀氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "玫瑰花釀氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "富士蘋果氣泡飲",
+            "price": 200
+          },
+          {
+            "subTitle": "純香鳳梨氣泡飲",
+            "price": 200
+          }
+        ]
+      },
+      {
+        "title": "甜點",
+        "image": "images/uploads/menu-types/1746868943851_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "特選布朗尼",
+            "price": 150
+          },
+          {
+            "subTitle": "OREO提拉米蘇",
+            "price": 150
+          },
+          {
+            "subTitle": "巴斯克乳酪蛋糕",
+            "price": 150
+          },
+          {
+            "subTitle": "銀河檸檬塔",
+            "price": 170
+          },
+          {
+            "subTitle": "可麗露",
+            "price": 170
+          },
+          {
+            "subTitle": "瑪德蓮",
+            "price": 200
+          },
+          {
+            "subTitle": "冰淇淋聖代",
+            "price": 230
+          }
+        ]
+      },
+      {
+        "title": "堡類",
+        "image": "images/uploads/menu-types/1746868943825_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "香濃奶油泡芙",
+            "price": 170
+          },
+          {
+            "subTitle": "銀河楓糖炸雞可颂",
+            "price": 260
+          },
+          {
+            "subTitle": "銀河楓糖炸雞貝果",
+            "price": 260
+          },
+          {
+            "subTitle": "原味奶油貝果",
+            "price": 200
+          },
+          {
+            "subTitle": "藍莓奶油貝果",
+            "price": 230
+          },
+          {
+            "subTitle": "焦糖奶油貝果",
+            "price": 230
+          }
+        ]
+      },
+      {
+        "title": "主餐",
+        "image": "images/uploads/menu-types/LINE_ALBUM_素材_250427_4.jpg",
+        "subMenu": [
+          {
+            "subTitle": "銀河辣雞丁蓋飯",
+            "price": 290
+          },
+          {
+            "subTitle": "桂花糖醋魚飯",
+            "price": 290
+          },
+          {
+            "subTitle": "麻油猴頭菇燴飯",
+            "price": 320
+          },
+          {
+            "subTitle": "匈牙利牛肉飯",
+            "price": 340
+          },
+          {
+            "subTitle": "紅燒牛肉燴飯",
+            "price": 350
+          },
+          {
+            "subTitle": "嫩煎豬排",
+            "price": 350
+          },
+          {
+            "subTitle": "嫩肩牛排",
+            "price": 480
+          }
+        ]
+      },
+      {
+        "title": "單點",
+        "image": "images/uploads/menu-types/IMG_20250423_195733_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "綜合零嘴",
+            "price": 220
+          },
+          {
+            "subTitle": "銀河鹹豬肉",
+            "price": 230
+          },
+          {
+            "subTitle": "高麗菜手工水餃",
+            "price": 250
+          },
+          {
+            "subTitle": "韭菜手工水餃",
+            "price": 280
+          },
+          {
+            "subTitle": "鮮蝦手工水餃",
+            "price": 300
+          },
+          {
+            "subTitle": "風味起司火腿拼盤",
+            "price": 560
+          }
+        ]
+      },
+      {
+        "title": "炸物",
+        "image": "images/uploads/menu-types/LINE_ALBUM_素材_250427_9.jpg",
+        "subMenu": [
+          {
+            "subTitle": "洋蔥圈",
+            "price": 120
+          },
+          {
+            "subTitle": "起司條",
+            "price": 130
+          },
+          {
+            "subTitle": "唐揚雞塊",
+            "price": 130
+          },
+          {
+            "subTitle": "檸檬香雞柳",
+            "price": 160
+          },
+          {
+            "subTitle": "原味薯條",
+            "price": 200
+          },
+          {
+            "subTitle": "松露薯條",
+            "price": 240
+          },
+          {
+            "subTitle": "紐澳良炸雞翅",
+            "price": 240
+          },
+          {
+            "subTitle": "銀河炸物拼盤",
+            "price": 400
+          },
+          {
+            "subTitle": "炸魚",
+            "price": 230
+          },
+          {
+            "subTitle": "炸蝦",
+            "price": 230
+          },
+          {
+            "subTitle": "炸魷魚圈",
+            "price": 230
+          },
+          {
+            "subTitle": "海鮮炸物拼盤",
+            "price": 500
+          }
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "title": "松山店一樓",
+        "description": "Galaxy House 銀河會所 松山店一樓入口與用餐空間，高端會所氛圍",
+        "image": "images/uploads/branch-gallery/松餐店一樓.jpg"
+      },
+      {
+        "title": "松山店會所餐桌",
+        "description": "Galaxy House 銀河會所 松山店會所餐桌，高端餐飲聚會環境",
+        "image": "images/uploads/branch-gallery/松山店會所餐桌.jpg"
+      },
+      {
+        "title": "松山店雪茄室",
+        "description": "Galaxy House 銀河會所 松山店雪茄室，VIP 私密品茄空間",
+        "image": "images/uploads/branch-gallery/松山店雪茄室.jpg"
+      },
+      {
+        "title": "松山店門口",
+        "description": "Galaxy House 銀河會所 松山店門口外觀，尊榮會所入口",
+        "image": "images/uploads/branch-gallery/松山店門口.jpg"
+      },
+      {
+        "title": "會所VIP室花束",
+        "description": "Galaxy House 銀河會所 VIP室花束裝飾，高端聚會與私密氛圍",
+        "image": "images/uploads/branch-gallery/VIP室花束.jpg"
+      },
+      {
+        "title": "一樓雪茄儲存室",
+        "description": "Galaxy House 銀河會所 松山店一樓雪茄儲存室，高品質雪茄收藏區",
+        "image": "images/uploads/branch-gallery/一樓雪茄儲存室.jpg"
+      },
+      {
+        "title": "門口招牌",
+        "description": "Galaxy House 銀河會所 松山店門口招牌，高端會所品牌識別",
+        "image": "images/uploads/branch-gallery/門口招牌.jpg"
+      },
+      {
+        "title": "門口氣氛豎燈",
+        "description": "Galaxy House 銀河會所 松山店門口豎燈裝飾，夜間氛圍營造",
+        "image": "images/uploads/branch-gallery/門口豎燈.jpg"
+      },
+      {
+        "title": "彩色沙發區",
+        "description": "Galaxy House 銀河會所 松山店彩色沙發區，舒適休憩與社交空間",
+        "image": "images/uploads/branch-gallery/彩色沙發區.jpg"
+      },
+      {
+        "title": "雪茄室紅酒",
+        "description": "Galaxy House 銀河會所 松山店雪茄室紅酒擺設，高端品飲體驗",
+        "image": "images/uploads/branch-gallery/雪茄室紅酒.jpg"
+      },
+      {
+        "title": "舒適沙發區",
+        "description": "Galaxy House 銀河會所 松山店舒適沙發區，私密聚會與休憩空間",
+        "image": "images/uploads/branch-gallery/舒適沙發區.jpg"
+      },
+      {
+        "title": "意境女郎畫像",
+        "description": "Galaxy House 銀河會所 松山店內意境女郎畫像，藝術裝飾與高端氛圍",
+        "image": "images/uploads/branch-gallery/意境女郎畫像.jpg"
+      },
+      {
+        "title": "歷史意境畫廊",
+        "description": "Galaxy House 銀河會所 松山店歷史意境畫廊，藝術裝置與品味空間",
+        "image": "images/uploads/branch-gallery/歷史意境畫廊.jpg"
+      },
+      {
+        "title": "西式Buffet桌菜",
+        "description": "Galaxy House 銀河會所 松山店西式Buffet桌菜，精緻餐飲與聚會選擇",
+        "image": "images/uploads/branch-gallery/西式桌菜.jpg"
+      }
+    ]
+  },
+  "Tianmu": {
+    "shop": {
+      "id": 2,
+      "title": "天母店",
+      "englishName": "Tianmu",
+      "images_list": [
+        "images/uploads/branch-cover/ff10d6fb-96b0-4cfe-bc74-6f521a089e14.jpg",
+        "images/uploads/branch-cover/5feb066b-9472-4ab3-be95-73f748402336.jpg",
+        "images/uploads/branch-cover/8c3c0c15-7d1b-4e56-9994-d50c2c9c5577.jpg"
+      ],
+      "phone": "(02) 2832-2211",
+      "location": "111台北市士林區中山北路六段310號2樓",
+      "openTime": "星期一公休，星期二~星期日15:00~23:00",
+      "consumptionPattern": "👉若訂位雪茄包廂，每人需消費一支雪茄 👉最低基本消費每位400元 👉開瓶費每瓶1,000元 👉開茄費每支500元or購買店內1支雪茄 👉外食清潔費1,000元。",
+      "googleMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.7354413034554!2d121.52324817516065!3d25.110815377766627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442afa5f34a6f33%3A0x2b035e354b35715c!2zR2FsYXh5IEhvdXNlIOWkqeavjemKgOays-acg-aJgCDnuL3lupc!5e0!3m2!1szh-TW!2stw!4v1746975640680!5m2!1szh-TW!2stw",
+      "bookingUrl": "https://www.instagram.com/thegalaxyhouse.310",
+      "instagramID": "thegalaxyhouse.310",
+      "facebookID": "galaxycafe310",
+      "lineID": "@684figyw"
+    },
+    "menus": [
+      {
+        "title": "奶昔",
+        "image": "images/uploads/menu-types/1746868944045_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "焦糖堅果奶昔",
+            "price": 250
+          },
+          {
+            "subTitle": "香蕉餅乾奶昔",
+            "price": 250
+          },
+          {
+            "subTitle": "ORE0脆餅奶昔",
+            "price": 250
+          },
+          {
+            "subTitle": "香草奶昔",
+            "price": 220
+          },
+          {
+            "subTitle": "草莓奶昔",
+            "price": 220
+          },
+          {
+            "subTitle": "葡萄奶昔",
+            "price": 220
+          }
+        ]
+      },
+      {
+        "title": "氣泡飲",
+        "image": "images/uploads/menu-types/1746868944079_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "莊園野莓氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "熱帶水果氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "柚香檸檬氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "芒果蜜香氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "洛神花釀氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "玫瑰花釀氣泡飲",
+            "price": 180
+          },
+          {
+            "subTitle": "檸檬片氣泡水",
+            "price": 120
+          },
+          {
+            "subTitle": "可樂",
+            "price": 100
+          }
+        ]
+      },
+      {
+        "title": "茶",
+        "image": "images/uploads/menu-types/1746868944131_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "銀河鮮奶茶",
+            "price": 200
+          },
+          {
+            "subTitle": "蜜香鮮奶茶",
+            "price": 200
+          },
+          {
+            "subTitle": "水果冰茶",
+            "price": 150
+          },
+          {
+            "subTitle": "香柚蜜茶",
+            "price": 150
+          },
+          {
+            "subTitle": "蜜香綠茶",
+            "price": 120
+          },
+          {
+            "subTitle": "野莓伯爵茶",
+            "price": 240
+          },
+          {
+            "subTitle": "水果茉莉茶",
+            "price": 240
+          },
+          {
+            "subTitle": "皇家伯爵茶",
+            "price": 220
+          },
+          {
+            "subTitle": "桂花烏龍茶",
+            "price": 220
+          },
+          {
+            "subTitle": "蜜香鮮奶綠",
+            "price": 200
+          },
+          {
+            "subTitle": "銀河鮮奶茶",
+            "price": 200
+          }
+        ]
+      },
+      {
+        "title": "單點",
+        "image": "images/uploads/menu-types/IMG_20250423_195733_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "銀河手工水餃",
+            "price": 280
+          }
+        ]
+      },
+      {
+        "title": "主餐",
+        "image": "images/uploads/menu-types/LINE_ALBUM_素材_250427_4.jpg",
+        "subMenu": [
+          {
+            "subTitle": "銀河辣雞丁蓋飯",
+            "price": 290
+          }
+        ]
+      },
+      {
+        "title": "炸物",
+        "image": "images/uploads/menu-types/LINE_ALBUM_素材_250427_9.jpg",
+        "subMenu": [
+          {
+            "subTitle": "松露薯條",
+            "price": 280
+          },
+          {
+            "subTitle": "紐澳良雞翅",
+            "price": 240
+          },
+          {
+            "subTitle": "銀河炸物拼盤",
+            "price": 400
+          }
+        ]
+      },
+      {
+        "title": "甜點",
+        "image": "images/uploads/menu-types/1746868943851_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "特選布朗尼",
+            "price": 150
+          },
+          {
+            "subTitle": "OREO提拉米蘇",
+            "price": 150
+          },
+          {
+            "subTitle": "巴斯克乳酪蛋糕",
+            "price": 150
+          },
+          {
+            "subTitle": "銀河檸檬塔",
+            "price": 170
+          },
+          {
+            "subTitle": "冰淇淋聖代",
+            "price": 190
+          },
+          {
+            "subTitle": "銀河香草鬆餅",
+            "price": 230
+          },
+          {
+            "subTitle": "巧克力脆片鬆餅",
+            "price": 260
+          },
+          {
+            "subTitle": "焦糖堅果香草鬆餅",
+            "price": 260
+          },
+          {
+            "subTitle": "銀河楓糖炸雞鬆餅",
+            "price": 320
+          }
+        ]
+      },
+      {
+        "title": "咖啡",
+        "image": "images/uploads/menu-types/1746868944166_1.jpg",
+        "subMenu": [
+          {
+            "subTitle": "晶鑽冰滴咖啡",
+            "price": 320
+          },
+          {
+            "subTitle": "手沖咖啡",
+            "price": 280
+          },
+          {
+            "subTitle": "義式咖啡",
+            "price": 250
+          },
+          {
+            "subTitle": "摩卡咖啡",
+            "price": 200
+          },
+          {
+            "subTitle": "熱可可",
+            "price": 200
+          },
+          {
+            "subTitle": "拿鐵",
+            "price": 180
+          },
+          {
+            "subTitle": "抹茶拿鐵",
+            "price": 180
+          },
+          {
+            "subTitle": "美式咖啡",
+            "price": 150
+          }
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "title": "天母3樓露天空間",
+        "description": "Galaxy House 銀河會所 天母店 3樓露天空間，提供高端聚會與戶外休憩體驗",
+        "image": "images/uploads/branch-gallery/天母3樓.jpg"
+      },
+      {
+        "title": "天母店2樓非吸菸區",
+        "description": "Galaxy House 銀河會所 天母店 2樓非吸菸區，舒適私密的用餐環境",
+        "image": "images/uploads/branch-gallery/天母店2樓外部.jpg"
+      },
+      {
+        "title": "天母店門口",
+        "description": "Galaxy House 銀河會所 天母店門口外觀，尊榮高端會所入口",
+        "image": "images/uploads/branch-gallery/天母店門口.jpg"
+      },
+      {
+        "title": "天母店雪茄室",
+        "description": "Galaxy House 銀河會所 天母店雪茄室，高端雪茄品味空間",
+        "image": "images/uploads/branch-gallery/天母店雪茄室.jpg"
+      },
+      {
+        "title": "天母店雪茄空間",
+        "description": "Galaxy House 銀河會所 天母店雪茄空間，VIP 私密包廂與品茄區",
+        "image": "images/uploads/branch-gallery/天母店雪茄室2.jpg"
+      },
+      {
+        "title": "戶外buffet",
+        "description": "Galaxy House 銀河會所 戶外Buffet自助餐，精緻餐飲與尊榮聚會選擇",
+        "image": "images/uploads/branch-gallery/戶外buffet.jpg"
+      },
+      {
+        "title": "火鍋套餐",
+        "description": "Galaxy House 銀河會所 精緻火鍋套餐，適合雙人或多人聚會",
+        "image": "images/uploads/branch-gallery/火鍋套餐.jpg"
+      },
+      {
+        "title": "甜點鬆餅",
+        "description": "Galaxy House 銀河會所 甜點鬆餅，精緻下午茶與餐後甜點",
+        "image": "images/uploads/branch-gallery/甜點鬆餅.jpg"
+      },
+      {
+        "title": "雪茄室畫面",
+        "description": "Galaxy House 銀河會所 雪茄室內部畫面，高端私密品茄空間",
+        "image": "images/uploads/branch-gallery/雪茄室畫面.jpg"
+      },
+      {
+        "title": "雙人火鍋套餐",
+        "description": "Galaxy House 銀河會所 雙人火鍋套餐，私密聚餐與尊榮用餐體驗",
+        "image": "images/uploads/branch-gallery/雙人火鍋套餐.jpg"
+      },
+      {
+        "title": "露天空間",
+        "description": "Galaxy House 銀河會所 露天空間，戶外聚會與夜景休憩區",
+        "image": "images/uploads/branch-gallery/露天空間.jpg"
+      },
+      {
+        "title": "台北市中心有露營的體驗",
+        "description": "Galaxy House 銀河會所 台北市中心露營體驗，高端都會休閒氛圍",
+        "image": "images/uploads/branch-gallery/在台北市中心有露營的體驗_.jpg"
+      },
+      {
+        "title": "歐式古典雪茄空間",
+        "description": "Galaxy House 銀河會所 歐式古典雪茄空間，典雅高端私密會所",
+        "image": "images/uploads/branch-gallery/歐式古典雪茄空間.jpg"
+      }
+    ]
+  }
+}

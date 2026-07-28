@@ -1,0 +1,47 @@
+.background-color{
+background: -moz-linear-gradient(top, rgba(140, 79, 40) 0%, rgba(17,17,17) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(140, 79, 40) 0%,rgba(17,17,17) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(140, 79, 40) 0%,rgba(17,17,17) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.soialButton{
+    background-color: rgba(27, 27, 27, 0);
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .soialButton {
+    padding: 4px 8px;
+    font-size: 14px;
+    margin: 3px 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .soialButton {
+    padding: 3px 6px;
+    font-size: 12px;
+    margin: 2px 1px;
+  }
+}
+
+.gold-border{
+  border-right: 1px solid #efd07f;
+   border-left: 1px solid #efd07f;
+}
+
+@media (max-width: 768px) {
+  .gold-border {
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid #efd07f;
+    border-bottom: 1px solid #efd07f;
+  }
+}

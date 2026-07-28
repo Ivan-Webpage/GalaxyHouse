@@ -1,0 +1,63 @@
+/*---------- 參數設定 ----------*/
+$one: 0.1;
+$three: 0.3;
+$five: 0.5;
+$seven: 0.7;
+$nine: 0.9;
+$ten: 1;
+
+table, th, td {
+  // text-align: left;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 5px;
+}
+
+svg {
+  height: 1em;
+}
+
+/*--- 背景顏色使用 ---*/
+// 黑色
+.back-black-one {background-color: rgb(17, 17, 17, $one);} 
+.back-black-three {background-color: rgb(17, 17, 17, $three);} 
+.back-black-five {background-color: rgb(17, 17, 17, $five);} 
+.back-black-seven {background-color: rgb(17, 17, 17, $seven);} 
+.back-black-nine {background-color: rgb(17, 17, 17, $nine);} 
+.back-black-ten,::-webkit-scrollbar {background-color: rgb(17, 17, 17, $ten);} 
+
+// 黃色
+.back-yellow-one {background-color: rgb(239, 208, 127, $one);} 
+.back-yellow-three {background-color: rgb(239, 208, 127, $three);} 
+.back-yellow-five {background-color: rgb(239, 208, 127, $five);} 
+.back-yellow-seven {background-color: rgb(239, 208, 127, $seven);} 
+.back-yellow-nine {background-color: rgb(239, 208, 127, $nine);} 
+.back-yellow-ten {background-color: rgb(239, 208, 127, $ten);} 
+
+// 褐色
+.back-brown-one {background-color: rgb(140, 79, 40, $one);} 
+.back-brown-three {background-color: rgb(140, 79, 40, $three);} 
+.back-brown-five {background-color: rgb(140, 79, 40, $five);} 
+.back-brown-seven {background-color: rgb(140, 79, 40, $seven);} 
+.back-brown-nine {background-color: rgb(140, 79, 40, $nine);} 
+.back-brown-ten, ::-webkit-scrollbar-thumb {background-color: rgb(140, 79, 40, $ten);} 
+
+// 白色
+.back-white-one {background-color: rgb(255, 255, 255, $one);} 
+.back-white-three {background-color: rgb(255, 255, 255, $three);} 
+.back-white-five {background-color: rgb(255, 255, 255, $five);} 
+.back-white-seven {background-color: rgb(255, 255, 255, $seven);} 
+.back-white-nine {background-color: rgb(255, 255, 255, $nine);} 
+.back-white-ten {background-color: rgb(255, 255, 255, $ten);} 
+
+/*--- 文字使用顏色 ---*/
+.text-black {color: rgb(17, 17, 17);} 
+.text-white {color: rgb(255, 255, 255);} 
+.text-yellow {color: rgb(239, 208, 127);} 
+.text-brown {color: rgb(140, 79, 40);} 

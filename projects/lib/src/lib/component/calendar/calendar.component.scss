@@ -1,0 +1,95 @@
+:host {
+  display: block;
+  padding: 20px;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.calendar-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+  // 手機板縮小 padding
+  @media (max-width: 768px) {
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+
+/* FullCalendar 自定義樣式 */
+.fc {
+  .fc-toolbar {
+    flex-wrap: wrap; // 工具列在小螢幕可換行
+    gap: 6px;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  .fc-toolbar-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem; // 手機板縮小標題
+    }
+  }
+
+  .fc-button {
+    background-color: #6B5B95;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 0 12px;
+    height: 36px;
+
+    &:hover {
+      background-color: #58427A;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+      height: 28px;
+      padding: 0 8px;
+    }
+  }
+
+  .fc-daygrid-event {
+    border-radius: 6px;
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      font-size: 0.7rem; // 活動字體縮小
+      padding: 2px 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .fc-daygrid-day-number {
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 0.7rem;
+    }
+  }
+
+  .fc-col-header-cell-cushion {
+    font-weight: 600;
+    color: #555;
+
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+    }
+  }
+}

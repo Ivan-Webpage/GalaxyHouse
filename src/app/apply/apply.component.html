@@ -1,0 +1,22 @@
+<lib-triangle-slideshow [showIntroduce]="true" [showArrow]="false" [introduceTitle]="'企業徵才'" [introduceContent]="''"
+    [logoSize]=50 [height]="'60vh'" [filterColer]="'rgba(27,27,27,0.5)'" [ballColor]="'rgba(239, 208, 127)'"
+    [geometryColor]="'rgba(255, 255, 255)'" [slides]="slides"></lib-triangle-slideshow>
+
+<div class="container back-black-ten p-5">
+    <lib-loading [show]="loading"></lib-loading>
+
+    @if(!loading){
+    <div class="row">
+        @for (shopData of applyData; track $index) {
+        <div class="col-6" style="align-content: start;">
+            <h1 class="text-white">{{shopData.title}}</h1>
+            @for (item of shopData.data; track $index) {
+            <lib-collapsible style="width: 100%;" [title]="item.title" [pay]="item.pay" [detail]="item.detail"
+                [location]="item.location" [how2Pay]="item.how2Pay_title" [workTime]="item.workTime"
+                [welfare]="item.welfare_title"></lib-collapsible>
+            }
+        </div>
+        }
+    </div>
+    }
+</div>

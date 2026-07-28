@@ -1,0 +1,198 @@
+.slideshow-container {
+    position: relative;
+    /* 父容器需要設定為relative */
+    width: 100%;
+    /* 設定幻燈片容器的寬度 */
+    overflow: hidden;
+    /* 隱藏超出容器範圍的幻燈片 */
+}
+
+.slides {
+    position: absolute;
+    /* 每個幻燈片需要設定為absolute */
+    width: 100%;
+    /* 幻燈片的寬度是100% */
+    height: 100%;
+    /* 幻燈片的高度是100% */
+    transition: transform 1s ease, opacity 1s ease;
+    /* 設置平滑過渡效果 */
+    opacity: 0;
+    /* 默認隱藏幻燈片 */
+}
+
+.slides>img {
+    width: 100%;
+}
+
+/* 顯示當前幻燈片 */
+.slidesActive {
+    opacity: 1;
+}
+
+#ball {
+    clip-path: circle(40%);
+    shape-outside: circle(45%);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: top 0.5s ease, left 0.5s ease;
+    /* 使圓圈平滑過渡 */
+    z-index: 1;
+}
+
+
+.arrow-down {
+    border: solid rgba(239, 208, 127);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: arrow-down .5s linear infinite alternate;
+}
+
+@keyframes arrow-down {
+    from {
+        bottom: 10%
+    }
+
+    to {
+        bottom: 8%
+    }
+}
+
+.filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+#polygonCanvas {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    animation-name: polygonCanvas;
+    animation-duration: 12s;
+    animation-timing-function: ease-int;
+    animation-iteration-count: 1;
+}
+
+@keyframes polygonCanvas {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.ball-button {
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: ball-button;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes ball-button {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.ball-button:hover {
+    border: solid rgba(239, 208, 127);
+}
+
+
+.logo {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.block-left,
+.block-right {
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    bottom: 0;
+}
+
+.block-right {
+    clip-path: polygon(100% 0%, 100% 100%, 50% 100%, 100% 0%);
+    right: 0;
+}
+
+.block-left {
+    clip-path: polygon(0% 100%, 0% 100%, 50% 100%, 0% 0%);
+    left: 0;
+}
+
+.introduce {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    height: 20vh;
+    color: white;
+    text-align: center;
+}
+
+.introduce h1 {
+    padding: 10px;
+
+}
+
+.introduce p {
+    width: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@media (max-width: 1300px) {
+    .slides > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;       /* 讓圖片自動裁切以填滿容器 */
+        object-position: center; /* 確保圖片顯示中間 */
+    }
+}

@@ -1,0 +1,33 @@
+
+<div class="card" [routerLink]="'/article/'+info.id" (mouseenter)="onMouseEnter()"
+     (mouseleave)="onMouseLeave()">
+    <div style="overflow: hidden; width:100%; height: 200px; position: relative;">
+        <img libImageFilter [src]="info.image" [alt]="info.description" [title]="info.title" style="width:100%" />
+        <span class="label" [style]="{'background-color': info.newType.color}">{{info.newType.title}}</span>
+    </div>
+    <h1 class="title">{{info.title}}</h1>
+    @if(info.expiration_date){
+      <p class="time">活動時間：{{info.expiration_date}}</p>
+    }@else{
+      <p class="time">文章日期：{{info.create_date}}</p>
+    }
+
+    <!-- 火花特效 -->
+  <div class="fireworks" aria-hidden="true"  [class.active]="hover">
+    @for(s of sparks; track $index){
+    <span
+      class="spark"
+      [style]="{
+        left: s.left,
+        'animation-delay': s.delay,
+        width: s.size,
+        height: s.size,
+        'animation-duration': s.duration,
+        'background-color': 'hsl(' + s.hue + ', 90%, 60%)',
+        'box-shadow': '0 0 6px hsl(' + s.hue + ', 100%, 70%)'
+      }"
+      
+    ></span>
+    }
+  </div>
+</div>

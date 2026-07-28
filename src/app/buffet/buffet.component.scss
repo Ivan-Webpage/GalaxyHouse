@@ -1,0 +1,55 @@
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 10px; /* 每個項目下方增加 10px 的間距 */
+}
+
+p{
+    line-height: 2;
+}
+
+.food-hero{
+    position: absolute; 
+    transform: translate(-50%, -50%); 
+    top: 50%; 
+    left: 50%;
+    justify-content: center;
+    text-align: center;
+}
+.food-hero h1{
+    color: #fff;
+}
+
+.highlineButton{
+    letter-spacing: 3px;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.highlineButton:hover{
+    background-color: rgb(140, 79, 40);
+    color: #fff;
+}
+
+.imgshow{
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .food-hero h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-hero h1 {
+        font-size: 18px;
+    }
+}

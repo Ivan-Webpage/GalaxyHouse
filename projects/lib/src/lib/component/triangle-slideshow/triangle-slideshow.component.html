@@ -1,0 +1,56 @@
+<div class="slideshow-container" [style]="'height: '+height">
+    <!-- 濾鏡 -->
+    <div class="filter" [style]="'background-color:'+filterColer"></div>
+    <!-- 幻燈片 -->
+    @for (slide of slides; track $index) {
+    <div class="slides" [class]="{'slidesActive': $index === currentSlide}">
+        <img libImageFilter [src]="slide.image" [title]="slide.title" [alt]="slide.description" 
+             [attr.fetchpriority]="$index === 0 ? 'high' : 'auto'" 
+             [attr.loading]="$index === 0 ? 'eager' : 'lazy'" />
+    </div>
+    }
+
+    <!-- logo -->
+    <img src="images/logo.png" alt="Galaxy House銀河會所 logo" class="logo" [style.width]="logoResize +'px'">
+
+    <!-- 幾何圖形 -->
+    <div class=""
+        style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); width: 100%; height: 100%;">
+        <div style="position: relative; width: 100%; height: 100%;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <!-- 線條 -->
+                <canvas id="polygonCanvas" [width]="logoSize*3" [height]="logoSize*3"></canvas>
+
+                @for (slide of slides; track $index) {
+                <button class="ball-button" 
+                        (click)="this.toSlide($index)" 
+                        [id]="'button_'+$index"
+                        [attr.aria-label]="'幻燈片 ' + ($index + 1) + ' - ' + slide.title"
+                        [attr.aria-pressed]="$index === currentSlide"
+                        type="button">
+                </button>
+                }
+                <!-- 黃色圈圈 (圓形移動的部分) -->
+                <div id="ball" [style]="'background-color:'+ballColor"></div>
+            </div>
+            
+        </div>
+       
+    </div>
+
+    <!-- 黑色方塊 -->
+    <div class="block-right back-black-ten"></div>
+    <div class="block-left back-black-ten"></div>
+    
+    @if (showIntroduce){
+        <div class="introduce back-black-five">
+            <h1>{{introduceTitle}}</h1>
+            <p>{{introduceContent}}</p>
+        </div>
+    }
+
+    @if (showArrow){
+        <p><i class="arrow-down"></i></p>
+    }
+
+</div>

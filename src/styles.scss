@@ -1,0 +1,19 @@
+@use './assets/style/bootstrap.scss'  as * ;
+@use './assets/style/color.scss'  as * ;
+@use './assets/style/responsive.scss'  as * ;
+
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate {
+    animation: slideInFromTop 1s ease-out;
+  }

@@ -1,0 +1,291 @@
+/* ============================================
+   響應式設計實用工具
+   Mobile First Approach
+   ============================================ */
+
+/* 斷點定義 */
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1200px;
+
+/* ========== 文字縮放 ========== */
+.text-responsive {
+  font-size: 16px;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    font-size: 12px;
+  }
+}
+
+.heading-responsive {
+  font-size: 32px;
+  letter-spacing: 2px;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+}
+
+.subheading-responsive {
+  font-size: 24px;
+  letter-spacing: 1.5px;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* ========== 間距調整 ========== */
+.padding-responsive {
+  padding: 30px;
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 20px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 12px;
+  }
+}
+
+.margin-responsive {
+  margin: 20px;
+
+  @media (max-width: $breakpoint-sm) {
+    margin: 15px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    margin: 10px;
+  }
+}
+
+.gap-responsive {
+  gap: 20px;
+
+  @media (max-width: $breakpoint-sm) {
+    gap: 15px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    gap: 10px;
+  }
+}
+
+/* ========== 顯示/隱藏 ========== */
+.hide-mobile {
+  @media (max-width: $breakpoint-sm) {
+    display: none !important;
+  }
+}
+
+.hide-tablet {
+  @media (min-width: 769px) and (max-width: $breakpoint-md) {
+    display: none !important;
+  }
+}
+
+.show-mobile {
+  display: none;
+
+  @media (max-width: $breakpoint-sm) {
+    display: block !important;
+  }
+}
+
+/* ========== Flexbox 響應 ========== */
+.flex-responsive {
+  flex-direction: row;
+
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+  }
+}
+
+.flex-wrap-responsive {
+  flex-wrap: nowrap;
+
+  @media (max-width: $breakpoint-sm) {
+    flex-wrap: wrap;
+  }
+}
+
+/* ========== Grid 響應 ========== */
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ========== 高度調整 ========== */
+.height-responsive-hero {
+  height: 100vh;
+
+  @media (max-width: $breakpoint-sm) {
+    height: 70vh;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    height: 50vh;
+  }
+}
+
+.height-responsive-image {
+  height: 400px;
+
+  @media (max-width: $breakpoint-sm) {
+    height: 300px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    height: 200px;
+  }
+}
+
+/* ========== 按鈕響應 ========== */
+.button-responsive {
+  padding: 12px 30px;
+  font-size: 16px;
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+.button-large-responsive {
+  padding: 15px 40px;
+  font-size: 18px;
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* ========== 容器最大寬度 ========== */
+.container-responsive {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: $breakpoint-lg) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 900px;
+    padding: 0 15px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 0 10px;
+  }
+}
+
+/* ========== 字母間距調整 ========== */
+.letter-spacing-responsive {
+  letter-spacing: 2px;
+
+  @media (max-width: $breakpoint-sm) {
+    letter-spacing: 1.5px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    letter-spacing: 0.5px;
+  }
+}
+
+/* ========== 行高調整 ========== */
+.line-height-responsive {
+  line-height: 1.8;
+
+  @media (max-width: $breakpoint-sm) {
+    line-height: 1.6;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    line-height: 1.4;
+  }
+}
+
+/* ========== 圖片響應 ========== */
+img.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== 表格響應 ========== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 12px;
+
+    th, td {
+      padding: 8px;
+    }
+  }
+}
+
+/* ========== Parallax 響應 ========== */
+.parallax-responsive {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $breakpoint-sm) {
+    background-attachment: scroll;
+  }
+}

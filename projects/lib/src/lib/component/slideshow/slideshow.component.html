@@ -1,0 +1,22 @@
+<div class="slideshow-container">
+    <!-- 幻燈片 -->
+    @for (slides of groupedSlides; track $index) {
+    <div class="slides container "
+        [class]="{'slidesActive': $index === currentSlide, 'slidesPrev': $index === prevSlide, 'slidesNext': $index === nextSlide}">
+        <div class="row">
+            @for (slide of slides; track $index) {
+                <div [class]="cardContainerClass" style="padding: 10px;">
+                    <lib-card [info]="slide"></lib-card>
+                </div>
+            }
+            
+        </div>
+
+    </div>
+    }
+
+
+    <!-- 前後按鈕 -->
+    <button class="prev" (click)="changeSlide(-1)">&#10094;</button>
+    <button class="next" (click)="changeSlide(1)">&#10095;</button>
+</div>

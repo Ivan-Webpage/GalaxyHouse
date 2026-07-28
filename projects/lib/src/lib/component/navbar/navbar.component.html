@@ -1,0 +1,72 @@
+<nav libSticky class="mg-navbar" id="mg-navbar">
+  <div class="container" style="position: relative;">
+    <div class="row" style="padding: 10px; z-index: 10;">
+      <!-- Logo -->
+      <a class="column-5 all-center" [routerLink]="'/home'" style="justify-content: left;">
+        <img [src]="titleImage" alt="Galaxy House 銀河會所 Logo" class="title-img" loading="lazy">
+        <h1 class="title-word">Galaxy House 銀河會所</h1>
+      </a>
+      
+
+      <!-- 手機版 漢堡 -->
+      <div class="hamburger-menu" (click)="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </div>
+
+      @if (isMobileMenuActive) {
+      <div class="column-7 to-left all-center">
+        @for (data of menuData; track $index) {
+          @if (data.subMenu) {
+            <!-- 有下拉選項 -->
+            <div class="dropdown"
+                 [style]="'color: '+navbarTextColor"
+                 (mouseenter)="showDropdown($index)"
+                 (mouseleave)="hideDropdown()">
+              <button class="dropbtn menuButton"
+                      [style]="'color: '+navbarTextColor"
+                      (click)="toggleDropdown($index)">
+                {{data.title}} <i class="arrow"></i>
+              </button>
+
+              <div class="dropdown-content"
+                   [style]="'background-color: '+dropdownBackbroundColor"
+                   [style.display]="activeDropdown === $index ? 'block' : 'none'">
+                <div class="row">
+                  <div class="all-center show-img" [class]="'column-'+ (12-data.subMenu.length *2)">
+                    <img [src]="subCategoryImg"
+                         [alt]="subCategoryImgAlt"
+                         class="subCategoryImg"
+                         loading="lazy">
+                  </div>
+                  @for (subMenuData of data.subMenu; track subMenuData.category) {
+                    <div class="column-2 sub-menu" [style]="'background-color: '+dropdownBackbroundColor">
+                      <h3>{{subMenuData.category}}</h3>
+                      @for (subMenusubCategoryData of subMenuData.subCategory; track subMenusubCategoryData.title) {
+                        <a [style]="'color: '+dropdownTextColor"
+                           [routerLink]="subMenusubCategoryData.link"
+                           (click)="closeMenu()"
+                           (mouseenter)="subCategoryImg=subMenusubCategoryData.hero; subCategoryImgAlt=subMenusubCategoryData.title;"
+                           (mouseleave)="subCategoryImg=''; subCategoryImgAlt='';">
+                          {{subMenusubCategoryData.title}}
+                        </a>
+                      }
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          } @else {
+            <!-- 沒有下拉選項 -->
+            <button class="menuButton"
+                    [style]="'color: '+navbarTextColor"
+                    [routerLink]="data.link"
+                    (click)="closeMenu()">
+              {{data.title}}
+            </button>
+          }
+        }
+      </div>
+      }
+    </div>
+  </div>
+</nav>

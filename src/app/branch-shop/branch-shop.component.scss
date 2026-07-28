@@ -1,0 +1,173 @@
+h3{
+    color: #efd07f;
+}
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 14px;
+    }
+}
+
+.content{
+    line-height: 32px;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        line-height: 24px;
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        line-height: 20px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+}
+
+.title-box{
+    padding: 50px 20px 20px 20px; 
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .title-box {
+        padding: 30px 15px 15px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-box {
+        padding: 20px 10px 10px 10px;
+    }
+}
+
+.img-box{
+    overflow: hidden; 
+    width:100%; 
+    height: 200px;
+}
+
+@media (max-width: 768px) {
+    .img-box {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-box {
+        height: 120px;
+    }
+}
+
+.highlineButton{
+    letter-spacing: 3px;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.highlineButton:hover{
+    background-color: rgb(140, 79, 40);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .highlineButton {
+        padding: 8px 20px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlineButton {
+        padding: 6px 15px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+.prodect{
+    width: 50%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-content: center;
+}
+
+@media (max-width: 768px) {
+    .prodect {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .prodect {
+        width: 70%;
+    }
+}
+
+.price{
+    width: 50%; 
+    text-align:right;
+}
+
+@media (max-width: 768px) {
+    .price {
+        width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .price {
+        width: 30%;
+    }
+}
+.card{
+    margin: 20px; 
+    align-content: start; 
+    position: relative; 
+    clip-path:polygon(0% 5%, 50% 0%,100% 5%,100% 95%,50% 100%,0% 95%);
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        margin: 10px;
+    }
+}
+
+.card-content{
+    padding: 20px 20px 50px 20px;
+}
+
+@media (max-width: 768px) {
+    .card-content {
+        padding: 15px 15px 40px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content {
+        padding: 10px 10px 30px 10px;
+    }
+}

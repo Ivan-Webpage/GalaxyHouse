@@ -1,0 +1,143 @@
+/*---------- bootstrap ----------*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  outline : 0 none ;
+  padding : 0 ;
+}
+html {height: 100%;}
+
+
+body {
+  /* height: 100%; */
+  margin: 0;
+  font-size: 15px;
+  font-family: Microsoft JhengHei, DFKai-sb, Arial, '新細明體', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px
+}
+
+
+/* 物件排版時使用 */
+.container {
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: inline-block;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-12 {width: 100%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-10 {width: 83.33%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-9 {width: 75%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-8 {width: 66.66%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-7 {width: 58.33%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-6 {width: 50%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-5 {width: 41.66%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-4 {width: 33.3%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-3 {width: 25%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-2 {width: 16.66%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-1 {width: 8.33%; display: flex; flex-wrap: wrap; align-content: center;}
+
+
+/* Mobile devices: max-width 480px */
+@media (max-width: 480px) {
+  /* 每一列都占满100%宽度 */
+  .col-12 { width: 100%; }
+  .col-10 { width: 100%; }
+  .col-9 { width: 100%; }
+  .col-8 { width: 100%; }
+  .col-7 { width: 100%; }
+  .col-6 { width: 100%; }
+  .col-5 { width: 100%; }
+  .col-4 { width: 100%; }
+  .col-3 { width: 100%; }
+  .col-2 { width: 100%; }
+  .col-1 { width: 100%; }
+
+  .row {
+    padding: 8px !important;
+  }
+}
+
+/* Small tablets: 481px to 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .col-12 { width: 100%; }
+  .col-10 { width: 100%; }
+  .col-9 { width: 100%; }
+  .col-8 { width: 100%; }
+  .col-7 { width: 100%; }
+  .col-6 { width: 100%; }
+  .col-5 { width: 100%; }
+  .col-4 { width: 50%; }
+  .col-3 { width: 50%; }
+  .col-2 { width: 33.33%; }
+  .col-1 { width: 25%; }
+
+  .row {
+    padding: 12px !important;
+  }
+}
+
+/* Tablets and small laptops: 769px to 1199px */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .col-12 { width: 100%; }
+  .col-10 { width: 83.33%; }
+  .col-9 { width: 75%; }
+  .col-8 { width: 66.66%; }
+  .col-7 { width: 58.33%; }
+  .col-6 { width: 50%; }
+  .col-5 { width: 50%; }
+  .col-4 { width: 33.33%; }
+  .col-3 { width: 25%; }
+  .col-2 { width: 16.66%; }
+  .col-1 { width: 8.33%; }
+}
+
+/* Desktops: 1200px and above */
+@media (min-width: 1200px) {
+  .col-12 { width: 100%; }
+  .col-10 { width: 83.33%; }
+  .col-9 { width: 75%; }
+  .col-8 { width: 66.66%; }
+  .col-7 { width: 58.33%; }
+  .col-6 { width: 50%; }
+  .col-5 { width: 41.66%; }
+  .col-4 { width: 33.33%; }
+  .col-3 { width: 25%; }
+  .col-2 { width: 16.66%; }
+  .col-1 { width: 8.33%; }
+}
+
+/* Responsive padding utilities */
+.p-5{
+  padding: 50px;
+}
+
+@media (max-width: 768px) {
+  .p-5 {
+    padding: 20px;
+  }
+}
+
+.center{
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

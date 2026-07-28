@@ -1,0 +1,51 @@
+<div class="collapsible-item container">
+    <!-- 点击标题时切换折叠状态 -->
+    <div class="row">
+        <div class="collapsible-header column-12" (click)="toggle()">
+            <div class="row">
+                <div class="column-6 all-center" style="justify-content: start;">
+                    <h2>{{title}}</h2>
+                </div>
+                <div class="column-5 all-center" style="justify-content: end;">
+                    <span>{{pay}}</span>
+                </div>
+                <div class="column-1 all-center" style="justify-content: end;">
+                    <i class="arrow" [class]="arrow"></i>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    @if(!isCollapsed){
+    <!-- 使用 ngIf 来控制详细内容的显示/隐藏 -->
+    <div class="collapsible-content" style="clip-path:polygon(0% 0%, 100% 0%,100% 95%,50% 100%,0% 95%);">
+        <h3>工作內容</h3>
+        <div [innerHTML]="detail"></div>
+
+        <h3>工作地點</h3>
+        <p>{{location}}</p>
+
+        <h3>支薪方式</h3>
+        <div class="row">
+            @for (item of how2Pay; track $index) {
+                <span>{{item}}</span>
+            }
+        </div>
+
+        <h3>工作時段</h3>
+        <p>{{workTime}}</p>
+
+        <h3>福利制度</h3>
+        <div class="row">
+            @for (item of welfare; track $index) {
+                <span>{{item}}</span>
+            }
+        </div>
+        
+        <div class="column-12" style="height: 100px;width: 100%;">
+            <a class="applyButton" href="https://line.me/R/ti/p/@392kgxba">我要應徵</a>
+        </div>
+    </div>
+    }
+</div>

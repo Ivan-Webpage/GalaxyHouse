@@ -1,0 +1,205 @@
+h1, span{
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  h1, span {
+    font-size: 18px;
+    letter-spacing: 0.8px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, span {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+}
+
+p{
+    overflow: hidden;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  p {
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    font-size: 12px;
+  }
+}
+
+span{
+    font-size: 18px;
+    letter-spacing: 0.8px;
+}
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgb(239, 208, 127);
+    transform: translateX(-50%); /* 确保时间轴在屏幕中心 */
+  }
+  
+  .timeline-points {
+    position: relative;
+  }
+  
+  .timeline-point {
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; /* 中心对齐时间点 */
+    align-items: center;
+    width: 100%;
+  }
+  
+  .point-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(239, 208, 127);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid white;
+    cursor: pointer;
+    z-index: 1; /* 保证点在内容之上 */
+  }
+  
+  .timeline-content {
+    width: 80vh;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* 左侧显示内容 */
+  .left-content {
+    position: relative;
+    left: 0px;
+    transform: translateX(-55%);
+  }
+  
+  .right-content {
+    position: relative;
+    right: 0px;
+    transform: translateX(55%);
+  }
+
+  .aboutBox{
+    padding: 30px 20px 30px 20px; 
+    position: relative; 
+    height: 500px;
+  }
+
+  @media (max-width: 950px) {
+    .aboutBox {
+      height: 100%;
+      padding: 25px 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .aboutBox {
+      height: 100%;
+      padding: 20px 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .aboutBox {
+      height: 100%;
+      padding: 15px 10px;
+    }
+  }
+
+  .imgBox{
+    height: 400px; 
+    overflow: hidden; 
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (max-width: 950px) {
+    .imgBox {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .imgBox {
+      height: 300px;
+      width: 100%;
+      position: static;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .imgBox {
+      height: 200px;
+      width: 100%;
+      position: static;
+    }
+  }
+
+  .contentBox{
+    position: absolute; 
+  }
+
+  @media (max-width: 950px) {
+    .contentBox {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contentBox {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline-content {
+        width: 25vh;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .timeline-content {
+      width: 70vw;
+    }
+    .timeline-line {
+      left: 15px;
+    }
+    .point-circle {
+      left: 15px;
+    }
+  }

@@ -1,0 +1,29 @@
+<lib-triangle-slideshow [showIntroduce]="true" [showArrow]="false" [introduceTitle]="'最新消息'" [introduceContent]="''"
+    [logoSize]=50 [height]="'60vh'" [filterColer]="'rgba(27,27,27,0.5)'" [ballColor]="'rgba(239, 208, 127)'"
+    [geometryColor]="'rgba(255, 255, 255)'" [slides]="slides"></lib-triangle-slideshow>
+
+<div class="container back-black-ten" style="position: relative;">
+  <lib-loading [show]="loading"></lib-loading>
+
+  @if(!loading){
+      @if(newType == 'newActivity'){
+      <div class="row" style="justify-content: center">
+        <div #calendarHost></div>
+      </div>
+    }
+
+    <div class="row" style="padding: 30px 20px 30px 20px; justify-content: center;">
+      @if(news.length != 0){
+        @for (new of news; track $index) {
+          <div class="col-3" style="height: 100%; overflow: hidden; padding: 20px 5px 20px 5px">
+            <lib-card [info]="new"></lib-card>
+          </div>
+        }
+      }@else{
+        <div class="no-data">
+          <h1>很抱歉，目前暫無其他資料</h1>
+        </div>
+      }
+    </div>
+  }
+</div>

@@ -1,0 +1,66 @@
+/* Small devices: 480px to 576px */
+@media (max-width: 576px) and (min-width: 481px) {
+  .container {
+    padding: 1.2rem !important;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  h1.text-white {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  lib-collapsible {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  lib-collapsible button {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Extra small devices: 480px and below */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.8rem !important;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  h1.text-white {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  lib-collapsible {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  lib-collapsible button {
+    display: block;
+    width: 100%;
+    margin-top: 0.4rem;
+    font-size: 14px;
+  }
+}

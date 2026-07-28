@@ -1,0 +1,137 @@
+<lib-triangle-slideshow
+[showIntroduce]="false"
+[showArrow]="true"
+[logoSize] = 100
+[height]="'100vh'"
+[filterColer] = "filterColer"
+[ballColor] = "ballColor"
+[geometryColor] = "geometryColor"
+[slides] = "slides"
+></lib-triangle-slideshow>
+
+<div class="container back-black-ten" style="position: relative;">
+    <div class="row" style="padding: 30px 20px 30px 20px; justify-content: center;">
+        <h1 class="text-yellow title">最新消息</h1>
+    </div>
+    <div class="row" style="padding: 30px 20px 30px 20px; justify-content: center;">
+        <div class="col-12" style="height: 500px; overflow: hidden;">
+            <lib-slideshow style="width: 100%; height: 100%;" [slides]="news"></lib-slideshow>
+        </div>
+    </div>
+
+</div>
+
+<div class="parallax" style="background-image: url('images/天母店場景/天母3樓.jpg')">
+    <div class="filter" [style]="'background-color:'+filterColer"></div>
+    <div class="block-full-right-up back-black-ten"></div>
+    <div class="block-full-right-down back-black-ten"></div>
+</div>
+
+<div class="container back-black-ten" style="position: relative;">
+    <div class="row" style="padding: 30px 20px 30px 20px; display: flex;">
+        <div class="col-5 center p-5 space-experience-text">
+            <div class="row">
+                <h1 class="text-yellow title">空間帶動體驗</h1>
+            </div>
+            <div class="row">
+                <p class="text-white content">Galaxy House
+                    以其現代化設計與自然元素的融合為特色。從空中花園到英倫包廂，每一處都精心設計，為您提供舒適、放鬆又具品味的環境。這裡不僅是享受美食與美酒的場所，更是一個讓心靈獲得放鬆與滋養的空間。</p>
+            </div>
+            <div class="row">
+                <button libAnimationInto class="highlineButton back-yellow-ten text-black" [routerLink]="'/about_us'">關於我們</button>
+            </div>
+        </div>
+        <div class="col-7 space-experience-img" style="height: 400px; overflow: hidden;">
+            <img libAnimationInto libImageFilter src="images/天母店場景/天母店雪茄室2.jpg" alt="天母店雪茄室" class="imgshow" libImageFilter>
+        </div>
+    </div>
+</div>
+
+<div class="parallax" style="background-image: url('images/松山店場景/松山店會所餐桌.jpg')">
+    <div class="filter" [style]="'background-color:'+filterColer"></div><!-- 濾鏡 -->
+    <div class="block-full-right-up back-black-ten"></div>
+    <div class="block-full-right-down back-black-ten"></div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 30px 20px 30px 20px; display: flex;">
+        <div class="col-7 food-experience-img" style="height: 400px; overflow: hidden;">
+            <img libAnimationInto libImageFilter src="images/松山店場景/松山店早午餐.jpg" alt="松山店早午餐" class="imgshow">
+        </div>
+        <div class="col-5 center p-5 food-experience-text">
+            <div class="row">
+                <h1 class="text-yellow title">美食與味蕾</h1>
+            </div>
+            <div class="row">
+                <p class="text-white content">
+                    品味與藝術的結合。無論您是來享受一頓精緻的晚餐，還是與朋友共度一段愉快的時光，我們的餐飲服務都將為您提供超越期待的獨特體驗。我們深知美食與飲品的完美搭配能讓餐點升華。為了提升您的用餐體驗，我們精選來自世界各地的頂級葡萄酒、威士忌以及其他烈酒，為每道菜品配對最理想的飲品。
+                </p>
+            </div>
+            <div class="row">
+                <button libAnimationInto class="highlineButton back-yellow-ten text-black" [routerLink]="'/home'"  fragment="branchShop">馬上訂位</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax" style="background-image: url('images/松山店場景/松餐店一樓.jpg')">
+    <div class="filter" [style]="'background-color:'+filterColer"></div><!-- 濾鏡 -->
+    <div class="block-full-left-up back-black-ten"></div>
+    <div class="block-full-left-down back-black-ten"></div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 30px 20px 30px 20px; display: flex;">
+        <div class="col-5 center p-5 cigar-experience-text">
+            <div class="row">
+                <h1 class="text-yellow title">探索非古巴，開啟您的品味旅程</h1>
+            </div>
+            <div class="row">
+                <p class="text-white content">
+                    由於法規因素，無法在這裡為您服務，您可以自行上網搜尋，或來電由專人為您服務！
+                </p>
+            </div>
+            <div class="row">
+                <a libAnimationInto class="highlineButton back-yellow-ten text-black" href="https://line.me/R/ti/p/@392kgxba">聯絡我們</a>
+            </div> 
+        </div>
+        <div class="col-7 cigar-experience-img" style="height: 400px; overflow: hidden;">
+            <img libAnimationInto libImageFilter src="images/松山店場景/松山雪茄室.jpg" alt="松山雪茄室" class="imgshow">
+        </div>
+    </div>
+</div>
+
+<div class="container back-brown-ten">
+    <div class="row" style="padding: 50px 20px 20px 20px; justify-content: center;">
+        <h1 class="text-yellow title" id="branchShop">選擇分店</h1>
+    </div>
+    <div class="row" style="padding: 20px 20px 100px 20px; justify-content: center;">
+        <div class="col-5 center" style="position: relative;">
+            <img libImageFilter src="images/天母店場景/天母店雪茄室.jpg" alt="天母店雪茄空間" class="imgshow">
+            <div class="shop">
+                <h1 libAnimationInto>天母店</h1>
+                <button class="highlineButton back-yellow-ten text-black" [routerLink]="'/branchShop/Tianmu'">查看更多</button>
+                <div libAnimationInto class="row" style="justify-content: center;">
+                    <a class="soialButton" href="https://www.facebook.com/galaxycafe310" aria-label="Facebook"><fa-icon [icon]="faFacebookF" class="text-yellow"></fa-icon></a>
+                    <a class="soialButton" href="https://www.instagram.com/thegalaxyhouse.310" aria-label="Instagram"><fa-icon [icon]="faInstagram" class="text-yellow"></fa-icon></a>
+                    <a class="soialButton" href="https://line.me/ti/p/@684figyw" aria-label="Line"><fa-icon [icon]="faLine" class="text-yellow"></fa-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-5 center" style="position: relative;">
+            <img libImageFilter src="images/松山店場景/松山店門口.jpg" alt="松山店門口" class="imgshow">
+            <div  class="shop">
+                <h1 libAnimationInto>松山店</h1>
+                <button class="highlineButton back-yellow-ten text-black" [routerLink]="'/branchShop/Songshan'">查看更多</button>
+                <div libAnimationInto class="row" style="justify-content: center;">
+                    <a class="soialButton" href="https://www.facebook.com/galaxyhouse2024" aria-label="Facebook"><fa-icon [icon]="faFacebookF" class="text-yellow"></fa-icon></a>
+                    <a class="soialButton" href="https://www.instagram.com/thegalaxyhouse.3" aria-label="Instagram"><fa-icon [icon]="faInstagram" class="text-yellow"></fa-icon></a>
+                    <a class="soialButton" href="https://line.me/ti/p/@392kgxba" aria-label="Line"><fa-icon [icon]="faLine" class="text-yellow"></fa-icon></a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

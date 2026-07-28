@@ -1,0 +1,14 @@
+<div class="block-container" id="container"  [style]="'background-color:'+backgroundColer">
+    <div class="row">
+        @for (imagesData of this.imageGroup; track $index) {
+        <div [class]="'col-'+(12/this.columns)" style="align-content: start;">
+            @for (data of imagesData; track $index) {
+            <div libSlipHover style="width: 100%; margin: 5px;" href="">
+                    <img width="100%" [src]="data.image" [title]="data.title" [alt]="data.description">
+            </div>
+            }
+        </div>
+        }
+    </div>
+
+</div>

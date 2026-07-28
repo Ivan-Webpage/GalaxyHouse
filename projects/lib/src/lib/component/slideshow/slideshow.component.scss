@@ -1,0 +1,103 @@
+
+/* 物件排版時使用 */
+.container {
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: inline-block;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-12 {width: 100%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-10 {width: 83.33%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-9 {width: 75%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-8 {width: 66.66%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-7 {width: 58.33%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-6 {width: 50%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-5 {width: 41.66%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-4 {width: 33.3%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-3 {width: 25%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-2 {width: 16.66%; display: flex; flex-wrap: wrap; align-content: center;}
+.col-1 {width: 8.33%; display: flex; flex-wrap: wrap; align-content: center;}
+
+.slideshow-container {
+    position: relative;  /* 父容器需要設定為relative */
+    width: 100%;         /* 設定幻燈片容器的寬度 */
+    margin: auto;        /* 居中顯示 */
+    overflow: hidden;    /* 隱藏超出容器範圍的幻燈片 */
+    height: 100%;
+  }
+  
+  .slides {
+    position: absolute;  /* 每個幻燈片需要設定為absolute */
+    width: 100%;         /* 幻燈片的寬度是100% */
+    height: 100%;        /* 幻燈片的高度是100% */
+    transition: transform 1s ease, opacity 1s ease; /* 設置平滑過渡效果 */
+    opacity: 0;          /* 默認隱藏幻燈片 */
+  }
+  
+  .slidesActive {
+    opacity: 1;          /* 顯示當前幻燈片 */
+    transform: translateX(0);  /* 當前幻燈片保持在容器中 */
+  }
+  
+  .slidesPrev {
+    opacity: 0;          /* 前一張幻燈片隱藏 */
+    transform: translateX(-100%); /* 前一張幻燈片向左滑出 */
+  }
+  
+  .slidesNext {
+    opacity: 0;          /* 下一張幻燈片隱藏 */
+    transform: translateX(100%); /* 下一張幻燈片向右滑出 */
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    color: white;
+    background-color: rgba(255,255,255, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .prev, .next {
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prev, .next {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+.prev, .next:hover {
+    background-color: rgba(255,255,255, 0.7);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}

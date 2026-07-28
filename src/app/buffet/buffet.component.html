@@ -1,0 +1,172 @@
+@if (!loading) {
+<lib-triangle-slideshow [showIntroduce]="true" [showArrow]="false" [introduceTitle]="'精緻桌菜'"
+    [introduceContent]="'#美食 #客製化 #派對宴客'" [logoSize]="50" [height]="'60vh'" [filterColer]="'rgba(27,27,27,0.5)'"
+    [ballColor]="'rgba(239, 208, 127)'" [geometryColor]="'rgba(255, 255, 255)'"
+    [slides]="slides"></lib-triangle-slideshow>
+
+
+<lib-loading [show]="loading"></lib-loading>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 30px 20px 30px 20px; display: flex;">
+        <div class="col-4 center p-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <h1 class="text-yellow title">客製化服務說明</h1>
+                    </div>
+                    <div class="row">
+                        <p class="text-white">依照菜色與人數有所不同，為您客製化專屬菜單，歡迎來電洽詢</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <img libAnimationInto libImageFilter src="images/Buffet/餐桌.jpg" alt="松山 餐桌" class="imgshow">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-4 center p-5">
+            <div class="row">
+                <div class="col-12">
+                    <img libAnimationInto libImageFilter src="images/Buffet/整桌餐點1.jpg" alt="松山 餐點" class="imgshow">
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <h1 class="text-yellow title">會所體驗你也可以</h1>
+                    </div>
+                    <div class="row">
+                        <p class="text-white">15,000元起，餐酒全包！金額全抵消費</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 center p-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <h1 class="text-yellow title">20坪獨立包廂</h1>
+                    </div>
+                    <div class="row">
+                        <p class="text-white">含伴唱設備(僅唱到晚上10點)、衛生間，不受外人打擾</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <img libAnimationInto libImageFilter src="images/Buffet/KTV空間.jpg" alt="Galaxy House 銀河會所 KTV空間" class="imgshow">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 50px 20px 20px 20px; justify-content: center;">
+        <h1 class="text-yellow title" id="branchShop">方案選擇</h1>
+    </div>
+    <div class="row" style="padding: 20px 20px 100px 20px; justify-content: center;">
+        <div class="col-5 cente p-5" style="position: relative;">
+            <img libImageFilter [filterIntensity]="'40%'" src="images/Buffet/KTV空間2.jpg" alt="Galaxy House 銀河會所 中式餐點" class="imgshow">
+            <div class="food-hero">
+                <h1 libAnimationInto>15,000元，歡唱方案</h1>
+                <h2 libAnimationInto class="text-yellow">15-20人舒適</h2>
+                <ul>
+                    <li class="text-white">全額抵消費</li>
+                    <li class="text-white">7,000元以上能為您客製化桌菜</li>
+                    <li class="text-white">獨立化妝室，不受打擾</li>
+                    <li class="text-yellow">附贈KTV歡唱設備(僅提供至晚上10點)</li>
+                    <li class="text-white">需提前20日預定</li>
+                    <li class="text-white">加時+3000元/小時，可抵消費</li>
+                </ul>
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+        </div>
+        <div class="col-5 center p-5" style="position: relative;">
+            <img libImageFilter [filterIntensity]="'40%'" src="images/Buffet/餐桌2.jpg" alt="Galaxy House 銀河會所 西式餐點" class="imgshow">
+            <div class="food-hero">
+                <h1 libAnimationInto>12,000元，宴會方案</h1>
+                <h2 libAnimationInto class="text-yellow">14人內</h2>
+                <ul>
+                    <li class="text-white">全額抵消費</li>
+                    <li class="text-white">7,000元以上能為您客製化桌菜</li>
+                    <li class="text-white">獨立化妝室，不受打擾</li>
+                    <li class="text-white">需提前20日預定</li>
+                    <li class="text-white">加時+3000元/小時，可抵消費</li>
+                </ul>
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 50px 20px 20px 20px; justify-content: center;">
+        <h1 class="text-yellow title" id="branchShop">菜色選擇</h1>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <p class="text-white" >
+            若有其他菜色需求，可以來電洽詢(02)2766-2882
+        </p>
+    </div>
+    <div class="row" style="padding: 20px 20px 100px 20px; justify-content: center;">
+        <div class="col-5 cente p-5" style="position: relative;">
+            <img libImageFilter [filterIntensity]="'40%'" src="images/Buffet/中式餐點.jpg" alt="Galaxy House 銀河會所 中式餐點" class="imgshow">
+            <div class="food-hero">
+                <h1 libAnimationInto>中式</h1>
+                <h2 libAnimationInto class="text-yellow">換算單人費用</h2>
+                <ul>
+                    <li class="text-white">400元/5道菜</li>
+                    <li class="text-white">401-600/7道菜</li>
+                    <li class="text-white">601-800/8道菜</li>
+                    <li class="text-white">800元以上另洽</li>
+                    <li class="text-white">(水果盤另外贈送)</li>
+                </ul>
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+        </div>
+        <div class="col-5 center p-5" style="position: relative;">
+            <img libImageFilter [filterIntensity]="'40%'" src="images/Buffet/西式餐點.jpg" alt="Galaxy House 銀河會所 西式餐點" class="imgshow">
+            <div class="food-hero">
+                <h1 libAnimationInto>西式</h1>
+                <h2 libAnimationInto class="text-yellow">換算單人費用</h2>
+                <ul>
+                    <li class="text-white">400元/7道菜</li>
+                    <li class="text-white">401-600/8道菜</li>
+                    <li class="text-white">601以上10道菜</li>
+                    <li class="text-white">(水果盤另外贈送)</li>
+                </ul>
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row" style="padding: 30px 20px 30px 20px; display: flex;">
+        <div class="col-7 cigar-experience-img" style="height: 400px; overflow: hidden;">
+            <img libAnimationInto libImageFilter src="images/Buffet/Buffer.jpg" alt="Galaxy House 銀河會所 Buffer" class="imgshow">
+        </div>
+        <div class="col-5 center p-5">
+            <div class="row">
+                <h1 class="text-yellow title">退訂方式</h1>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="text-white">前15～10天，退50%</li>
+                    <li class="text-white">前10～7天，退30%</li>
+                    <li class="text-white">7天內恕不退款</li>
+                </ul>
+            </div>
+            <div class="row">
+                <a class="highlineButton back-yellow-ten text-black" href="https://line.me/ti/p/@392kgxba">我要預訂</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<lib-floating-block [imageData]="gallery" [backgroundColer]="'rgb(140, 79, 40)'"></lib-floating-block>
+}

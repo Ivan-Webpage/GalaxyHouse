@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "galaxyhouse-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-X",
+        "utf8",
+        "C:\\Users\\ivany\\AppData\\Local\\Temp\\claude\\C--Users-ivany-OneDrive-Desktop-GHWeb\\68a74344-480d-4b05-90cb-af2958ea30b6\\scratchpad\\spa_server.py",
+        "C:\\Users\\ivany\\OneDrive\\Desktop\\GHWeb\\dist\\galaxyhouse-web\\browser",
+        "8080"
+      ],
+      "port": 8080
+    }
+  ]
+}

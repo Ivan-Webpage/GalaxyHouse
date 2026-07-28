@@ -1,0 +1,80 @@
+<lib-triangle-slideshow [showIntroduce]="true" [showArrow]="false" [introduceTitle]="'關於我們'" [introduceContent]="''"
+    [logoSize]=50 [height]="'60vh'" [filterColer]="'rgba(27,27,27,0.5)'" [ballColor]="'rgba(239, 208, 127)'"
+    [geometryColor]="'rgba(255, 255, 255)'" [slides]="slides"></lib-triangle-slideshow>
+
+<div class="container back-black-ten">
+    <div  class="row aboutBox">
+        <div class="col-9 imgBox" style="right: 0;">
+            <img libImageFilter src="images/天母店場景/雙人火鍋套餐.jpg" alt="雙人火鍋套餐" class="imgshow">
+        </div>
+        <div libAnimationInto class="col-5 p-5 back-brown-nine contentBox" style="top: 0; left: 0;">
+            <div  class="row">
+                <h1 class="text-yellow title">漫天的星空下，分享所愛</h1>
+                <span class="text-yellow">Under The Stars, We Share We Love</span>
+            </div>
+            <div class="row">
+                <p class="text-white content">Galaxy House 追求的是一種跨越時空的感動，透過精緻的細節與無微不至的服務，帶給每位客人舒適、貼心、獨特的體驗。從歷史的深度，到每一口雪茄與美酒的微妙變化，我們期望能在這片星空之下，與每一個品味獨特的靈魂交流，激發出更多的共鳴與可能。</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container back-black-ten">
+    <div class="row aboutBox">
+        <div class="col-7 imgBox" style="left: 0;">
+            <img libImageFilter src="images/松山店場景/西式桌菜.jpg" alt="西式桌菜" class="imgshow">
+        </div>
+        <div class="col-5 contentBox" style="bottom: 0%; right: 0;">
+            <div libAnimationInto class="row back-white-nine p-5">
+                <div class="row">
+                    <h1 class="text-black title">高端多功能會所空間</h1>
+                    <span class="text-black">Premium Multi-Functional Lounge Space</span>
+                </div>
+                <div class="row">
+                    <p class="text-black content">提供獨立包廂與商務空間，結合KTV娛樂與舒適座椅，兼顧隱私與社交需求，適合商務洽談、團體聚會或私人派對。</p>
+                </div>
+            </div>
+            <div libAnimationInto class="row back-yellow-nine p-5">
+                <div class="row">
+                    <h1 class="text-black title">精緻餐飲與酒品搭配</h1>
+                    <span class="text-black">Refined Dining and Beverage Pairings</span>
+                </div>
+                <div class="row">
+                    <p class="text-black content">精選桌菜、排餐、甜點與手工飲品，搭配紅白酒與威士忌，營造兼具美食享受與品味生活的完整體驗。</p>
+                </div>
+            </div>
+            <div libAnimationInto class="row back-brown-nine p-5">
+                <div class="row">
+                    <h1 class="text-yellow title">非古巴專注 & 友善環境</h1>
+                    <span class="text-yellow">Non-Cuban Cigar Focus & Guest-Friendly Environment</span>
+                </div>
+                <div class="row">
+                    <p class="text-white content">以非古巴文化為特色，提供專屬品味體驗，並設置非吸菸區，確保不抽的賓客也能自在享受。</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="timeline-container back-black-ten">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-points">
+        @for (item of timelineData; track $index) {
+        <div class="timeline-point">
+            <!-- 点击事件，切换内容的展开/折叠 -->
+            <div class="point-circle"></div>
+
+            <!-- 动态绑定内容的显示位置 -->
+            <div [class]="{'left-content': getDirection($index) === 'left', 'right-content': getDirection($index) === 'right'}"
+                class="timeline-content">
+                <h3>{{ item.date +" "+ item.title }}</h3>
+                <p>{{ item.description }}</p>
+            </div>
+
+        </div>
+        }
+    </div>
+</div>
