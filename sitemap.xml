@@ -6,83 +6,155 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://thegalaxyhouse.com/</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
-</url>
-<url>
   <loc>https://thegalaxyhouse.com/home</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
-  <loc>http://thegalaxyhouse.com/</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <loc>https://thegalaxyhouse.com/about_us</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
-  <loc>http://thegalaxyhouse.com/home</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <loc>https://thegalaxyhouse.com/apply</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/banquet</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/catering</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
   <loc>https://thegalaxyhouse.com/branchShop/Songshan</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
   <loc>https://thegalaxyhouse.com/branchShop/Tianmu</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
-</url>
-<url>
-  <loc>https://thegalaxyhouse.com/branchShop/apply</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
-</url>
-<url>
-  <loc>https://thegalaxyhouse.com/branchShop/about_us</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
   <loc>https://thegalaxyhouse.com/news/announcement/galaxyhouse</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
-</url>
-<url>
-  <loc>https://thegalaxyhouse.com/news/announcement/Tianmu</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
   <loc>https://thegalaxyhouse.com/news/announcement/Songshan</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/news/announcement/Tianmu</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
   <loc>https://thegalaxyhouse.com/news/newActivity/galaxyhouse</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
-</url>
-<url>
-  <loc>https://thegalaxyhouse.com/news/newActivity/Tianmu</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
   <loc>https://thegalaxyhouse.com/news/newActivity/Songshan</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/news/newActivity/Tianmu</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
   <loc>https://thegalaxyhouse.com/news/eventHighlights/galaxyhouse</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
-</url>
-<url>
-  <loc>https://thegalaxyhouse.com/news/eventHighlights/Tianmu</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
   <loc>https://thegalaxyhouse.com/news/eventHighlights/Songshan</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
-  <loc>https://thegalaxyhouse.com/news/catering</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <loc>https://thegalaxyhouse.com/news/eventHighlights/Tianmu</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
-  <loc>https://thegalaxyhouse.com/news/banquet</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <loc>https://thegalaxyhouse.com/article/5</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 <url>
-  <loc>https://thegalaxyhouse.com/404.html</loc>
-  <lastmod>2025-09-09T14:01:22+00:00</lastmod>
+  <loc>https://thegalaxyhouse.com/article/6</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/7</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/8</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/10</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/12</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/13</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/14</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/15</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/16</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/17</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/18</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/19</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/20</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/21</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/22</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/23</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/24</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/25</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/26</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/27</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
+</url>
+<url>
+  <loc>https://thegalaxyhouse.com/article/28</loc>
+  <lastmod>2026-07-28T11:50:25.198Z</lastmod>
 </url>
 </urlset>

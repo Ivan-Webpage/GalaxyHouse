@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "公告",
+    "englishName": "announcement",
+    "image": "images/uploads/news-types/Logo彩色16_9.jpg",
+    "color": "#3fe73b",
+    "description": "Galaxy House 銀河會所最新資訊",
+    "state": 1
+  },
+  {
+    "id": 2,
+    "title": "最新活動",
+    "englishName": "newActivity",
+    "image": "images/uploads/news-types/活動16_9.jpg",
+    "color": "#e73b3f",
+    "description": "最新活動資訊，Galaxy House銀河會所活動",
+    "state": 1
+  },
+  {
+    "id": 3,
+    "title": "活動花絮",
+    "englishName": "eventHighlights",
+    "image": "images/uploads/news-types/乾杯畫面16_9.jpg",
+    "color": "#1bbe17",
+    "description": "活動後的分享與介紹",
+    "state": 1
+  }
+]

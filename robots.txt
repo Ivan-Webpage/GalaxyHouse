@@ -13,4 +13,3 @@ Allow: /
 
 # 指定 Sitemap 位置
 Sitemap: https://thegalaxyhouse.com/sitemap.xml
-``

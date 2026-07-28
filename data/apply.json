@@ -1,0 +1,78 @@
+[
+  {
+    "title": "松山店",
+    "data": [
+      {
+        "title": "外場PT兼職",
+        "pay": "時薪 $ 200",
+        "detail": "<ul>\r\n\t<li>👉前台餐飲：飲料、調酒、早午餐等製作（無經驗可）</li>\r\n\t<li>👉外場服務：上餐、結帳、清潔（無經驗可</li>\r\n\t<li>👉雪茄介紹：內有雪茄室，介意雪茄煙味者請三思（無經驗可）</li>\r\n\t<li>👉紅白威士忌介紹：有教育訓練</li>\r\n</ul>",
+        "location": "松山店 台北市松山區南京東路五段66巷12弄3號",
+        "branchShop_title": "松山店",
+        "workTime": "依照營業時間可自由搭配，長短期皆可，無最低最高時數限制",
+        "welfare_title": [
+          "員工餐",
+          "教育訓練",
+          "團體保險",
+          "免經驗可",
+          "員工折扣",
+          "點心櫃",
+          "可折抵實習時數"
+        ],
+        "how2Pay_title": [
+          "現金",
+          "匯款",
+          "行動支付"
+        ]
+      },
+      {
+        "title": "儲備幹部-正職",
+        "pay": "月薪$ 38K-42K",
+        "detail": "<h2>🔹 工作事項 &nbsp; &nbsp;</h2>\r\n\r\n<ul>\r\n\t<li>客人服務:出餐、上餐、侍酒服務、侍茄服務 &nbsp; &nbsp;</li>\r\n\t<li>行政事項:店內文件整理、系統資訊上架與更新 &nbsp; &nbsp;</li>\r\n\t<li>人員管理:PT員工排班 &nbsp; &nbsp;</li>\r\n\t<li>商品控管:倉儲管理、貨品控管 &nbsp; &nbsp;</li>\r\n\t<li>店內環境:桌面地板清潔、衛生管理 &nbsp;</li>\r\n</ul>\r\n\r\n<h2>🔹 具備條件 &nbsp; &nbsp;</h2>\r\n\r\n<ul>\r\n\t<li>口條清晰 &nbsp; &nbsp;</li>\r\n\t<li>細心觀察，照顧客人感受 &nbsp; &nbsp;</li>\r\n\t<li>熟悉紅白酒、威士忌、雪茄為嘉 &nbsp; &nbsp;</li>\r\n\t<li>能長期配合</li>\r\n</ul>",
+        "location": "松山店-台北市松山區南京東路五段66巷12弄3號",
+        "branchShop_title": "松山店",
+        "workTime": "下午2點-晚上10點，月休8天，星期1公休，另外4天排班",
+        "welfare_title": [
+          "員工餐",
+          "育嬰假",
+          "教育訓練",
+          "團體保險",
+          "免經驗可",
+          "員工折扣",
+          "點心櫃",
+          "可折抵實習時數"
+        ],
+        "how2Pay_title": [
+          "現金",
+          "匯款"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "天母店",
+    "data": [
+      {
+        "title": "儲備幹部-正職",
+        "pay": "月薪$ 38K-42K",
+        "detail": "<h2>🔹 工作事項 &nbsp; &nbsp;</h2>\r\n\r\n<ul>\r\n\t<li>客人服務:出餐、上餐、侍酒服務、侍茄服務 &nbsp; &nbsp;</li>\r\n\t<li>行政事項:店內文件整理、系統資訊上架與更新 &nbsp; &nbsp;</li>\r\n\t<li>人員管理:PT員工排班 &nbsp; &nbsp;</li>\r\n\t<li>商品控管:倉儲管理、貨品控管 &nbsp; &nbsp;</li>\r\n\t<li>店內環境:桌面地板清潔、衛生管理 &nbsp;</li>\r\n</ul>\r\n\r\n<h2>🔹 具備條件 &nbsp; &nbsp;</h2>\r\n\r\n<ul>\r\n\t<li>口條清晰 &nbsp; &nbsp;</li>\r\n\t<li>細心觀察，照顧客人感受 &nbsp; &nbsp;</li>\r\n\t<li>熟悉紅白酒、威士忌、雪茄為嘉 &nbsp; &nbsp;</li>\r\n\t<li>能長期配合</li>\r\n</ul>",
+        "location": "天母店 台北市士林區中山北路六段310號2樓",
+        "branchShop_title": "天母店",
+        "workTime": "下午3點-晚上11點",
+        "welfare_title": [
+          "員工餐",
+          "育嬰假",
+          "教育訓練",
+          "團體保險",
+          "免經驗可",
+          "員工折扣",
+          "點心櫃",
+          "可折抵實習時數"
+        ],
+        "how2Pay_title": [
+          "現金",
+          "匯款"
+        ]
+      }
+    ]
+  }
+]
