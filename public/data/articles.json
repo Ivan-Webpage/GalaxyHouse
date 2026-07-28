@@ -474,5 +474,22 @@
     "expiration_date": null,
     "create_date": "2025-12-09",
     "create_time": "2025-12-09 10:52:45.544000"
+  },
+  {
+    "id": 29,
+    "title": "8/14漫霧與音樂之約",
+    "image": "images/uploads/articles/漫霧與音樂之約_5-2.jpg",
+    "description": "在銀河會所，一場雪茄分享聚會化作文化的旅程。從風味探索到品牌故事，再延伸至古巴與非古巴雪茄的對話，煙霧之中藏著無數思緒與記憶。這裡不只是享受雪茄的場所，更像是一座文化沙龍，讓每位來賓在交流與分享中，將夜晚凝結為獨特的體驗。",
+    "content": "<ul>",
+    "newTypeId": 2,
+    "newTypeTitle": "最新活動",
+    "newTypeColor": "#e73b3f",
+    "newTypeEnglishName": "newActivity",
+    "branchShopId": 1,
+    "branchShopEnglishName": "Songshan",
+    "state": 1,
+    "expiration_date": "2026-08-14",
+    "create_date": "2026-07-28",
+    "create_time": "2026-07-28 12:26:36.474"
   }
 ]
