@@ -7,20 +7,10 @@ const path = require('path');
 const readline = require('node:readline/promises');
 const { stdin, stdout } = require('node:process');
 const { TEMPLATES } = require('./article-templates');
+const { saveArticleDraft, loadCatalog } = require('./article-store');
 
 const ROOT = path.join(__dirname, '..');
-const ARTICLES_PATH = path.join(ROOT, 'public', 'data', 'articles.json');
-const NEWS_TYPES_PATH = path.join(ROOT, 'public', 'data', 'news-types.json');
-const BRANCH_SHOPS_PATH = path.join(ROOT, 'public', 'data', 'branch-shops.json');
 const ARTICLE_IMAGE_DIR = path.join(ROOT, 'public', 'images', 'uploads', 'articles');
-
-function readJson(file) {
-  return JSON.parse(fs.readFileSync(file, 'utf-8'));
-}
-
-function writeJson(file, data) {
-  fs.writeFileSync(file, JSON.stringify(data, null, 2), 'utf-8');
-}
 
 function slugifyImageName(originalPath, existingNames) {
   const ext = path.extname(originalPath) || '.jpg';
@@ -199,11 +189,7 @@ async function main() {
   const rl = readline.createInterface({ input: stdin, output: stdout });
 
   try {
-    const articles = readJson(ARTICLES_PATH);
-    const newsTypes = readJson(NEWS_TYPES_PATH);
-    const branchShops = readJson(BRANCH_SHOPS_PATH);
-    const branchNames = Object.keys(branchShops);
-    const newTypeByEnglishName = Object.fromEntries(newsTypes.map((nt) => [nt.englishName, nt]));
+    const { newsTypes, branchShops, branchNames } = loadCatalog();
 
     console.log('=== 新增文章 / 活動 ===\n');
     console.log('請選擇文章類型：');
@@ -231,36 +217,8 @@ async function main() {
       return;
     }
 
-    const newType = newTypeByEnglishName[draft.newTypeEnglishName];
-    const now = new Date();
-    const createTime = now.toISOString().replace('T', ' ').slice(0, 23);
-    const createDate = now.toISOString().slice(0, 10);
-    const newId = articles.reduce((max, a) => Math.max(max, a.id), 0) + 1;
-
-    const newArticle = {
-      id: newId,
-      title: draft.title,
-      image: draft.imageRelPath,
-      description: draft.description,
-      content: draft.content,
-      newTypeId: newType.id,
-      newTypeTitle: newType.title,
-      newTypeColor: newType.color,
-      newTypeEnglishName: newType.englishName,
-      branchShopId: draft.branchShopEnglishName ? branchShops[draft.branchShopEnglishName].shop.id : null,
-      branchShopEnglishName: draft.branchShopEnglishName,
-      state: 1,
-      expiration_date: draft.expirationDate || null,
-      create_date: createDate,
-      create_time: createTime,
-    };
-
-    articles.push(newArticle);
-    writeJson(ARTICLES_PATH, articles);
-    console.log(`\n已新增文章 #${newId}：${newArticle.title}`);
-
-    const { buildSitemap } = require('./generate-sitemap');
-    fs.writeFileSync(path.join(ROOT, 'public', 'sitemap.xml'), buildSitemap(), 'utf-8');
+    const newArticle = saveArticleDraft(draft);
+    console.log(`\n已新增文章 #${newArticle.id}：${newArticle.title}`);
     console.log('sitemap.xml 已同步更新。');
 
     const publishAnswer = (await rl.question('\n是否要立即建置並發佈到 GitHub Pages？(y/N)：')).trim().toLowerCase();

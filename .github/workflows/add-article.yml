@@ -1,0 +1,65 @@
+name: 自動新增活動並發佈
+
+# 由外部系統（例如公司內部財務系統）呼叫 GitHub API 觸發：
+#   POST https://api.github.com/repos/Ivan-Webpage/GalaxyHouse/dispatches
+#   { "event_type": "add-article", "client_payload": { "template": "moonMusic", "date": "2026-08-14", "branch": "Songshan" } }
+#
+# template: moonMusic（漫霧與音樂之約，全自動）｜venueClosure（包場公告，需另外帶 title/content）
+# venueClosure 需要在 client_payload 額外帶 title、content（標題與內文，內文可以是 HTML）
+#
+# 注意：所有 client_payload 欄位一律經由 env 傳遞給下面的指令，不要直接內插進
+# run: 的 shell 字串裡——client_payload 內容可能來自外部系統的自由輸入欄位，
+# 直接內插到 shell 字串會有 command injection 風險。
+on:
+  repository_dispatch:
+    types: [add-article]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: add-article-publish
+  cancel-in-progress: false
+
+jobs:
+  add-article-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure git identity
+        run: |
+          git config user.name "galaxyhouse-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+      - name: Add article from template
+        env:
+          TEMPLATE: ${{ github.event.client_payload.template }}
+          EVENT_DATE: ${{ github.event.client_payload.date }}
+          BRANCH: ${{ github.event.client_payload.branch }}
+          ARTICLE_TITLE: ${{ github.event.client_payload.title }}
+          ARTICLE_CONTENT: ${{ github.event.client_payload.content }}
+        run: |
+          node scripts/add-article-from-template.js \
+            --template="$TEMPLATE" \
+            --date="$EVENT_DATE" \
+            --branch="$BRANCH"
+
+      - name: Build and deploy
+        env:
+          TEMPLATE: ${{ github.event.client_payload.template }}
+          EVENT_DATE: ${{ github.event.client_payload.date }}
+        run: node scripts/publish.js "自動發布：$TEMPLATE $EVENT_DATE"

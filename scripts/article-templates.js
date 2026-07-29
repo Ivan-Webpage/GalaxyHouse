@@ -77,7 +77,11 @@ const VENUE_CLOSURE = {
   label: '包場公告（公告）',
   newTypeEnglishName: 'announcement',
   imageRelPath: 'images/uploads/articles/過年店休公告1.jpg',
-  // 內容每次差異較大（包場原因、日期都不同），不套版，只固定分類與封面圖。
+  // 內容每次差異較大（包場原因、日期都不同），標題/內文不套版，要另外提供；
+  // 簡短介紹（SEO description）則用標題自動產生，減少每次都要重打一次的欄位。
+  buildDescription(title) {
+    return `Galaxy House 銀河會所松山店公告：${title}，造成不便敬請見諒，詳情請洽詢我們的官方 Line@ 或粉絲專頁。`;
+  },
 };
 
 const TEMPLATES = [MOON_MUSIC, VENUE_CLOSURE];
