@@ -508,5 +508,22 @@
     "expiration_date": "2026-09-11",
     "create_date": "2026-07-30",
     "create_time": "2026-07-30 07:07:44.053"
+  },
+  {
+    "id": 31,
+    "title": "卡牌聚會",
+    "image": "images/uploads/articles/過年店休公告1.jpg",
+    "description": "Galaxy House 銀河會所松山店公告：卡牌聚會，造成不便敬請見諒，詳情請洽詢我們的官方 Line@ 或粉絲專頁。",
+    "content": "2026/08/29 全場包場，13:00~18:00，若造成不便請見諒",
+    "newTypeId": 1,
+    "newTypeTitle": "公告",
+    "newTypeColor": "#3fe73b",
+    "newTypeEnglishName": "announcement",
+    "branchShopId": 1,
+    "branchShopEnglishName": "Songshan",
+    "state": 1,
+    "expiration_date": "2026-08-29",
+    "create_date": "2026-07-30",
+    "create_time": "2026-07-30 07:15:39.671"
   }
 ]
