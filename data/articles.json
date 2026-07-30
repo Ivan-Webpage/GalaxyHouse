@@ -491,5 +491,22 @@
     "expiration_date": "2026-08-14",
     "create_date": "2026-07-28",
     "create_time": "2026-07-28 12:26:36.474"
+  },
+  {
+    "id": 30,
+    "title": "9/11漫霧與音樂之約",
+    "image": "images/uploads/articles/漫霧與音樂之約_5.jpg",
+    "description": "Galaxy House 銀河會所松山店 9/11 晚間8點舉辦「漫霧與音樂之約」雪茄音樂分享會，限量15位，850元享雪茄一支＋白酒一杯，在音樂與雪茄煙霧交織的私密夜晚中，展開一場屬於台北的高端社交體驗。",
+    "content": "<ul>\n\t<li>\n\t<p>日期：2026/9/11</p>\n\t</li>\n\t<li>\n\t<p>時間：晚上8-9點</p>\n\t</li>\n\t<li>\n\t<p>費用：850元/人</p>\n\t</li>\n\t<li>\n\t<p>享用：精選任選1隻+白酒1杯</p>\n\t</li>\n\t<li>\n\t<p>人數：上限15位</p>\n\t</li>\n\t<li>\n\t<p>地點：台北市松山區南京東路5段66巷12弄3號 (南京三民站2號出口)</p>\n\t</li>\n</ul>\n\n<hr />\n<h2>注意事項：</h2>\n\n<ul>\n\t<li>因名額有限，因此已報名付款為主</li>\n\t<li>未到退款一半金額</li>\n</ul>\n\n<hr />\n<h2>報名方式：</h2>\n\n<ol>\n\t<li>\n\t<p>Line@報名：加入我們的Line@詢問報名，ID:「<a href=\"https://line.me/ti/p/@392kgxba\">@392kgxba</a>」，確認尚有名額後方可報名。</p>\n\t</li>\n\t<li>\n\t<p>選擇付款方式：可選擇以下3種付款方式</p>\n\n\t<ol>\n\t\t<li>銀行轉帳</li>\n\t\t<li>Line Pay</li>\n\t\t<li>街口</li>\n\t</ol>\n\t</li>\n</ol>",
+    "newTypeId": 2,
+    "newTypeTitle": "最新活動",
+    "newTypeColor": "#e73b3f",
+    "newTypeEnglishName": "newActivity",
+    "branchShopId": 1,
+    "branchShopEnglishName": "Songshan",
+    "state": 1,
+    "expiration_date": "2026-09-11",
+    "create_date": "2026-07-30",
+    "create_time": "2026-07-30 07:07:44.053"
   }
 ]
