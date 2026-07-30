@@ -3,8 +3,8 @@
 // 用法：
 //   漫霧與音樂之約（全自動，不需要標題/內文）：
 //     node scripts/add-article-from-template.js --template=moonMusic --date=2026-08-14 --branch=Songshan
-//   包場公告（標題/內文每次不同，用文字直接帶不透過 argv，避免特殊字元被 shell 吃掉）：
-//     ARTICLE_TITLE="9月包場公告" ARTICLE_CONTENT="9月15日、9月22日包場" \
+//   包場公告（標題固定為「X年X月包場公告」自動產生；內文每次不同，用文字直接帶不透過 argv，避免特殊字元被 shell 吃掉）：
+//     ARTICLE_CONTENT="9月15日、9月22日包場" \
 //       node scripts/add-article-from-template.js --template=venueClosure --date=2026-09-30 --branch=Songshan
 'use strict';
 
@@ -49,12 +49,12 @@ function main() {
       branchShopEnglishName,
     };
   } else {
-    // 標題/內文每次不同的套版（包場公告）：從環境變數帶入，簡短介紹自動產生。
-    const title = (process.env.ARTICLE_TITLE || '').trim();
+    // 內文每次不同的套版（包場公告）：從環境變數帶入；標題固定格式「X年X月包場公告」、簡短介紹都自動產生。
     const content = (process.env.ARTICLE_CONTENT || '').trim();
-    if (!title || !content) {
-      throw new Error('套版「' + template.label + '」需要 ARTICLE_TITLE 與 ARTICLE_CONTENT 環境變數。');
+    if (!content) {
+      throw new Error('套版「' + template.label + '」需要 ARTICLE_CONTENT 環境變數。');
     }
+    const title = template.buildTitle(dateStr);
     draft = {
       title,
       description: template.buildDescription(title),

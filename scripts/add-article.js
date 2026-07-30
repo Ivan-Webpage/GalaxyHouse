@@ -117,16 +117,24 @@ async function buildFromMoonMusicTemplate(rl, template, branchShops, branchNames
 
 async function buildFromVenueClosureTemplate(rl, template, branchShops, branchNames) {
   const branchShopEnglishName = await askBranchShop(rl, branchShops, branchNames);
-  const title = (await rl.question('\n標題：')).trim();
-  if (!title) {
-    console.log('標題不可空白，已取消。');
-    return null;
-  }
-  const description = (await rl.question('\n簡短介紹（會用在列表卡片與社群分享預覽，建議 100 字內）：')).trim();
-  const expirationDate = await askEventDate(rl, '\n公告截止日期（YYYY-MM-DD，長期公告可留空直接按 Enter）：', false);
+  const dateStr = await askEventDate(rl, '\n包場日期（YYYY-MM-DD，例如 2026-08-29，用來產生標題與截止日期）：', true);
+  const title = template.buildTitle(dateStr);
+  const description = template.buildDescription(title);
+
   const content = await askContent(rl);
   if (!content) {
     console.log('內文不可空白，已取消。');
+    return null;
+  }
+
+  console.log('\n已自動產生以下內容：');
+  console.log(`  標題：${title}`);
+  console.log(`  簡短介紹：${description}`);
+  console.log(`  截止日期：${dateStr}`);
+  console.log(`  封面圖片：${template.imageRelPath}（沿用既有檔案，不會複製新檔）`);
+
+  const confirm = (await rl.question('\n確認送出？(Y/n)：')).trim().toLowerCase();
+  if (confirm === 'n' || confirm === 'no') {
     return null;
   }
 
@@ -134,7 +142,7 @@ async function buildFromVenueClosureTemplate(rl, template, branchShops, branchNa
     title,
     description,
     content,
-    expirationDate,
+    expirationDate: dateStr,
     imageRelPath: template.imageRelPath,
     newTypeEnglishName: template.newTypeEnglishName,
     branchShopEnglishName,
