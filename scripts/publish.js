@@ -68,34 +68,70 @@ function preparePagesOutput() {
   console.log(`已寫入自訂網域 CNAME：${DOMAIN}`);
 }
 
-function deployGhPages() {
+/**
+ * 把本機的 gh-pages 分支強制對齊 origin/gh-pages。
+ * 單純 `git fetch` 不會更新本機分支指標，只會更新 FETCH_HEAD／origin/gh-pages
+ * 這個 remote-tracking ref——如果本機 gh-pages 分支是舊的（例如財務系統的自動化
+ * 流程已經在別處推過新版），worktree checkout 出來的內容會是舊的，之後 push
+ * 一定會被拒絕（non-fast-forward）。
+ */
+function syncLocalGhPagesBranch() {
   run('git fetch origin gh-pages');
-
-  if (fs.existsSync(WORKTREE_DIR)) {
-    run(`git worktree remove "${WORKTREE_DIR}" --force`);
-  }
-  run(`git worktree add "${WORKTREE_DIR}" gh-pages`);
-
+  let hasLocalBranch = true;
   try {
-    // 清空舊檔（保留 .git）
-    for (const entry of fs.readdirSync(WORKTREE_DIR)) {
-      if (entry === '.git') continue;
-      fs.rmSync(path.join(WORKTREE_DIR, entry), { recursive: true, force: true });
+    runCapture('git rev-parse --verify gh-pages');
+  } catch {
+    hasLocalBranch = false;
+  }
+  run(`git branch ${hasLocalBranch ? '-f ' : ''}gh-pages origin/gh-pages`);
+}
+
+/**
+ * 這個專案現在有「人手動跑 npm run publish」跟「財務系統觸發 GitHub Actions」
+ * 兩種來源都會 push gh-pages，彼此之間有競爭關係：即使每次都先 fetch 對齊，
+ * fetch 完到真正 push 之間，還是可能有另一個流程搶先 push 成功。
+ * 所以用重試機制處理 non-fast-forward，而不是假設只有自己在推。
+ */
+function deployGhPages() {
+  const maxAttempts = 3;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    syncLocalGhPagesBranch();
+
+    if (fs.existsSync(WORKTREE_DIR)) {
+      run(`git worktree remove "${WORKTREE_DIR}" --force`);
     }
+    run(`git worktree add "${WORKTREE_DIR}" gh-pages`);
 
-    // 複製新的 build 產物進去
-    fs.cpSync(DIST_BROWSER, WORKTREE_DIR, { recursive: true });
+    try {
+      // 清空舊檔（保留 .git）
+      for (const entry of fs.readdirSync(WORKTREE_DIR)) {
+        if (entry === '.git') continue;
+        fs.rmSync(path.join(WORKTREE_DIR, entry), { recursive: true, force: true });
+      }
 
-    run('git add -A', { cwd: WORKTREE_DIR });
-    const status = runCapture('git status --porcelain', { cwd: WORKTREE_DIR });
-    if (status) {
+      // 複製新的 build 產物進去
+      fs.cpSync(DIST_BROWSER, WORKTREE_DIR, { recursive: true });
+
+      run('git add -A', { cwd: WORKTREE_DIR });
+      const status = runCapture('git status --porcelain', { cwd: WORKTREE_DIR });
+      if (!status) {
+        console.log('gh-pages 內容沒有變化，略過 push。');
+        return;
+      }
+
       run(`git commit -m "Deploy ${new Date().toISOString()}"`, { cwd: WORKTREE_DIR });
-      run('git push origin gh-pages', { cwd: WORKTREE_DIR });
-    } else {
-      console.log('gh-pages 內容沒有變化，略過 push。');
+
+      try {
+        run('git push origin gh-pages', { cwd: WORKTREE_DIR });
+        return;
+      } catch (err) {
+        if (attempt === maxAttempts) throw err;
+        console.log(`\ngh-pages push 被拒絕（可能有其他流程同時在部署），重新同步後再試一次（第 ${attempt + 1}/${maxAttempts} 次）...\n`);
+      }
+    } finally {
+      run(`git worktree remove "${WORKTREE_DIR}" --force`);
     }
-  } finally {
-    run(`git worktree remove "${WORKTREE_DIR}" --force`);
   }
 }
 
