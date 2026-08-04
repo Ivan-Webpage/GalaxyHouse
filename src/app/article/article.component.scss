@@ -166,6 +166,33 @@ span, .text-content>h1 {
   justify-content: center;
 }
 
+// 文章分類／日期／報名按鈕這一列，緊接在 hero 圖片下方、文章內文上方（一般文件流，不脫離排版）
+.meta-row {
+  align-items: center;
+  justify-content: center;
+  gap: 12px 20px;
+  color: #fff;
+
+  .newType,
+  .create_date {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .sign-up-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meta-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 :host ::ng-deep .article-content {
   max-width: 680px;
   margin: 0 auto;

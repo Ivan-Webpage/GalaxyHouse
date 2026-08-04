@@ -9,12 +9,12 @@
         }
     </div>
     @if(articleData) {
-    <div class="row text-content">
-        <span class="col-4 newType">{{articleData.newType}}</span>
+    <div class="row meta-row">
+        <span class="newType">{{articleData.newType}}</span>
         @if(articleData.newType=='最新活動'){
-            <span class="col-4 create_date">活動時間：{{articleData.expiration_date}}</span>
+            <span class="create_date">活動時間：{{articleData.expiration_date}}</span>
         }@else{
-            <span class="col-4 create_date">文章日期：{{articleData.create_date}}</span>
+            <span class="create_date">文章日期：{{articleData.create_date}}</span>
         }
         @if(articleData.newType=='最新活動'){
         <a class="sign-up-button" href="https://line.me/ti/p/@392kgxba">
