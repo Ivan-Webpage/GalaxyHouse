@@ -329,6 +329,252 @@
             "price": 500
           }
         ]
+      },
+      {
+        "title": "啤酒",
+        "image": "images/uploads/Line@/1715085745108.jpg",
+        "subMenu": [
+          {
+            "subTitle": "百威（杯）",
+            "price": 100
+          },
+          {
+            "subTitle": "百威（箱）",
+            "price": 1920
+          },
+          {
+            "subTitle": "海尼根（杯）",
+            "price": 120
+          },
+          {
+            "subTitle": "海尼根（箱）",
+            "price": 2300
+          }
+        ]
+      },
+      {
+        "title": "威士忌",
+        "image": "images/uploads/Line@/2025-04-18雪茄之夜-262.jpg",
+        "subMenu": [
+          {
+            "subTitle": "格蘭多納12年（單一麥芽）（杯）",
+            "price": 350
+          },
+          {
+            "subTitle": "格蘭多納12年（單一麥芽）（瓶）",
+            "price": 3200
+          },
+          {
+            "subTitle": "亞伯樂12年（單一麥芽）（杯）",
+            "price": 350
+          },
+          {
+            "subTitle": "亞伯樂12年（單一麥芽）（瓶）",
+            "price": 3200
+          },
+          {
+            "subTitle": "費特肯12年（單一麥芽）（杯）",
+            "price": 350
+          },
+          {
+            "subTitle": "費特肯12年（單一麥芽）（瓶）",
+            "price": 3300
+          },
+          {
+            "subTitle": "格蘭菲迪12年（單一麥芽）（杯）",
+            "price": 350
+          },
+          {
+            "subTitle": "格蘭菲迪12年（單一麥芽）（瓶）",
+            "price": 3500
+          },
+          {
+            "subTitle": "百富12年（單一麥芽）（杯）",
+            "price": 400
+          },
+          {
+            "subTitle": "百富12年（單一麥芽）（瓶）",
+            "price": 3800
+          },
+          {
+            "subTitle": "百富14年（單一麥芽）（杯）",
+            "price": 450
+          },
+          {
+            "subTitle": "百富14年（單一麥芽）（瓶）",
+            "price": 4200
+          },
+          {
+            "subTitle": "慕赫12年（單一麥芽）（杯）",
+            "price": 400
+          },
+          {
+            "subTitle": "慕赫12年（單一麥芽）（瓶）",
+            "price": 3800
+          },
+          {
+            "subTitle": "慕赫16年（單一麥芽）（杯）",
+            "price": 450
+          },
+          {
+            "subTitle": "慕赫16年（單一麥芽）（瓶）",
+            "price": 4900
+          },
+          {
+            "subTitle": "大摩12年（單一麥芽）（杯）",
+            "price": 400
+          },
+          {
+            "subTitle": "大摩12年（單一麥芽）（瓶）",
+            "price": 3900
+          },
+          {
+            "subTitle": "大摩15年（單一麥芽）（杯）",
+            "price": 500
+          },
+          {
+            "subTitle": "大摩15年（單一麥芽）（瓶）",
+            "price": 5100
+          },
+          {
+            "subTitle": "大摩18年（單一麥芽）（杯）",
+            "price": 1500
+          },
+          {
+            "subTitle": "大摩18年（單一麥芽）（瓶）",
+            "price": 13000
+          },
+          {
+            "subTitle": "麥卡倫12年（單一麥芽）（杯）",
+            "price": 400
+          },
+          {
+            "subTitle": "麥卡倫12年（單一麥芽）（瓶）",
+            "price": 4200
+          },
+          {
+            "subTitle": "新響（單一麥芽）（杯）",
+            "price": 450
+          },
+          {
+            "subTitle": "新響（單一麥芽）（瓶）",
+            "price": 4900
+          },
+          {
+            "subTitle": "皇家太魯閣（煙燻泥煤）（杯）",
+            "price": 300
+          },
+          {
+            "subTitle": "皇家太魯閣（煙燻泥煤）（瓶）",
+            "price": 3300
+          },
+          {
+            "subTitle": "雅柏10年（煙燻泥煤）（杯）",
+            "price": 400
+          },
+          {
+            "subTitle": "雅柏10年（煙燻泥煤）（瓶）",
+            "price": 3900
+          },
+          {
+            "subTitle": "拉佛格10年（煙燻泥煤）（杯）",
+            "price": 350
+          },
+          {
+            "subTitle": "拉佛格10年（煙燻泥煤）（瓶）",
+            "price": 3300
+          },
+          {
+            "subTitle": "約翰走路 XR21年（調和）（杯）",
+            "price": 450
+          },
+          {
+            "subTitle": "約翰走路 XR21年（調和）（瓶）",
+            "price": 4900
+          },
+          {
+            "subTitle": "皇家禮炮（調和）（杯）",
+            "price": 450
+          },
+          {
+            "subTitle": "皇家禮炮（調和）（瓶）",
+            "price": 4900
+          },
+          {
+            "subTitle": "百齡潭30年（調和）（杯）",
+            "price": 1500
+          },
+          {
+            "subTitle": "百齡潭30年（調和）（瓶）",
+            "price": 14000
+          }
+        ]
+      },
+      {
+        "title": "氣泡酒",
+        "image": "images/uploads/Line@/S__38502418_0.jpg",
+        "subMenu": [
+          {
+            "subTitle": "Sussurro d’Amore 告白蜜思嘉（西班牙）",
+            "price": 1100
+          },
+          {
+            "subTitle": "Louis Eschenauer 24K Carat Gold Muscat Sparkling（法國）",
+            "price": 1600
+          },
+          {
+            "subTitle": "Joly de Trébuis Réserve Brut Champagne（法國香檳區）",
+            "price": 2800
+          },
+          {
+            "subTitle": "Moet & Chandon（法國香檳區）",
+            "price": 3500
+          }
+        ]
+      },
+      {
+        "title": "白酒",
+        "image": "images/uploads/Line@/S__38494227_0.jpg",
+        "subMenu": [
+          {
+            "subTitle": "Santero Dile Moscato sweet 天使之手（義大利）",
+            "price": 1100
+          },
+          {
+            "subTitle": "Primo Amore Moscato Delle Venezie IGT 初戀（義大利）",
+            "price": 1100
+          },
+          {
+            "subTitle": "Adobe Sauvignon White 2021（智利）",
+            "price": 1600
+          }
+        ]
+      },
+      {
+        "title": "紅酒",
+        "image": "images/uploads/Line@/S__38502414_0.jpg",
+        "subMenu": [
+          {
+            "subTitle": "Dark Horse Cabernet Sauvignon（美國）",
+            "price": 1450
+          },
+          {
+            "subTitle": "McManis Cab. Sau 2022（美國）",
+            "price": 1450
+          },
+          {
+            "subTitle": "Domaine Viticole de la Ville de Colmar Signature de Colmar Pinot Noir（法國）",
+            "price": 1600
+          },
+          {
+            "subTitle": "Botter Cuvee 16 Limited Edition Rosso Vino 16樂章（義大利）",
+            "price": 2200
+          },
+          {
+            "subTitle": "Saint-Estephe Calon Segur 卡隆賽古堡三軍 2015（法國）",
+            "price": 3500
+          }
+        ]
       }
     ],
     "gallery": [
