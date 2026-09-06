@@ -61,8 +61,18 @@ npm run publish
 
 只要有改到 `public/` 或 `src/` 底下的任何內容，跑一次 `npm run publish` 就會把新版本部署上去。
 
+### 新增菜單分類（例如酒水）的做法
+
+`public/data/branch-shops.json` 裡每張菜單卡片是一個 `menuType` 分組（品名/價格/圖片）。沒有互動式工具，直接手動編輯 JSON，流程可參考酒水菜單那次的做法：
+
+- 卡片圖片盡量沿用該分類原本就有、已存在 `public/images/uploads/` 底下的照片，不確定圖片來源時先跟使用者確認，不要隨意新增檔案。
+- 品項來源如果是 LINE 選單的 flex message JSON（例如 `github.com/Ivan-Webpage/share_card` 這個 repo 底下 `json/GalaxyHouse-<類別>-酒類飲品.json`，是使用者用於 LINE 官方帳號選單的資料），**格式跟網站卡片格式不是一對一對得起來**（分組方式、每行呈現方式不同），動手改資料前務必跟使用者確認呈現方式（例如威士忌原始選單品項太多，後來拆成「單一麥芽／煙燻泥煤／調和」三張卡片）。
+- 改完先用 `ng serve` 本機開發伺服器實際看過該分店頁面（`/branchShop/:id`），確認新卡片的圖片有載入（沒有 404）、六邊形折角角度跟其他卡片一致（見上方[前端結構文件](frontend-structure.md)的「分店菜單卡片」章節），再發佈。
+
 ## 注意事項
 
 - `npm run publish` 會直接 push 到 GitHub 的 `main` 與 `gh-pages` 分支，這兩個分支都是「正式」分支，push 之後會立即反映在對外網站上——執行前確認自己真的要發佈。
 - 第一次執行 `npm run article:add` 或 `npm run publish` 前，這台電腦要先能用 git 存取 `https://github.com/Ivan-Webpage/GalaxyHouse.git`（例如已經登入過 GitHub CLI 或設定好認證），否則 push 那一步會失敗。
+- `scripts/publish.js` 寫死 push 到本地分支 `main`（[scripts/publish.js:52](../scripts/publish.js)）。如果在新環境（例如換電腦、重新 clone）跑 `npm run publish` 時卡在 push 這步，先確認本地分支叫 `main` 而不是 `master`（`git branch` 檢查；不對的話 `git branch -m master main`）——GitHub 遠端上的預設分支是 `main`，沒有 `master`。同樣道理，第一次在新環境跑之前也要記得先 `npm install`（`node_modules` 不會進 git，沒裝過的話 `ng build` 會直接失敗）。
+- **`public/images/uploads/` 底下不要放帶有隱藏 `.git` 的資料夾**（例如直接複製一個曾經 `git init`/clone 過的資料夾進來）。之前 `Line@` 資料夾就因為裡面藏了一個 `.git`，被 git 當成「內嵌 git repository」（gitlink）而不是一般檔案，導致裡面十幾張照片實際內容從沒真的進到 git 歷史、部署到 `gh-pages` 後圖片是打不開的（已修正，見 commit `8276651`）。加新圖片資料夾前，可以簡單檢查一下裡面有沒有 `.git`（`ls -la` 或 Windows 顯示隱藏檔案），有的話先刪掉再放進 `uploads/`。
 - 財務系統觸發的自動化需要：這個 repo 的預設分支是 `main`（GitHub 只會讀取預設分支上的 workflow 檔案來決定要不要監聽 `repository_dispatch`）、財務後端服務有設定 `GALAXYHOUSE_SYNC_ENABLED=true` 與 `GALAXYHOUSE_DISPATCH_TOKEN`（GitHub classic PAT，`repo` 權限），且改動環境變數後記得重新部署/重啟服務讓它生效。

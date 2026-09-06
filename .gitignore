@@ -44,3 +44,7 @@ Thumbs.db
 # 舊 Django 後端（重構後不再由前端 repo 追蹤，留在硬碟上當歷史備份）
 /backEnd20251210
 
+# 暫存影片檔案（給 Threads 影片發布用的公開網址暫存，發布確認成功後會刪除本機檔案，
+# 不進 main 分支版控歷史；見 galaxy_house_ai_crew 專案的 marketing-video-publisher skill）
+/public/videos-temp
+

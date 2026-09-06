@@ -21,6 +21,10 @@ Angular workspace 有兩個 project（見 `angular.json`）：`galaxyhouseWeb`�
 
 `BuffetComponent` 與 `CateringComponent` 完全是靜態內容，沒有資料依賴。
 
+### 分店菜單卡片（六邊形版型）
+
+`BranchShopComponent`（[src/app/branch-shop/branch-shop.component.html](../src/app/branch-shop/branch-shop.component.html)）的每張菜單卡片圖片區塊用 `class="img-box"`，靠 [branch-shop.component.scss](../src/app/branch-shop/branch-shop.component.scss) 的 `.img-box { overflow: hidden; height: ... }` 把圖片裁成固定高度，卡片本身的六邊形折角是用 `clip-path: polygon(0% 5%, 50% 0%, 100% 5%, 100% 95%, 50% 100%, 0% 95%)`（[branch-shop.component.scss:144](../src/app/branch-shop/branch-shop.component.scss)）——折角角度是「卡片總高度的 5%」，所以**卡片高度必須固定、一致**，折角看起來才會整齊。之前發生過 `img-box` 的 `class` 屬性被誤打成 `clase`，導致這個固定高度沒套用、圖片區塊改用原圖比例撐開，酒單卡片（威士忌 26 行、直式酒瓶照）跟食物卡片比例差異大時，六邊形折角就會參差不齊（已修正，見 commit `e7fde0a`）。之後新增/調整菜單分類卡片時，若發現折角角度跑掉，先檢查是不是圖片區塊的固定高度沒有被套用。
+
 ## `projects/lib` — 共用套件（import 時寫 `from 'lib'`）
 
 ```
