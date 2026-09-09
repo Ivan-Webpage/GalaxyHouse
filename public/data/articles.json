@@ -542,5 +542,22 @@
     "expiration_date": "2026-09-30",
     "create_date": "2026-09-06",
     "create_time": "2026-09-06 11:34:28.748"
+  },
+  {
+    "id": 33,
+    "title": "中秋連假公休公告",
+    "image": "images/uploads/articles/中秋連假公休公告.png",
+    "description": "Galaxy House 銀河會所 松山店：9/27(日)~9/28(一)中秋連假公休，造成不便敬請見諒。",
+    "content": "<h1>松山店中秋連假公休公告</h1>\r\n\r\n<p>松山店將於 9/27（日）～9/28（一）中秋連假期間公休，暫停營業。</p>\r\n\r\n<p>造成您的不便，敬請見諒，連假後我們將以最好的狀態，繼續與您分享星空下的美好時光。</p>",
+    "newTypeId": 1,
+    "newTypeTitle": "公告",
+    "newTypeColor": "#3fe73b",
+    "newTypeEnglishName": "announcement",
+    "branchShopId": 1,
+    "branchShopEnglishName": "Songshan",
+    "state": 1,
+    "expiration_date": "2026-09-28",
+    "create_date": "2026-09-09",
+    "create_time": "2026-09-09 17:19:32.000000"
   }
 ]
