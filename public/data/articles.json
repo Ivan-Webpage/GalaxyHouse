@@ -559,5 +559,22 @@
     "expiration_date": "2026-09-28",
     "create_date": "2026-09-09",
     "create_time": "2026-09-09 17:19:32.000000"
+  },
+  {
+    "id": 34,
+    "title": "週年慶公休公告",
+    "image": "images/uploads/articles/週年慶公休公告.png",
+    "description": "Galaxy House 銀河會所 松山店：12/5(六)~12/6(日)週年慶活動公休，造成不便敬請見諒。",
+    "content": "<h1>松山店週年慶公休公告</h1>\r\n\r\n<p>松山店將於 12/5（六）～12/6（日）舉辦年度週年慶活動（活動於外地舉行），店內公休兩天，12/6（日）為場復整理。</p>\r\n\r\n<p>造成您的不便，敬請見諒，週年慶後我們將以最好的狀態，繼續與您分享星空下的美好時光。</p>",
+    "newTypeId": 1,
+    "newTypeTitle": "公告",
+    "newTypeColor": "#3fe73b",
+    "newTypeEnglishName": "announcement",
+    "branchShopId": 1,
+    "branchShopEnglishName": "Songshan",
+    "state": 1,
+    "expiration_date": "2026-12-06",
+    "create_date": "2026-09-16",
+    "create_time": "2026-09-16 16:15:21.000000"
   }
 ]
