@@ -2,4 +2,9 @@
   <div class="calendar-wrapper">
     <full-calendar [options]="calendarOptions"></full-calendar>
   </div>
+  @if (tooltipText) {
+  <div class="event-tooltip" [style.left.px]="tooltipPosition.x" [style.top.px]="tooltipPosition.y">
+    {{ tooltipText }}
+  </div>
+  }
 }
