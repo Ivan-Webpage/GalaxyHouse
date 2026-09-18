@@ -80,4 +80,4 @@ jobs:
         env:
           RES_ACTION: ${{ github.event.client_payload.action }}
           RES_SOURCE_EVENT_ID: ${{ github.event.client_payload.sourceEventId }}
-        run: node scripts/publish.js "自動同步預定項目：$RES_ACTION #$RES_SOURCE_EVENT_ID"
+        run: node scripts/publish.js "自動同步預定項目：$RES_ACTION id=$RES_SOURCE_EVENT_ID"
