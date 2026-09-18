@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ViewContainerRef, ComponentRef, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import {
   ContentService,
   BranchData,
+  ReservationBlock,
   TriangleSlideshowComponent,
   FloatingBlockComponent,
   AnimationIntoDirective,
@@ -42,6 +43,11 @@ export class BranchShopComponent implements OnInit, OnDestroy {
   branchData: (Omit<BranchData, 'shop'> & { shop: Omit<BranchData['shop'], 'googleMapUrl'> & { googleMapUrl: string | SafeResourceUrl } }) | null = null;
   loading: boolean = true;
   isBrowser: boolean;
+  reservations: ReservationBlock[] = [];
+  @ViewChild('reservationHost', { read: ViewContainerRef, static: false }) reservationHost?: ViewContainerRef;
+  private reservationComponentRef?: ComponentRef<any>;
+  private reservationCalendarLoaded: boolean = false;
+  private reservationCalendarLoading: boolean = false;
 
   slides: Images[] = [
     { image: 'images/16比9/在台北市中心有露營的體驗16_9.jpg', title: '台北市中心有露營的體驗', description: 'Galaxy House 銀河會所 台北市中心露營體驗，高端都會休閒氛圍' },
@@ -56,6 +62,7 @@ export class BranchShopComponent implements OnInit, OnDestroy {
     private content: ContentService,
     private meta: MakeMetaService,
     private destroy$: DestroyService,
+    private cdr: ChangeDetectorRef,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
@@ -93,6 +100,10 @@ export class BranchShopComponent implements OnInit, OnDestroy {
         this.loading = false;
         if (this.isBrowser) {
           this.reloadOnNextNavigation();
+          // 手動跑一次 CD，讓 @if (branchData) 區塊裡的 reservationHost 容器先掛上去，
+          // ViewChild 才會有值（否則這個 subscribe callback 執行時 view 還沒更新）。
+          this.cdr.detectChanges();
+          this.renderReservationCalendar();
         }
       },
       error: (err) => {
@@ -100,10 +111,61 @@ export class BranchShopComponent implements OnInit, OnDestroy {
         this.loading = false;
       }
     });
+
+    this.content.getReservations(shopId).pipe(
+      takeUntil(this.destroy$)
+    ).subscribe({
+      next: (reservations) => {
+        this.reservations = reservations;
+        if (this.isBrowser) {
+          this.renderReservationCalendar();
+        }
+      },
+      error: (err) => console.error('Error fetching reservation data', err)
+    });
+  }
+
+  // branchData 與 reservations 是兩個獨立的非同步請求，哪個先回來就先嘗試 render 一次：
+  // 已建立過元件就只更新 input，容器（在 @if (branchData) 區塊內）還沒存在就等下一次資料到達再試。
+  private renderReservationCalendar(): void {
+    if (!this.isBrowser) return;
+    if (this.reservationComponentRef) {
+      this.reservationComponentRef.setInput('reservations', this.reservations);
+      return;
+    }
+    this.loadReservationCalendar();
+  }
+
+  private async loadReservationCalendar(): Promise<void> {
+    if (!this.reservationHost || this.reservationCalendarLoaded || this.reservationCalendarLoading) return;
+    this.reservationCalendarLoading = true;
+    try {
+      const m = await import('lib');
+      const ReservationCalendarComponent = (m as any).ReservationCalendarComponent;
+      if (!ReservationCalendarComponent) return;
+      this.reservationComponentRef = this.reservationHost.createComponent(ReservationCalendarComponent as any);
+      this.reservationComponentRef.setInput('reservations', this.reservations);
+      this.reservationCalendarLoaded = true;
+      this.cdr.detectChanges();
+    } catch (err) {
+      console.error('Failed to load ReservationCalendarComponent dynamically', err);
+    } finally {
+      this.reservationCalendarLoading = false;
+    }
   }
 
   ngOnDestroy(): void {
     // DestroyService 會自動清理訂閱
+    if (this.reservationComponentRef) {
+      try { this.reservationComponentRef.destroy(); } catch {}
+    }
+  }
+
+  /** 點擊後開啟與官方 LINE@ 的對話，並帶入預設訂位文字讓客戶直接送出 */
+  get lineReservationUrl(): string {
+    const lineId = this.branchData?.shop?.lineID;
+    if (!lineId) return '';
+    return `https://line.me/R/oaMessage/${lineId}/?${encodeURIComponent('您好，我想預約訂位')}`;
   }
 
   // 換頁刷新（沿用原 ApiService.reload 的行為）

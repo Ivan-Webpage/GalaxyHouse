@@ -61,6 +61,17 @@ export interface BranchData {
   gallery: Images[];
 }
 
+/** 分店某一天已被訂走的時段，之後預計由 gh_finance 的活動管理資料同步過來 */
+export interface ReservationBlock {
+  /** YYYY-MM-DD */
+  date: string;
+  /** HH:mm */
+  startTime: string;
+  /** HH:mm */
+  endTime: string;
+  note?: string;
+}
+
 export interface ApplyData {
   title: string;
   branchShop_title: string;

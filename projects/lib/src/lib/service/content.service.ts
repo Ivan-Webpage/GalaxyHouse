@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 import { Article, ArticleSimple } from '../interface/article';
-import { ArticleRecord, BranchData, ApplyGroup } from '../interface/content';
+import { ArticleRecord, BranchData, ApplyGroup, ReservationBlock } from '../interface/content';
 
 const HOME_ARTICLE_LIMIT = 9;
 
@@ -19,6 +19,7 @@ export class ContentService {
   private articles$?: Observable<ArticleRecord[]>;
   private branchShops$?: Observable<Record<string, BranchData>>;
   private applyGroups$?: Observable<ApplyGroup[]>;
+  private reservations$?: Observable<Record<string, ReservationBlock[]>>;
 
   constructor(private http: HttpClient) {}
 
@@ -41,6 +42,13 @@ export class ContentService {
       this.applyGroups$ = this.http.get<ApplyGroup[]>('data/apply.json').pipe(shareReplay(1));
     }
     return this.applyGroups$;
+  }
+
+  private loadReservations(): Observable<Record<string, ReservationBlock[]>> {
+    if (!this.reservations$) {
+      this.reservations$ = this.http.get<Record<string, ReservationBlock[]>>('data/reservations.json').pipe(shareReplay(1));
+    }
+    return this.reservations$;
   }
 
   /** 對照原本 articleViewSet.get_queryset：state>0 且未過期（或無到期日） */
@@ -132,5 +140,10 @@ export class ContentService {
   /** 對照 GET apply/shopClassification/ */
   getApplyClassification(): Observable<ApplyGroup[]> {
     return this.loadApply();
+  }
+
+  /** 分店訂位資訊（已被訂走的時段），未來預計由 gh_finance 的活動管理資料同步過來 */
+  getReservations(branchShopEnglishName: string): Observable<ReservationBlock[]> {
+    return this.loadReservations().pipe(map((all) => all[branchShopEnglishName] ?? []));
   }
 }

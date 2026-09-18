@@ -26,6 +26,7 @@ export * from './lib/component/collapsible/collapsible.component'
 export * from './lib/component/card/card.component'
 export * from './lib/component/slideshow/slideshow.component'
 export * from './lib/component/calendar/calendar.component'
+export * from './lib/component/reservation-calendar/reservation-calendar.component'
 export * from './lib/component/loading/loading.component'
 
 // Interface

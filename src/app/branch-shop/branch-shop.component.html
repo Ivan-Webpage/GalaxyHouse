@@ -105,5 +105,20 @@
     </div>
 </div>
 
+<div class="container back-black-ten">
+    <div class="row title-box">
+        <h1 class="text-yellow title">訂位資訊</h1>
+    </div>
+    @if (lineReservationUrl) {
+    <div class="row" style="justify-content: center; padding-bottom: 20px;">
+        <a [href]="lineReservationUrl" target="_blank" rel="noopener" libAnimationInto
+            class="highlineButton back-yellow-ten text-black">我要訂位</a>
+    </div>
+    }
+    <div class="row" style="padding: 0 20px 60px 20px; justify-content: center;">
+        <ng-container #reservationHost></ng-container>
+    </div>
+</div>
+
 <lib-floating-block [imageData]="branchData.gallery" [backgroundColer]="'rgb(140, 79, 40)'"></lib-floating-block>
 }
