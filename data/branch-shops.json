@@ -333,162 +333,111 @@
       {
         "title": "啤酒",
         "image": "images/uploads/Line@/1715085745108.jpg",
+        "unitLabel": "杯 / 箱",
         "subMenu": [
           {
-            "subTitle": "百威（杯）",
-            "price": 100
+            "subTitle": "百威",
+            "price": 100,
+            "priceAlt": 1920
           },
           {
-            "subTitle": "百威（箱）",
-            "price": 1920
-          },
-          {
-            "subTitle": "海尼根（杯）",
-            "price": 120
-          },
-          {
-            "subTitle": "海尼根（箱）",
-            "price": 2300
+            "subTitle": "海尼根",
+            "price": 120,
+            "priceAlt": 2300
           }
         ]
       },
       {
         "title": "威士忌（單一麥芽）",
         "image": "images/uploads/Line@/2025-04-18雪茄之夜-262.jpg",
+        "unitLabel": "杯 / 瓶",
         "subMenu": [
           {
-            "subTitle": "格蘭多納12年（杯）",
-            "price": 350
+            "subTitle": "格蘭多納12年",
+            "price": 350,
+            "priceAlt": 3200
           },
           {
-            "subTitle": "格蘭多納12年（瓶）",
-            "price": 3200
+            "subTitle": "亞伯樂12年",
+            "price": 350,
+            "priceAlt": 3200
           },
           {
-            "subTitle": "亞伯樂12年（杯）",
-            "price": 350
+            "subTitle": "費特肯12年",
+            "price": 350,
+            "priceAlt": 3300
           },
           {
-            "subTitle": "亞伯樂12年（瓶）",
-            "price": 3200
+            "subTitle": "格蘭菲迪12年",
+            "price": 350,
+            "priceAlt": 3500
           },
           {
-            "subTitle": "費特肯12年（杯）",
-            "price": 350
+            "subTitle": "百富12年",
+            "price": 400,
+            "priceAlt": 3800
           },
           {
-            "subTitle": "費特肯12年（瓶）",
-            "price": 3300
+            "subTitle": "百富14年",
+            "price": 450,
+            "priceAlt": 4200
           },
           {
-            "subTitle": "格蘭菲迪12年（杯）",
-            "price": 350
+            "subTitle": "慕赫12年",
+            "price": 400,
+            "priceAlt": 3800
           },
           {
-            "subTitle": "格蘭菲迪12年（瓶）",
-            "price": 3500
+            "subTitle": "慕赫16年",
+            "price": 450,
+            "priceAlt": 4900
           },
           {
-            "subTitle": "百富12年（杯）",
-            "price": 400
+            "subTitle": "大摩12年",
+            "price": 400,
+            "priceAlt": 3900
           },
           {
-            "subTitle": "百富12年（瓶）",
-            "price": 3800
+            "subTitle": "大摩15年",
+            "price": 500,
+            "priceAlt": 5100
           },
           {
-            "subTitle": "百富14年（杯）",
-            "price": 450
+            "subTitle": "大摩18年",
+            "price": 1500,
+            "priceAlt": 13000
           },
           {
-            "subTitle": "百富14年（瓶）",
-            "price": 4200
+            "subTitle": "麥卡倫12年",
+            "price": 400,
+            "priceAlt": 4200
           },
           {
-            "subTitle": "慕赫12年（杯）",
-            "price": 400
-          },
-          {
-            "subTitle": "慕赫12年（瓶）",
-            "price": 3800
-          },
-          {
-            "subTitle": "慕赫16年（杯）",
-            "price": 450
-          },
-          {
-            "subTitle": "慕赫16年（瓶）",
-            "price": 4900
-          },
-          {
-            "subTitle": "大摩12年（杯）",
-            "price": 400
-          },
-          {
-            "subTitle": "大摩12年（瓶）",
-            "price": 3900
-          },
-          {
-            "subTitle": "大摩15年（杯）",
-            "price": 500
-          },
-          {
-            "subTitle": "大摩15年（瓶）",
-            "price": 5100
-          },
-          {
-            "subTitle": "大摩18年（杯）",
-            "price": 1500
-          },
-          {
-            "subTitle": "大摩18年（瓶）",
-            "price": 13000
-          },
-          {
-            "subTitle": "麥卡倫12年（杯）",
-            "price": 400
-          },
-          {
-            "subTitle": "麥卡倫12年（瓶）",
-            "price": 4200
-          },
-          {
-            "subTitle": "新響（杯）",
-            "price": 450
-          },
-          {
-            "subTitle": "新響（瓶）",
-            "price": 4900
+            "subTitle": "新響",
+            "price": 450,
+            "priceAlt": 4900
           }
         ]
       },
       {
         "title": "威士忌（煙燻泥煤）",
         "image": "images/uploads/Line@/S__38559756.jpg",
+        "unitLabel": "杯 / 瓶",
         "subMenu": [
           {
-            "subTitle": "皇家太魯閣（杯）",
-            "price": 300
+            "subTitle": "皇家太魯閣",
+            "price": 300,
+            "priceAlt": 3300
           },
           {
-            "subTitle": "皇家太魯閣（瓶）",
-            "price": 3300
+            "subTitle": "雅柏10年",
+            "price": 400,
+            "priceAlt": 3900
           },
           {
-            "subTitle": "雅柏10年（杯）",
-            "price": 400
-          },
-          {
-            "subTitle": "雅柏10年（瓶）",
-            "price": 3900
-          },
-          {
-            "subTitle": "拉佛格10年（杯）",
-            "price": 350
-          },
-          {
-            "subTitle": "拉佛格10年（瓶）",
-            "price": 3300
+            "subTitle": "拉佛格10年",
+            "price": 350,
+            "priceAlt": 3300
           }
         ]
       },
