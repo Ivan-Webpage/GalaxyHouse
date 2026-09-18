@@ -6,6 +6,13 @@
       "endTime": "23:00",
       "label": "9/30漫霧與音樂之約",
       "sourceEventId": "176"
+    },
+    {
+      "date": "2026-09-29",
+      "startTime": "19:30",
+      "endTime": "21:00",
+      "label": "VIP包廂",
+      "sourceEventId": "175"
     }
   ],
   "Tianmu": []
