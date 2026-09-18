@@ -42,7 +42,7 @@ export class ReservationCalendarComponent implements OnChanges {
     if (changes['reservations']) {
       const mappedEvents = this.reservations.map((r, index) => ({
         id: `${r.date}-${index}`,
-        title: `${r.startTime} - ${r.endTime} 已預訂`,
+        title: `${r.startTime}~${r.endTime} ${r.label || '已預訂'}`,
         date: r.date,
         color: '#8C4F28'
       }));

@@ -70,6 +70,10 @@ export interface ReservationBlock {
   /** HH:mm */
   endTime: string;
   note?: string;
+  /** 行事曆上顯示的文字，例如活動名稱「漫霧與音樂之約」或場地名稱「VIP包廂」；缺少時前端顯示「已預訂」 */
+  label?: string;
+  /** 來源系統（gh_finance 活動管理）的活動 id，供自動同步腳本比對要更新/刪除哪一筆 */
+  sourceEventId?: string;
 }
 
 export interface ApplyData {

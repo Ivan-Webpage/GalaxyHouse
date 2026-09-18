@@ -1,0 +1,83 @@
+name: 自動同步預定項目並發佈
+
+# 由外部系統（gh_finance 財務系統的「活動管理」）呼叫 GitHub API 觸發，
+# 在活動新增／編輯／刪除時保持分店頁面（/branchShop/:id）預約行事曆同步：
+#   POST https://api.github.com/repos/Ivan-Webpage/GalaxyHouse/dispatches
+#   {
+#     "event_type": "sync-reservation",
+#     "client_payload": {
+#       "action": "upsert",            // 或 "delete"
+#       "branch": "Songshan",
+#       "sourceEventId": "123",        // gh_finance 活動管理的活動 id
+#       "date": "2026-09-20",          // upsert 才需要，YYYY-MM-DD
+#       "startTime": "20:00",          // upsert 才需要，HH:mm
+#       "endTime": "21:00",            // upsert 才需要，HH:mm
+#       "label": "漫霧與音樂之約"       // upsert 才需要，行事曆上顯示的文字
+#     }
+#   }
+#
+# 注意：所有 client_payload 欄位一律經由 env 傳遞給下面的指令，不要直接內插進
+# run: 的 shell 字串裡——client_payload 內容可能來自外部系統的自由輸入欄位，
+# 直接內插到 shell 字串會有 command injection 風險。
+on:
+  repository_dispatch:
+    types: [sync-reservation]
+
+permissions:
+  contents: write
+
+# 跟 add-article.yml 共用同一個 concurrency group：兩支 workflow 都會 commit/push
+# main 分支、並 build+push gh-pages 分支，共用同一個 group 可避免兩邊同時跑造成
+# push 衝突（publish.js 本身雖然有重試機制，但共用 group 讓兩邊排隊執行更單純）。
+concurrency:
+  group: add-article-publish
+  cancel-in-progress: false
+
+jobs:
+  sync-reservation-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure git identity
+        run: |
+          git config user.name "galaxyhouse-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+      - name: Sync reservation entry
+        env:
+          RES_ACTION: ${{ github.event.client_payload.action }}
+          RES_BRANCH: ${{ github.event.client_payload.branch }}
+          RES_SOURCE_EVENT_ID: ${{ github.event.client_payload.sourceEventId }}
+          RES_DATE: ${{ github.event.client_payload.date }}
+          RES_START_TIME: ${{ github.event.client_payload.startTime }}
+          RES_END_TIME: ${{ github.event.client_payload.endTime }}
+          RES_LABEL: ${{ github.event.client_payload.label }}
+        run: |
+          node scripts/manage-reservation.js \
+            --action="$RES_ACTION" \
+            --branch="$RES_BRANCH" \
+            --sourceEventId="$RES_SOURCE_EVENT_ID" \
+            --date="$RES_DATE" \
+            --startTime="$RES_START_TIME" \
+            --endTime="$RES_END_TIME" \
+            --label="$RES_LABEL"
+
+      - name: Build and deploy
+        env:
+          RES_ACTION: ${{ github.event.client_payload.action }}
+          RES_SOURCE_EVENT_ID: ${{ github.event.client_payload.sourceEventId }}
+        run: node scripts/publish.js "自動同步預定項目：$RES_ACTION #$RES_SOURCE_EVENT_ID"
