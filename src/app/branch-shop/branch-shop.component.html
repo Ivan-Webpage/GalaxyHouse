@@ -83,10 +83,20 @@
                 </div>
             </div>
             <div class="row card-content">
+                @if (menu.unitLabel) {
+                <div class="row" style="padding: 5px 20px;">
+                    <p class="prodect"></p>
+                    <p class="price unit-label">{{menu.unitLabel}}</p>
+                </div>
+                }
                 @for (subMenu of menu.subMenu; track $index) {
                 <div class="row" style="padding: 5px 20px;">
                     <p class="prodect">{{subMenu.subTitle}}</p>
+                    @if (subMenu.priceAlt !== undefined) {
+                    <p class="price">$ {{subMenu.price}} / $ {{subMenu.priceAlt}}</p>
+                    } @else {
                     <p class="price">$ {{subMenu.price}}</p>
+                    }
                 </div>
                 }
             </div>

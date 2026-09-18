@@ -51,7 +51,8 @@ export interface BranchShop {
 export interface BranchMenu {
   title: string;
   image: string;
-  subMenu: { subTitle: string; price: number }[];
+  unitLabel?: string;
+  subMenu: { subTitle: string; price: number; priceAlt?: number }[];
 }
 
 export interface BranchData {
