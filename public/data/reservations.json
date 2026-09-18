@@ -13,6 +13,20 @@
       "endTime": "21:00",
       "label": "VIP包廂",
       "sourceEventId": "175"
+    },
+    {
+      "date": "2026-12-05",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "label": "公休",
+      "sourceEventId": "closure-34-2026-12-05"
+    },
+    {
+      "date": "2026-12-06",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "label": "公休",
+      "sourceEventId": "closure-34-2026-12-06"
     }
   ],
   "Tianmu": []
