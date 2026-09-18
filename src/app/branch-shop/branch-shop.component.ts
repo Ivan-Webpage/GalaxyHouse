@@ -161,11 +161,11 @@ export class BranchShopComponent implements OnInit, OnDestroy {
     }
   }
 
-  /** 點擊後開啟與官方 LINE@ 的對話，並帶入預設訂位文字讓客戶直接送出 */
+  /** 開啟官方 LINE@ 加好友/對話頁面 */
   get lineReservationUrl(): string {
     const lineId = this.branchData?.shop?.lineID;
     if (!lineId) return '';
-    return `https://line.me/R/oaMessage/${lineId}/?${encodeURIComponent('您好，我想預約訂位')}`;
+    return `https://line.me/ti/p/${lineId}`;
   }
 
   // 換頁刷新（沿用原 ApiService.reload 的行為）
