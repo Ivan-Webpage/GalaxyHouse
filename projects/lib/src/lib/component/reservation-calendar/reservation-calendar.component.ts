@@ -70,12 +70,17 @@ export class ReservationCalendarComponent implements OnChanges, OnDestroy {
         color: '#777777'
       }));
 
-      const mappedEvents = this.reservations.map((r, index) => ({
-        id: `${r.date}-${index}`,
-        title: `${r.startTime}~${r.endTime} ${r.label || '已預訂'}`,
-        date: r.date,
-        color: '#8C4F28'
-      }));
+      // label 剛好是「公休」時（例如某天臨時/連假公休），比照上面每週固定公休的樣式：
+      // 不顯示時段、改用同一個灰色，而不是一般預約的「時段+文字」棕色標籤。
+      const mappedEvents = this.reservations.map((r, index) => {
+        const isClosure = r.label === '公休';
+        return {
+          id: `${r.date}-${index}`,
+          title: isClosure ? '公休' : `${r.startTime}~${r.endTime} ${r.label || '已預訂'}`,
+          date: r.date,
+          color: isClosure ? '#777777' : '#8C4F28'
+        };
+      });
 
       const allEvents = [...closedEvents, ...mappedEvents];
 
