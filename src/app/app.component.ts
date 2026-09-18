@@ -20,7 +20,7 @@ export class AppComponent {
   title = "Galaxy House 銀河會所";
   titleImage = "images/logo.png";
   menuData: MenuItem[] = [{
-    "title": "據點資訊",
+    "title": "據點&菜單資訊",
     "subMenu": [
       {
         "category": "北區",

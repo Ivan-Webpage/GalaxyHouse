@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   @Input() menuData: MenuItem[] = [
     { title: "首頁", link: "/home" },
     {
-      title: "據點資訊",
+      title: "據點&菜單資訊",
       link: "",
       subMenu: [
         {
