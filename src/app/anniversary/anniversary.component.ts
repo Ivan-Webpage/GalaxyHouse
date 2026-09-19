@@ -40,7 +40,7 @@ export class AnniversaryComponent implements OnInit {
 
   gallery: GalleryItem[] = [
     { src: 'images/uploads/anniversary/海鮮炭烤拼盤.jpg', tag: '海鮮拼盤', caption: '現烤大蝦、鮮干貝與時令海味百匯', alt: '海鮮冷盤與現烤生蠔蝦貝' },
-    { src: 'images/uploads/anniversary/炭烤串燒拼盤.jpg', tag: '招牌串燒', caption: '秘製醬香串燒料理', alt: '經典炭火串烤' },
+    { src: 'images/uploads/anniversary/烤滷豬.jpg', tag: '烤滷豬', caption: '秘製烤滷豬料理', alt: '秘製烤滷豬料理' },
     { src: 'images/uploads/anniversary/調酒師特調演繹.jpg', tag: '調酒特寫', caption: '微醺律動的夜間特調', alt: '專注傾注美酒的調酒師' },
     { src: 'images/uploads/anniversary/吧台社交時光.jpg', tag: '會所社交', caption: '名流匯聚的社交沙龍', alt: '會所吧台貴賓歡聚' },
     { src: 'images/uploads/anniversary/當晚特調酒單.jpg', tag: '精選酒單', caption: '伏特加、琴酒、蘭姆與威士忌系列', alt: '當晚專屬酒單與現場調酒吧台' },
