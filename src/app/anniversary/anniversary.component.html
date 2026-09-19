@@ -49,8 +49,8 @@
       </div>
 
       <div class="ann-hero-actions no-print">
-        <a href="#rsvp" class="ann-btn ann-btn--gold">立即響應出席</a>
-        <button type="button" class="ann-btn ann-btn--ghost" (click)="print()">列印 / 存為海報 PDF</button>
+        <button type="button" class="ann-btn ann-btn--gold" (click)="scrollToRsvp()">立即響應出席</button>
+        <a [href]="lineFallbackUrl" target="_blank" rel="noopener noreferrer" class="ann-btn ann-btn--ghost">LINE&#64;詢問</a>
       </div>
     </div>
   </section>
@@ -174,62 +174,28 @@
           <h2>尊榮席次確認 ‧ 響應參與</h2>
           <p>
             為維護派對最高品質與私密氛圍，名額嚴格限制 <strong>100～140 人</strong>。<br>
-            登記完成後，我們將以專屬的「<span class="ann-gold-text-solid">確認邀請 DM</span>」通知您，並為您預留入場席位。
+            請透過 LINE 官方帳號完成報名，我們將以專屬的「<span class="ann-gold-text-solid">確認邀請 DM</span>」通知您，並為您預留入場席位。
           </p>
         </div>
 
-        <form class="ann-form" #rsvpForm="ngForm" (ngSubmit)="submitRsvp()">
-          <div class="ann-form-row">
-            <div class="ann-form-field">
-              <label>貴賓姓名 / 稱謂 <span class="ann-required">*</span></label>
-              <input type="text" name="name" required [(ngModel)]="form.name" placeholder="例：林柏宇 先生">
-            </div>
-            <div class="ann-form-field">
-              <label>聯絡手機 / LINE <span class="ann-required">*</span></label>
-              <input type="tel" name="phone" required [(ngModel)]="form.phone" placeholder="0912-345-678">
-            </div>
+        <div class="ann-rsvp-body">
+          <div class="ann-rsvp-checklist">
+            <span class="ann-label">報名時請提供以下資訊</span>
+            <ul>
+              <li>貴賓姓名 / 稱謂</li>
+              <li>聯絡手機</li>
+              <li>所屬會所身分（天母銀河會員／松山銀河會員／受邀貴賓）</li>
+              <li>攜伴女伴人數</li>
+              <li>其他備註需求（如：雪茄品好、品酒偏好）</li>
+            </ul>
           </div>
 
-          <div class="ann-form-row">
-            <div class="ann-form-field">
-              <label>所屬會所身分 <span class="ann-required">*</span></label>
-              <select name="branch" required [(ngModel)]="form.branch">
-                <option value="天母銀河會員">天母銀河會員（享女伴免費1位）</option>
-                <option value="松山銀河會員">松山銀河會員（享女伴免費1位）</option>
-                <option value="受邀貴賓/常客">受邀特邀常客 / 業界名流</option>
-              </select>
-            </div>
-            <div class="ann-form-field">
-              <label>攜伴女伴人數</label>
-              <select name="partner" [(ngModel)]="form.partner">
-                <option value="0">獨自出席</option>
-                <option value="1">攜伴 1 位女士（會員享免費）</option>
-                <option value="2">攜伴 2 位或以上同行</option>
-              </select>
-            </div>
-          </div>
+          <a [href]="lineFallbackUrl" target="_blank" rel="noopener noreferrer" class="ann-btn ann-btn--gold ann-btn--block">
+            加入 LINE 官方帳號 ‧ 立即報名
+          </a>
 
-          <div class="ann-form-field">
-            <label>其他備註需求（如：雪茄品好、品酒偏好）</label>
-            <input type="text" name="notes" [(ngModel)]="form.notes" placeholder="無特殊需求可留空">
-          </div>
-
-          @if (submitError) {
-            <p class="ann-form-error">
-              送出時發生問題，請改用
-              <a [href]="lineFallbackUrl" target="_blank" rel="noopener noreferrer">LINE 官方帳號</a>
-              直接與我們聯繫，會所管家將協助您完成登記。
-            </p>
-          }
-
-          <div class="ann-form-submit">
-            <button type="submit" class="ann-btn ann-btn--gold ann-btn--block" [disabled]="submitting || rsvpForm.invalid">
-              {{ submitting ? '送出中...' : '確認響應參與 ‧ 送出審核' }}
-            </button>
-          </div>
-
-          <p class="ann-form-hint">※ 資料僅供銀河會所盛典入場名單造冊，絕不外流。</p>
-        </form>
+          <p class="ann-rsvp-note">※ 資料僅供銀河會所盛典入場名單造冊，絕不外流。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -293,26 +259,5 @@
     </div>
   }
 
-  <!-- 提交成功確認彈窗 -->
-  @if (showSuccess) {
-    <div class="ann-modal-overlay no-print">
-      <div class="ann-modal ann-modal--success">
-        <div class="ann-modal-icon">✓</div>
-        <span class="ann-eyebrow-gold">預約已確認</span>
-        <h3>已收到您的響應參與！</h3>
-        <p>
-          尊貴的 <strong>{{ lastSubmission?.name }}</strong> 貴賓您好：<br>
-          您的出席意願已登記（{{ lastSubmission?.branch }}，攜伴女伴：{{ lastSubmission?.partner }} 位）。<br>
-          會所管家將優先保留席次，並向您傳送專屬「確認邀請 DM」。
-        </p>
-        <div class="ann-modal-actions">
-          <button type="button" class="ann-btn ann-btn--ghost-gold" (click)="copySummary()">
-            {{ copied ? '✓ 已複製到剪貼簿！可直接貼在 LINE' : '複製報名摘要（可直接傳送給管家）' }}
-          </button>
-          <button type="button" class="ann-btn ann-btn--dark" (click)="closeSuccess()">關閉視窗</button>
-        </div>
-      </div>
-    </div>
-  }
 
 </div>

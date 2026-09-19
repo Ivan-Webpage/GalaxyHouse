@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { MakeMetaService } from 'lib';
 
 interface GalleryItem {
@@ -19,32 +18,15 @@ interface ExperienceItem {
   wide?: boolean;
 }
 
-interface RsvpFormModel {
-  name: string;
-  phone: string;
-  branch: string;
-  partner: string;
-  notes: string;
-}
-
 @Component({
   selector: 'app-anniversary',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule],
   templateUrl: './anniversary.component.html',
   styleUrl: './anniversary.component.scss'
 })
 export class AnniversaryComponent implements OnInit {
   isBrowser: boolean;
-
-  /**
-   * 這個網站是純靜態站（GitHub Pages），沒有後端可以收表單。
-   * 請到 https://formspree.io 免費註冊、建立一個表單，
-   * 再把下面換成你自己的表單網址（形如 https://formspree.io/f/xxxxxxx），
-   * 訪客送出 RSVP 表單後就會自動寄一封信到你註冊 Formspree 時用的信箱。
-   * 正式上線前務必替換，否則表單送出會失敗。
-   */
-  private readonly FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 
   private readonly LINE_FALLBACK_URL = 'https://line.me/ti/p/@392kgxba';
 
@@ -64,15 +46,8 @@ export class AnniversaryComponent implements OnInit {
     { src: 'images/uploads/anniversary/當晚特調酒單.jpg', tag: '精選酒單', caption: '伏特加、琴酒、蘭姆與威士忌系列', alt: '當晚專屬酒單與現場調酒吧台' },
   ];
 
-  form: RsvpFormModel = { name: '', phone: '', branch: '天母銀河會員', partner: '0', notes: '' };
-
-  submitting = false;
-  submitError = false;
-  showSuccess = false;
   showLightbox = false;
   activeImage: GalleryItem | null = null;
-  lastSubmission: RsvpFormModel | null = null;
-  copied = false;
 
   get lineFallbackUrl(): string {
     return this.LINE_FALLBACK_URL;
@@ -104,55 +79,8 @@ export class AnniversaryComponent implements OnInit {
     this.activeImage = null;
   }
 
-  async submitRsvp(): Promise<void> {
-    if (!this.isBrowser || this.submitting) return;
-
-    this.submitting = true;
-    this.submitError = false;
-    const payload: RsvpFormModel = { ...this.form };
-
-    try {
-      const res = await fetch(this.FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      if (!res.ok) {
-        throw new Error(`Formspree responded with ${res.status}`);
-      }
-      this.lastSubmission = payload;
-      this.showSuccess = true;
-    } catch (err) {
-      console.error('RSVP 表單送出失敗', err);
-      this.submitError = true;
-    } finally {
-      this.submitting = false;
-    }
-  }
-
-  closeSuccess(): void {
-    this.showSuccess = false;
-    this.copied = false;
-    this.form = { name: '', phone: '', branch: '天母銀河會員', partner: '0', notes: '' };
-  }
-
-  async copySummary(): Promise<void> {
-    if (!this.isBrowser || !this.lastSubmission) return;
-    const d = this.lastSubmission;
-    const text = `【銀河會所週年慶 提前響應確認】\n姓名：${d.name}\n電話：${d.phone}\n身分：${d.branch}\n攜伴女伴：${d.partner} 位\n備註：${d.notes || '無'}`;
-
-    try {
-      await navigator.clipboard.writeText(text);
-      this.copied = true;
-      setTimeout(() => (this.copied = false), 2500);
-    } catch (err) {
-      console.error('複製摘要失敗', err);
-    }
-  }
-
-  print(): void {
-    if (this.isBrowser) {
-      window.print();
-    }
+  scrollToRsvp(): void {
+    if (!this.isBrowser) return;
+    document.getElementById('rsvp')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
