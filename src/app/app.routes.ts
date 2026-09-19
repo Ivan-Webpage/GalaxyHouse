@@ -7,6 +7,7 @@ import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './article/article.component';
 import { BuffetComponent } from './buffet/buffet.component';
 import { CateringComponent } from './catering/catering.component';
+import { AnniversaryComponent } from './anniversary/anniversary.component';
 
 export const routes: Routes = [
     {
@@ -33,6 +34,9 @@ export const routes: Routes = [
     },{
         path: 'article/:id',
         component: ArticleComponent
+    },{
+        path: 'anniversary',
+        component: AnniversaryComponent
     }, {
         path: '',
         redirectTo: 'home',

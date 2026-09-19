@@ -1,0 +1,318 @@
+<div class="ann-page">
+
+  <!-- Section 1：封面導言 & 雙館巨獻 -->
+  <section class="ann-hero">
+    <div class="ann-container">
+      <div class="ann-hero-eyebrow">
+        <span class="ann-eyebrow-mark">
+          <span class="ann-dot"></span>
+          特別企劃 ‧ 2026
+        </span>
+        <span class="ann-eyebrow-mid">私人會員專屬</span>
+        <span class="ann-eyebrow-right">貴賓席次 100～140 位</span>
+      </div>
+
+      <div class="ann-hero-grid">
+        <div class="ann-hero-title-col">
+          <p class="ann-kicker">盛大慶典 ‧ 歲末夜宴</p>
+          <h1 class="ann-h1">
+            天母 ╳ 松山 <br>
+            <span class="ann-gold-text">銀河會所週年慶盛典</span>
+          </h1>
+        </div>
+
+        <div class="ann-hero-note-col">
+          <span class="ann-badge">官方出席通知</span>
+          <p>歲末將至，兩館首次合辦頂級私享派對。集結戶外炙烤、星級琴酒雞尾酒、雪茄威士忌、現場弦樂與歌手演唱，僅向常客與重要好友發出提前席次確認。</p>
+        </div>
+      </div>
+
+      <div class="ann-info-card">
+        <div class="ann-info-item">
+          <span class="ann-label">活動日期</span>
+          <div class="ann-date"><strong>12.05</strong><span>2026 年 星期五</span></div>
+          <p>傍晚 16:00 入場 ～ 22:00 晚宴時光</p>
+        </div>
+
+        <div class="ann-info-item">
+          <span class="ann-label">活動地點</span>
+          <div class="ann-location">臺北市北投區八仙里承德路七段401巷989弄90號</div>
+          <p>專屬私隱空間 ‧ 迎賓泊車與微醺場域</p>
+        </div>
+
+        <div class="ann-info-item ann-info-item--action">
+          <p class="ann-capacity"><strong>限定規模：</strong>100 ～ 140 位貴賓席次</p>
+          <a class="ann-map-btn" href="https://maps.app.goo.gl/zSx5qHcbLmfp9Ysd6?g_st=il" target="_blank" rel="noopener noreferrer">
+            Google地圖 快速導航 →
+          </a>
+        </div>
+      </div>
+
+      <div class="ann-hero-actions no-print">
+        <a href="#rsvp" class="ann-btn ann-btn--gold">立即響應出席</a>
+        <button type="button" class="ann-btn ann-btn--ghost" (click)="print()">列印 / 存為海報 PDF</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2：尊榮方案與會員特權 -->
+  <section class="ann-privilege">
+    <div class="ann-container">
+      <div class="ann-hr"></div>
+
+      <div class="ann-privilege-grid">
+        <div class="ann-privilege-card">
+          <span class="ann-privilege-watermark">VIP</span>
+
+          <div class="ann-privilege-body">
+            <span class="ann-eyebrow-gold"><span class="ann-eyebrow-gold-dot"></span>會員專屬禮遇</span>
+            <h3 class="ann-privilege-title">
+              銀河會所正式會員 <br>
+              <span class="ann-gold-text">免費攜伴一位女伴出席</span>
+            </h3>
+            <p>為答謝天母館與松山館會員一年來的厚愛，凡銀河會所正式會員報名參與，即享尊榮攜伴特權——<strong>同行女伴完全不收費（免入場費）</strong>。與重要佳人一同沉浸在美酒、雪茄與古典樂聲中。</p>
+          </div>
+
+          <div class="ann-privilege-foot">
+            <span>※ 會員入場請於登記時填寫所屬門市</span>
+            <span class="ann-gold-text-solid">#攜伴同歡 ‧ 歲末之約</span>
+          </div>
+        </div>
+
+        <div class="ann-pricing">
+          <div class="ann-price-card">
+            <div>
+              <span class="ann-label">男士票券</span>
+              <h4>男士貴賓入場</h4>
+              <p>含現烤百匯、調酒與全場演出享用</p>
+            </div>
+            <div class="ann-price">
+              <span>1,600 元</span>
+              <small>單人全額款</small>
+            </div>
+          </div>
+
+          <div class="ann-price-card ann-price-card--ladies">
+            <span class="ann-ribbon">女士五折優惠</span>
+            <div>
+              <span class="ann-label ann-label--gold">女士專屬禮遇</span>
+              <h4 class="ann-gold-text-solid">女士貴賓入場</h4>
+              <p>女士半價寵愛優惠（非會員同行）</p>
+            </div>
+            <div class="ann-price">
+              <span class="ann-gold-text-solid">800 元</span>
+              <small>享半價禮遇</small>
+            </div>
+          </div>
+
+          <div class="ann-note-box">邀約對象：天母／松山銀河會員、品味常客、特定受邀業界領袖</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3：五大奢華感官體驗 -->
+  <section class="ann-experience">
+    <div class="ann-container">
+      <div class="ann-section-head">
+        <div>
+          <span class="ann-eyebrow-gold">感官之旅</span>
+          <h2>盛典五大極致感官巡禮</h2>
+        </div>
+        <p class="ann-section-head-right">精選饗宴 ‧ 娛樂表演</p>
+      </div>
+
+      <div class="ann-experience-grid">
+        @for (item of experiences; track item.no) {
+          <div class="ann-exp-card" [class.ann-exp-card--wide]="item.wide">
+            <div>
+              <div class="ann-exp-top">
+                <span class="ann-exp-no">{{ item.no }}</span>
+                <span class="ann-exp-tag" [class.ann-exp-tag--accent]="item.wide">{{ item.tag }}</span>
+              </div>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.desc }}</p>
+            </div>
+            <div class="ann-exp-note">{{ item.note }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4：現代藝廊風格相片展現 -->
+  <section class="ann-gallery">
+    <div class="ann-container">
+      <div class="ann-section-head">
+        <div>
+          <span class="ann-eyebrow-gold">影像紀實</span>
+          <h2>盛宴剪影 ‧ 極致氛圍</h2>
+        </div>
+        <p class="ann-section-head-right">點擊影像可展開檢視細節</p>
+      </div>
+
+      <div class="ann-gallery-grid">
+        @for (img of gallery; track img.src) {
+          <div class="ann-gallery-item" (click)="openLightbox(img)">
+            <img [src]="img.src" [alt]="img.alt" loading="lazy">
+            <div class="ann-gallery-caption">
+              <span>{{ img.tag }}</span>
+              <p>{{ img.caption }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5：提前報名與意願響應確認表單 -->
+  <section id="rsvp" class="ann-rsvp scroll-mt">
+    <div class="ann-container">
+      <div class="ann-rsvp-card">
+        <div class="ann-rsvp-head">
+          <span class="ann-eyebrow-gold">提前預約</span>
+          <h2>尊榮席次確認 ‧ 響應參與</h2>
+          <p>
+            為維護派對最高品質與私密氛圍，名額嚴格限制 <strong>100～140 人</strong>。<br>
+            登記完成後，我們將以專屬的「<span class="ann-gold-text-solid">確認邀請 DM</span>」通知您，並為您預留入場席位。
+          </p>
+        </div>
+
+        <form class="ann-form" #rsvpForm="ngForm" (ngSubmit)="submitRsvp()">
+          <div class="ann-form-row">
+            <div class="ann-form-field">
+              <label>貴賓姓名 / 稱謂 <span class="ann-required">*</span></label>
+              <input type="text" name="name" required [(ngModel)]="form.name" placeholder="例：林柏宇 先生">
+            </div>
+            <div class="ann-form-field">
+              <label>聯絡手機 / LINE <span class="ann-required">*</span></label>
+              <input type="tel" name="phone" required [(ngModel)]="form.phone" placeholder="0912-345-678">
+            </div>
+          </div>
+
+          <div class="ann-form-row">
+            <div class="ann-form-field">
+              <label>所屬會所身分 <span class="ann-required">*</span></label>
+              <select name="branch" required [(ngModel)]="form.branch">
+                <option value="天母銀河會員">天母銀河會員（享女伴免費1位）</option>
+                <option value="松山銀河會員">松山銀河會員（享女伴免費1位）</option>
+                <option value="受邀貴賓/常客">受邀特邀常客 / 業界名流</option>
+              </select>
+            </div>
+            <div class="ann-form-field">
+              <label>攜伴女伴人數</label>
+              <select name="partner" [(ngModel)]="form.partner">
+                <option value="0">獨自出席</option>
+                <option value="1">攜伴 1 位女士（會員享免費）</option>
+                <option value="2">攜伴 2 位或以上同行</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ann-form-field">
+            <label>其他備註需求（如：雪茄品好、品酒偏好）</label>
+            <input type="text" name="notes" [(ngModel)]="form.notes" placeholder="無特殊需求可留空">
+          </div>
+
+          @if (submitError) {
+            <p class="ann-form-error">
+              送出時發生問題，請改用
+              <a [href]="lineFallbackUrl" target="_blank" rel="noopener noreferrer">LINE 官方帳號</a>
+              直接與我們聯繫，會所管家將協助您完成登記。
+            </p>
+          }
+
+          <div class="ann-form-submit">
+            <button type="submit" class="ann-btn ann-btn--gold ann-btn--block" [disabled]="submitting || rsvpForm.invalid">
+              {{ submitting ? '送出中...' : '確認響應參與 ‧ 送出審核' }}
+            </button>
+          </div>
+
+          <p class="ann-form-hint">※ 資料僅供銀河會所盛典入場名單造冊，絕不外流。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6：收費與匯款資訊 -->
+  <section class="ann-payment">
+    <div class="ann-container">
+      <div class="ann-payment-card">
+        <div class="ann-payment-head">
+          <span class="ann-eyebrow-gold">報名繳費資訊</span>
+          <h2>收費方式與匯款資訊</h2>
+          <p>完成線上響應出席後，請依下方帳戶資訊完成匯款，以確保您的席次。</p>
+        </div>
+
+        <div class="ann-payment-body">
+          <div class="ann-payment-info">
+            <div class="ann-payment-row">
+              <span class="ann-label">戶名</span>
+              <span class="ann-payment-value">百泇有限公司</span>
+            </div>
+            <div class="ann-payment-row">
+              <span class="ann-label">銀行</span>
+              <span class="ann-payment-value">台灣銀行（004）</span>
+            </div>
+            <div class="ann-payment-row">
+              <span class="ann-label">帳號</span>
+              <span class="ann-payment-value">080 001 008902</span>
+            </div>
+          </div>
+
+          <ul class="ann-payment-notes">
+            <li>轉帳後麻煩提供匯款帳號末五碼，以利核對確認。</li>
+            <li>因活動需提前安排場地與物資，請於 <strong>2026 年 10 月 15 日前</strong>完成報名費匯款。</li>
+            <li>報名後恕不退款。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾資訊 & 飲酒警語 -->
+  <footer class="ann-footer">
+    <div class="ann-container">
+      <div class="ann-footer-title">銀河會所 天母館 ╳ 松山館</div>
+      <p>臺北市北投區八仙里承德路七段401巷989弄90號 ｜ 貴賓席次敬請期待專屬確認通知</p>
+      <div class="ann-footer-warning">
+        <span>【 禁止酒駕 ‧ 飲酒過量 有害健康 】</span>
+        <span>【 未滿十八歲請勿飲酒 】</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 圖片放大燈箱 -->
+  @if (showLightbox && activeImage) {
+    <div class="ann-modal-overlay no-print" (click)="closeLightbox()">
+      <div class="ann-modal ann-modal--lightbox" (click)="$event.stopPropagation()">
+        <button type="button" class="ann-modal-close" (click)="closeLightbox()">✕</button>
+        <img [src]="activeImage.src" [alt]="activeImage.alt">
+        <p>{{ activeImage.caption }}</p>
+      </div>
+    </div>
+  }
+
+  <!-- 提交成功確認彈窗 -->
+  @if (showSuccess) {
+    <div class="ann-modal-overlay no-print">
+      <div class="ann-modal ann-modal--success">
+        <div class="ann-modal-icon">✓</div>
+        <span class="ann-eyebrow-gold">預約已確認</span>
+        <h3>已收到您的響應參與！</h3>
+        <p>
+          尊貴的 <strong>{{ lastSubmission?.name }}</strong> 貴賓您好：<br>
+          您的出席意願已登記（{{ lastSubmission?.branch }}，攜伴女伴：{{ lastSubmission?.partner }} 位）。<br>
+          會所管家將優先保留席次，並向您傳送專屬「確認邀請 DM」。
+        </p>
+        <div class="ann-modal-actions">
+          <button type="button" class="ann-btn ann-btn--ghost-gold" (click)="copySummary()">
+            {{ copied ? '✓ 已複製到剪貼簿！可直接貼在 LINE' : '複製報名摘要（可直接傳送給管家）' }}
+          </button>
+          <button type="button" class="ann-btn ann-btn--dark" (click)="closeSuccess()">關閉視窗</button>
+        </div>
+      </div>
+    </div>
+  }
+
+</div>

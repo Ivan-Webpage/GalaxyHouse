@@ -10,7 +10,7 @@ const BRANCH_SHOPS = ['Songshan', 'Tianmu'];
 const NEWS_TYPES = ['announcement', 'newActivity', 'eventHighlights'];
 const NEWS_SCOPES = ['galaxyhouse', ...BRANCH_SHOPS];
 
-const STATIC_PATHS = ['/home', '/about_us', '/apply', '/banquet', '/catering'];
+const STATIC_PATHS = ['/home', '/about_us', '/apply', '/banquet', '/catering', '/anniversary'];
 
 function readArticles() {
   const file = path.join(__dirname, '..', 'public', 'data', 'articles.json');

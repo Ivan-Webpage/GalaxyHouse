@@ -1,0 +1,1066 @@
+// 品牌色票（對應 src/assets/style/color.scss 的黑 / 金 / 褐 / 白）
+$gh-black: rgb(17, 17, 17);
+$gh-black-soft: #1a1a1a;
+$gh-black-panel: #201c16;
+$gh-gold: rgb(239, 208, 127);   // #efd07f
+$gh-gold-light: #f9ecd0;
+$gh-gold-deep: rgb(140, 79, 40); // #8c4f28
+$gh-white: #ffffff;
+$gh-gray: #b9b6ae;
+$gh-gray-dim: #8a8781;
+$gh-border: rgba(239, 208, 127, 0.22);
+$gh-border-strong: rgba(239, 208, 127, 0.45);
+
+:host {
+  display: block;
+}
+
+.ann-page {
+  background:
+    radial-gradient(circle at 80% 15%, rgba(239, 208, 127, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 15% 55%, rgba(140, 79, 40, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 75% 85%, rgba(239, 208, 127, 0.05) 0%, transparent 40%),
+    linear-gradient(180deg, $gh-black 0%, #171310 45%, $gh-black 100%);
+  color: $gh-gray;
+  font-family: 'Microsoft JhengHei', 'PMingLiU', serif;
+  padding-top: 110px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow-x: hidden;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4 {
+    color: $gh-white;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  p {
+    line-height: 1.9;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ann-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ann-gold-text {
+  background: linear-gradient(135deg, $gh-gold-light 0%, $gh-gold 45%, $gh-gold-deep 80%, $gh-gold-light 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ann-gold-text-solid {
+  color: $gh-gold;
+  font-weight: 600;
+}
+
+.ann-eyebrow-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $gh-gold;
+  font-weight: 600;
+}
+
+.ann-eyebrow-gold-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $gh-gold;
+  display: inline-block;
+}
+
+.ann-hr {
+  height: 1px;
+  margin-bottom: 48px;
+  background: linear-gradient(90deg, transparent 0%, $gh-border-strong 30%, $gh-border-strong 70%, transparent 100%);
+}
+
+/* --- 按鈕 --- */
+.ann-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  border: none;
+  transition: filter 0.2s, background 0.2s, transform 0.1s;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &--gold {
+    background: linear-gradient(90deg, $gh-gold-light, $gh-gold, $gh-gold-deep);
+    color: $gh-black;
+
+    &:hover {
+      filter: brightness(1.08);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    border: 1px solid $gh-border;
+    color: $gh-gold-light;
+
+    &:hover {
+      border-color: $gh-gold;
+      color: $gh-white;
+    }
+  }
+
+  &--ghost-gold {
+    background: rgba(239, 208, 127, 0.14);
+    border: 1px solid $gh-gold;
+    color: $gh-gold-light;
+
+    &:hover {
+      background: rgba(239, 208, 127, 0.24);
+    }
+  }
+
+  &--dark {
+    background: #2a2a2a;
+    color: $gh-gray;
+
+    &:hover {
+      background: #333;
+    }
+  }
+
+  &--block {
+    width: 100%;
+    padding: 16px;
+    text-transform: uppercase;
+  }
+}
+
+/* --- Section 1：Hero --- */
+.ann-hero {
+  padding-top: 24px;
+  margin-bottom: 64px;
+}
+
+.ann-hero-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid $gh-border;
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: $gh-gray-dim;
+}
+
+.ann-eyebrow-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: $gh-gold;
+}
+
+.ann-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $gh-gold;
+}
+
+.ann-eyebrow-right {
+  display: none;
+}
+
+.ann-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.ann-kicker {
+  font-style: italic;
+  font-size: 18px;
+  color: rgba(239, 208, 127, 0.9);
+  margin-bottom: 4px;
+}
+
+.ann-h1 {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 300;
+  color: $gh-white;
+
+  .ann-gold-text {
+    font-weight: 500;
+  }
+}
+
+.ann-hero-note-col {
+  border-top: 1px solid $gh-border;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ann-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(239, 208, 127, 0.4);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $gh-gold;
+  width: fit-content;
+}
+
+.ann-info-card {
+  position: relative;
+  background: linear-gradient(90deg, $gh-black-panel, #17130f, $gh-black-panel);
+  border: 1px solid $gh-border;
+  border-radius: 20px;
+  padding: 28px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.ann-info-item {
+  padding-top: 16px;
+  border-top: 1px solid #2a271f;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.ann-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $gh-gray-dim;
+
+  &--gold {
+    color: $gh-gold;
+  }
+}
+
+.ann-date {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 28px;
+
+  strong {
+    background: linear-gradient(135deg, $gh-gold-light, $gh-gold, $gh-gold-deep);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+
+  span {
+    font-size: 13px;
+    color: $gh-gray;
+  }
+}
+
+.ann-location {
+  font-size: 15px;
+  font-weight: 500;
+  color: $gh-white;
+}
+
+.ann-info-item--action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ann-capacity {
+  font-size: 13px;
+  color: $gh-gray;
+
+  strong {
+    color: $gh-gold;
+  }
+}
+
+.ann-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid $gh-border;
+  color: $gh-gold-light;
+  font-size: 12px;
+  transition: border-color 0.2s, color 0.2s;
+
+  &:hover {
+    border-color: $gh-gold;
+    color: $gh-white;
+  }
+}
+
+.ann-hero-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* --- Section 2：VIP 特權 --- */
+.ann-privilege {
+  margin-bottom: 72px;
+}
+
+.ann-privilege-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.ann-privilege-card {
+  position: relative;
+  background: linear-gradient(135deg, #241d10, #191510, #12100c);
+  border: 1px solid $gh-border-strong;
+  box-shadow: 0 0 25px rgba(239, 208, 127, 0.08);
+  border-radius: 20px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.ann-privilege-watermark {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 64px;
+  font-weight: 700;
+  color: $gh-gold;
+  opacity: 0.12;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ann-privilege-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ann-privilege-title {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.ann-privilege-foot {
+  padding-top: 20px;
+  border-top: 1px solid rgba(239, 208, 127, 0.18);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: $gh-gray-dim;
+}
+
+.ann-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ann-price-card {
+  position: relative;
+  background: rgba(26, 26, 26, 0.9);
+  border: 1px solid #2b2b2b;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: $gh-border;
+  }
+
+  h4 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 2px 0;
+  }
+
+  p {
+    font-size: 12px;
+    color: $gh-gray-dim;
+  }
+
+  &--ladies {
+    border-color: $gh-border;
+
+    &:hover {
+      border-color: rgba(239, 208, 127, 0.6);
+    }
+  }
+}
+
+.ann-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $gh-gold;
+  color: $gh-black;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-bottom-left-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ann-price {
+  text-align: right;
+  flex-shrink: 0;
+
+  span {
+    font-size: 22px;
+    font-weight: 700;
+    color: $gh-white;
+  }
+
+  small {
+    display: block;
+    font-size: 10px;
+    color: $gh-gray-dim;
+  }
+}
+
+.ann-note-box {
+  padding: 14px;
+  border-radius: 12px;
+  background: $gh-black;
+  border: 1px dashed #2b2b2b;
+  font-size: 11px;
+  color: $gh-gray-dim;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* --- Section 3：五大體驗 --- */
+.ann-experience {
+  margin-bottom: 72px;
+}
+
+.ann-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid $gh-border;
+  padding-bottom: 16px;
+  margin-bottom: 36px;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-top: 4px;
+  }
+}
+
+.ann-section-head-right {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: $gh-gray-dim;
+}
+
+.ann-experience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.ann-exp-card {
+  background: rgba(26, 26, 26, 0.7);
+  border: 1px solid #2b2b2b;
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: $gh-border;
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 12px;
+    color: $gh-gray-dim;
+  }
+}
+
+.ann-exp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.ann-exp-no {
+  font-size: 28px;
+  font-weight: 300;
+  color: rgba(239, 208, 127, 0.75);
+}
+
+.ann-exp-tag {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $gh-gray-dim;
+  background: #232323;
+  padding: 2px 8px;
+  border-radius: 4px;
+  height: fit-content;
+
+  &--accent {
+    color: $gh-gold;
+    background: rgba(239, 208, 127, 0.1);
+    border: 1px solid $gh-border;
+  }
+}
+
+.ann-exp-note {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #2b2b2b;
+  font-size: 11px;
+  color: rgba(239, 208, 127, 0.8);
+}
+
+/* --- Section 4：相片藝廊 --- */
+.ann-gallery {
+  margin-bottom: 72px;
+}
+
+.ann-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.ann-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #2b2b2b;
+  box-shadow: 0 16px 38px -10px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(239, 208, 127, 0.15);
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  grid-column: span 12;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.06);
+  }
+
+  &:hover .ann-gallery-caption {
+    opacity: 1;
+  }
+
+  &:nth-child(1) {
+    grid-column: span 12;
+    aspect-ratio: 16 / 10;
+  }
+
+  @media (min-width: 768px) {
+    &:nth-child(1) { grid-column: span 7; }
+    &:nth-child(2) { grid-column: span 5; aspect-ratio: 4 / 3; }
+    &:nth-child(3), &:nth-child(4), &:nth-child(5) { grid-column: span 4; aspect-ratio: 1 / 1; }
+  }
+
+  @media (max-width: 767px) {
+    &:nth-child(2) { grid-column: span 6; }
+    &:nth-child(3) { grid-column: span 6; }
+    &:nth-child(4) { grid-column: span 6; }
+    &:nth-child(5) { grid-column: span 6; }
+  }
+}
+
+.ann-gallery-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(17, 17, 17, 0.92), transparent 60%);
+  opacity: 0.85;
+  transition: opacity 0.3s;
+
+  span {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $gh-gold;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 500;
+    color: $gh-white;
+    margin-top: 2px;
+  }
+}
+
+/* --- Section 5：RSVP --- */
+.ann-rsvp {
+  margin-bottom: 48px;
+}
+
+.scroll-mt {
+  scroll-margin-top: 110px;
+}
+
+.ann-rsvp-card {
+  background: linear-gradient(180deg, $gh-black-panel, $gh-black);
+  border: 1px solid $gh-border-strong;
+  box-shadow: 0 0 25px rgba(239, 208, 127, 0.08);
+  border-radius: 24px;
+  padding: 32px 20px;
+}
+
+.ann-rsvp-head {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 300;
+  }
+}
+
+.ann-form {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ann-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @media (min-width: 576px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ann-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 12px;
+    color: $gh-gray-dim;
+  }
+
+  input, select {
+    background: $gh-black;
+    border: 1px solid #2b2b2b;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: $gh-white;
+    font-family: inherit;
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $gh-gold;
+    }
+  }
+}
+
+.ann-required {
+  color: $gh-gold;
+}
+
+.ann-form-error {
+  font-size: 12px;
+  color: #e0a06b;
+  background: rgba(224, 160, 107, 0.08);
+  border: 1px solid rgba(224, 160, 107, 0.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+
+  a {
+    color: $gh-gold;
+    text-decoration: underline;
+  }
+}
+
+.ann-form-submit {
+  padding-top: 8px;
+}
+
+.ann-form-hint {
+  text-align: center;
+  font-size: 11px;
+  color: $gh-gray-dim;
+}
+
+/* --- Section 6：匯款資訊 --- */
+.ann-payment {
+  margin-bottom: 48px;
+}
+
+.ann-payment-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, $gh-black-panel, $gh-black);
+  border: 1px solid $gh-border;
+  border-radius: 24px;
+  padding: 32px 20px;
+}
+
+.ann-payment-head {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+.ann-payment-info {
+  background: $gh-black;
+  border: 1px solid #2b2b2b;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.ann-payment-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #232323;
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.ann-payment-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: $gh-gold-light;
+  letter-spacing: 0.03em;
+}
+
+.ann-payment-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  color: $gh-gray;
+  line-height: 1.8;
+  padding-left: 18px;
+
+  li {
+    list-style: disc;
+
+    strong {
+      color: $gh-gold;
+    }
+  }
+}
+
+/* --- 頁尾 --- */
+.ann-footer {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(239, 208, 127, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ann-footer-title {
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: $gh-gold;
+}
+
+.ann-footer p {
+  font-size: 12px;
+  color: $gh-gray-dim;
+}
+
+.ann-footer-warning {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-size: 11px;
+  color: $gh-gray-dim;
+  letter-spacing: 0.05em;
+}
+
+/* --- Modal / Lightbox --- */
+.ann-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.ann-modal {
+  position: relative;
+  background: $gh-black-soft;
+  border: 1px solid $gh-border;
+  border-radius: 18px;
+  padding: 16px;
+
+  &--lightbox {
+    max-width: 720px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: $gh-gold;
+      margin-top: 12px;
+    }
+  }
+
+  &--success {
+    max-width: 420px;
+    width: 100%;
+    padding: 32px 24px;
+    text-align: center;
+    background: linear-gradient(180deg, $gh-black-panel, $gh-black);
+    border: 1px solid $gh-border-strong;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    h3 {
+      font-size: 22px;
+      font-weight: 300;
+      margin-top: 4px;
+    }
+
+    p {
+      font-size: 12px;
+      margin: 10px 0 18px;
+    }
+  }
+}
+
+.ann-modal-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: $gh-gold;
+  color: $gh-black;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ann-modal-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(239, 208, 127, 0.15);
+  border: 1px solid rgba(239, 208, 127, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: $gh-gold;
+  margin-bottom: 8px;
+}
+
+.ann-modal-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* --- Responsive tweaks --- */
+@media (min-width: 768px) {
+  .ann-page {
+    padding-top: 130px;
+  }
+
+  .ann-eyebrow-right {
+    display: block;
+  }
+
+  .ann-hero-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .ann-hero-note-col {
+    border-top: none;
+    border-left: 1px solid $gh-border;
+    padding-top: 0;
+    padding-left: 24px;
+  }
+
+  .ann-h1 {
+    font-size: 60px;
+  }
+
+  .ann-info-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ann-info-item {
+    padding-top: 0;
+    border-top: none;
+    padding-left: 24px;
+    border-left: 1px solid #2a271f;
+
+    &:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  .ann-privilege-grid {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  .ann-experience-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ann-exp-card--wide {
+    grid-column: span 2;
+  }
+}
+
+/* --- 列印樣式 --- */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .ann-page {
+    background: $gh-black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    padding-top: 20px;
+  }
+}
