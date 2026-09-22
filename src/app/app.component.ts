@@ -19,10 +19,12 @@ export class AppComponent {
   subCategoryImgAlt = "" // 下拉選單 子項目 圖片 介紹
   title = "Galaxy House 銀河會所";
   titleImage = "images/logo.png";
-  menuData: MenuItem[] = [{
-    "title": "週年慶",
-    "link": "/anniversary"
-  },{
+  menuData: MenuItem[] = [
+  //   {
+  //   "title": "週年慶",
+  //   "link": "/anniversary"
+  // },
+  {
     "title": "據點&菜單資訊",
     "subMenu": [
       {
