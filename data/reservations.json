@@ -27,6 +27,13 @@
       "endTime": "23:59",
       "label": "公休",
       "sourceEventId": "closure-34-2026-12-06"
+    },
+    {
+      "date": "2026-10-28",
+      "startTime": "20:00",
+      "endTime": "23:00",
+      "label": "10/28音樂會",
+      "sourceEventId": "179"
     }
   ],
   "Tianmu": []
