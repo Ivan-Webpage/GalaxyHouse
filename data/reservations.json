@@ -34,6 +34,13 @@
       "endTime": "23:00",
       "label": "10/28音樂會",
       "sourceEventId": "179"
+    },
+    {
+      "date": "2026-10-29",
+      "startTime": "19:30",
+      "endTime": "21:00",
+      "label": "VIP包廂",
+      "sourceEventId": "182"
     }
   ],
   "Tianmu": []
