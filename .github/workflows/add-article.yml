@@ -7,6 +7,11 @@ name: 自動新增活動並發佈
 # template: moonMusic（漫霧與音樂之約，全自動）｜venueClosure（包場公告，標題固定「X年X月包場公告」自動產生，需另外帶 content）
 # venueClosure 需要在 client_payload 額外帶 content（內文，可以是 HTML）；title 欄位已不再需要，即使帶了也會被忽略
 #
+# 選填 sourceEventId：財務系統「活動管理」的活動 id。部署完成後會回呼財務系統
+#   POST https://galaxyhouse-finance.zeabur.app/api/public/website-article-callback
+# 把文章編號寫回該活動（需要 repo secret GH_FINANCE_CALLBACK_KEY，等於財務系統後端的
+# WEBSITE_ARTICLE_CALLBACK_KEY；沒設定 secret 或沒帶 sourceEventId 就只略過回寫，不影響發佈）。
+#
 # 注意：所有 client_payload 欄位一律經由 env 傳遞給下面的指令，不要直接內插進
 # run: 的 shell 字串裡——client_payload 內容可能來自外部系統的自由輸入欄位，
 # 直接內插到 shell 字串會有 command injection 風險。
@@ -46,6 +51,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
 
       - name: Add article from template
+        id: add_article
         env:
           TEMPLATE: ${{ github.event.client_payload.template }}
           EVENT_DATE: ${{ github.event.client_payload.date }}
@@ -63,3 +69,11 @@ jobs:
           TEMPLATE: ${{ github.event.client_payload.template }}
           EVENT_DATE: ${{ github.event.client_payload.date }}
         run: node scripts/publish.js "自動發布：$TEMPLATE $EVENT_DATE"
+
+      - name: Write article id back to gh_finance
+        env:
+          SOURCE_EVENT_ID: ${{ github.event.client_payload.sourceEventId }}
+          ARTICLE_ID: ${{ steps.add_article.outputs.article_id }}
+          GH_FINANCE_CALLBACK_KEY: ${{ secrets.GH_FINANCE_CALLBACK_KEY }}
+          GH_FINANCE_API_BASE: ${{ vars.GH_FINANCE_API_BASE }}
+        run: node scripts/notify-gh-finance-article.js

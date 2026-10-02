@@ -6,8 +6,12 @@
 //   包場公告（標題固定為「X年X月包場公告」自動產生；內文每次不同，用文字直接帶不透過 argv，避免特殊字元被 shell 吃掉）：
 //     ARTICLE_CONTENT="9月15日、9月22日包場" \
 //       node scripts/add-article-from-template.js --template=venueClosure --date=2026-09-30 --branch=Songshan
+//
+// 在 GitHub Actions 裡執行時，會把新文章編號寫進 $GITHUB_OUTPUT（article_id），讓後面的
+// 步驟部署完成後回呼財務系統（scripts/notify-gh-finance-article.js）寫回文章網址。
 'use strict';
 
+const fs = require('fs');
 const { TEMPLATES } = require('./article-templates');
 const { saveArticleDraft } = require('./article-store');
 
@@ -69,6 +73,10 @@ function main() {
   const newArticle = saveArticleDraft(draft);
   console.log(`已新增文章 #${newArticle.id}：${newArticle.title}`);
   console.log('sitemap.xml 已同步更新。');
+
+  if (process.env.GITHUB_OUTPUT) {
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, `article_id=${newArticle.id}\n`);
+  }
 }
 
 try {
