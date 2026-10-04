@@ -1,7 +1,8 @@
 // 品牌色票（對應 src/assets/style/color.scss 的黑 / 金 / 褐 / 白）
 $gh-black: rgb(17, 17, 17);
-$gh-black-soft: #1a1a1a;
-$gh-black-panel: #201c16;
+$gh-black-soft: #2a2017;
+$gh-black-panel: #32261a;
+$gh-deep: #1c150e;
 $gh-gold: rgb(239, 208, 127);   // #efd07f
 $gh-gold-light: #f9ecd0;
 $gh-gold-deep: rgb(140, 79, 40); // #8c4f28
@@ -17,14 +18,16 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 
 .ann-page {
   background:
-    radial-gradient(circle at 80% 15%, rgba(239, 208, 127, 0.07) 0%, transparent 45%),
-    radial-gradient(circle at 15% 55%, rgba(140, 79, 40, 0.18) 0%, transparent 55%),
-    radial-gradient(circle at 75% 85%, rgba(239, 208, 127, 0.05) 0%, transparent 40%),
-    linear-gradient(180deg, $gh-black 0%, #171310 45%, $gh-black 100%);
+    radial-gradient(ellipse 70% 14% at 88% 4%, rgba(239, 208, 127, 0.22), transparent 70%),
+    radial-gradient(ellipse 60% 12% at 6% 22%, rgba(190, 115, 50, 0.30), transparent 70%),
+    radial-gradient(ellipse 70% 12% at 92% 42%, rgba(239, 208, 127, 0.14), transparent 70%),
+    radial-gradient(ellipse 60% 12% at 4% 64%, rgba(190, 115, 50, 0.28), transparent 70%),
+    radial-gradient(ellipse 70% 12% at 90% 84%, rgba(239, 208, 127, 0.16), transparent 70%),
+    linear-gradient(180deg, #1e1812 0%, #281d13 40%, #231a12 70%, #1b150f 100%);
   color: $gh-gray;
   font-family: 'Microsoft JhengHei', 'PMingLiU', serif;
   padding-top: 110px;
-  padding-bottom: 60px;
+  padding-bottom: clamp(140px, 24vw, 300px);
   position: relative;
   overflow-x: hidden;
 
@@ -59,6 +62,63 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- 金粉光點裝飾（柔和閃爍，不搶內容） --- */
+.ann-glitter {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+  animation: ann-twinkle 7s ease-in-out infinite alternate;
+
+  &--tr {
+    --o: 0.65;
+    top: 0;
+    right: 0;
+    width: min(52vw, 560px);
+  }
+
+  &--wave {
+    --o: 0.45;
+    left: -12.5%;
+    top: -170px;
+    width: 125%;
+    animation-delay: -2s;
+  }
+
+  &--bl,
+  &--br {
+    --o: 0.55;
+    bottom: 0;
+    width: min(44vw, 440px);
+  }
+
+  &--bl {
+    left: 0;
+    animation-delay: -4s;
+  }
+
+  &--br {
+    right: 0;
+    transform: scaleY(-1);
+    animation-delay: -1s;
+  }
+}
+
+@keyframes ann-twinkle {
+  from { opacity: calc(var(--o) * 0.65); }
+  to { opacity: var(--o); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ann-glitter {
+    animation: none;
+    opacity: var(--o);
+  }
 }
 
 .ann-gold-text {
@@ -235,7 +295,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 
 .ann-info-card {
   position: relative;
-  background: linear-gradient(90deg, $gh-black-panel, #17130f, $gh-black-panel);
+  background: linear-gradient(90deg, $gh-black-panel, #241b12, $gh-black-panel);
   border: 1px solid $gh-border;
   border-radius: 20px;
   padding: 28px 24px;
@@ -246,7 +306,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 
 .ann-info-item {
   padding-top: 16px;
-  border-top: 1px solid #2a271f;
+  border-top: 1px solid rgba(239, 208, 127, 0.14);
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -335,9 +395,15 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   gap: 12px;
 }
 
+/* --- 場地大圖 --- */
+.ann-venue {
+  margin-bottom: 72px;
+}
+
 /* --- Section 2：VIP 特權 --- */
 .ann-privilege {
   margin-bottom: 72px;
+  position: relative;
 }
 
 .ann-privilege-grid {
@@ -348,7 +414,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 
 .ann-privilege-card {
   position: relative;
-  background: linear-gradient(135deg, #241d10, #191510, #12100c);
+  background: linear-gradient(135deg, #3a2a15, #2a2013, #1f1710);
   border: 1px solid $gh-border-strong;
   box-shadow: 0 0 25px rgba(239, 208, 127, 0.08);
   border-radius: 20px;
@@ -405,8 +471,8 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 
 .ann-price-card {
   position: relative;
-  background: rgba(26, 26, 26, 0.9);
-  border: 1px solid #2b2b2b;
+  background: rgba(48, 37, 26, 0.78);
+  border: 1px solid rgba(239, 208, 127, 0.16);
   border-radius: 16px;
   padding: 18px;
   display: flex;
@@ -473,8 +539,8 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 .ann-note-box {
   padding: 14px;
   border-radius: 12px;
-  background: $gh-black;
-  border: 1px dashed #2b2b2b;
+  background: $gh-deep;
+  border: 1px dashed rgba(239, 208, 127, 0.16);
   font-size: 11px;
   color: $gh-gray-dim;
   line-height: 1.7;
@@ -516,8 +582,8 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 }
 
 .ann-exp-card {
-  background: rgba(26, 26, 26, 0.7);
-  border: 1px solid #2b2b2b;
+  background: linear-gradient(160deg, rgba(58, 44, 30, 0.78), rgba(34, 27, 19, 0.78));
+  border: 1px solid rgba(239, 208, 127, 0.16);
   border-radius: 16px;
   padding: 22px;
   display: flex;
@@ -559,7 +625,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: $gh-gray-dim;
-  background: #232323;
+  background: rgba(239, 208, 127, 0.08);
   padding: 2px 8px;
   border-radius: 4px;
   height: fit-content;
@@ -574,9 +640,98 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 .ann-exp-note {
   margin-top: 14px;
   padding-top: 10px;
-  border-top: 1px solid #2b2b2b;
+  border-top: 1px solid rgba(239, 208, 127, 0.16);
   font-size: 11px;
   color: rgba(239, 208, 127, 0.8);
+}
+
+.ann-exp-photo {
+  margin: -22px -22px 18px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+}
+
+.ann-exp-card:hover .ann-exp-photo img {
+  transform: scale(1.05);
+}
+
+/* --- 大幅場景圖（場地／樂手） --- */
+.ann-banner {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  border: 1px solid $gh-border-strong;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.9s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+
+  &--venue {
+    border-width: 1px 0;
+    box-shadow: 0 0 60px rgba(239, 208, 127, 0.12);
+
+    img {
+      object-position: 50% 60%;
+    }
+  }
+
+  &--band {
+    border-radius: 20px;
+    aspect-ratio: 3 / 2;
+
+    .ann-banner-caption p {
+      display: block;
+      font-size: 12px;
+      color: $gh-gray;
+    }
+  }
+}
+
+.ann-band-pair {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.ann-banner-caption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 56px 20px 18px;
+  background: linear-gradient(to top, rgba(17, 17, 17, 0.92), transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+  }
+
+  p {
+    display: none;
+    font-size: 13px;
+    max-width: 560px;
+  }
 }
 
 /* --- Section 4：相片藝廊 --- */
@@ -594,7 +749,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  border: 1px solid #2b2b2b;
+  border: 1px solid rgba(239, 208, 127, 0.16);
   box-shadow: 0 16px 38px -10px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(239, 208, 127, 0.15);
   cursor: pointer;
   aspect-ratio: 4 / 3;
@@ -624,14 +779,12 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   @media (min-width: 768px) {
     &:nth-child(1) { grid-column: span 7; }
     &:nth-child(2) { grid-column: span 5; aspect-ratio: 4 / 3; }
-    &:nth-child(3), &:nth-child(4), &:nth-child(5) { grid-column: span 4; aspect-ratio: 1 / 1; }
+    &:nth-child(n + 3) { grid-column: span 4; aspect-ratio: 1 / 1; }
   }
 
   @media (max-width: 767px) {
-    &:nth-child(2) { grid-column: span 6; }
-    &:nth-child(3) { grid-column: span 6; }
-    &:nth-child(4) { grid-column: span 6; }
-    &:nth-child(5) { grid-column: span 6; }
+    &:nth-child(n + 2) { grid-column: span 6; }
+    &:last-child:nth-child(even) { grid-column: span 12; aspect-ratio: 16 / 10; }
   }
 }
 
@@ -664,6 +817,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 /* --- Section 5：RSVP --- */
 .ann-rsvp {
   margin-bottom: 48px;
+  position: relative;
 }
 
 .scroll-mt {
@@ -671,7 +825,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 }
 
 .ann-rsvp-card {
-  background: linear-gradient(180deg, $gh-black-panel, $gh-black);
+  background: linear-gradient(180deg, $gh-black-panel, $gh-deep);
   border: 1px solid $gh-border-strong;
   box-shadow: 0 0 25px rgba(239, 208, 127, 0.08);
   border-radius: 24px;
@@ -698,8 +852,8 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 }
 
 .ann-rsvp-checklist {
-  background: $gh-black;
-  border: 1px solid #2b2b2b;
+  background: $gh-deep;
+  border: 1px solid rgba(239, 208, 127, 0.16);
   border-radius: 14px;
   padding: 18px 20px;
   margin-bottom: 24px;
@@ -742,7 +896,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 .ann-payment-card {
   max-width: 620px;
   margin: 0 auto;
-  background: linear-gradient(180deg, $gh-black-panel, $gh-black);
+  background: linear-gradient(180deg, $gh-black-panel, $gh-deep);
   border: 1px solid $gh-border;
   border-radius: 24px;
   padding: 32px 20px;
@@ -762,8 +916,8 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
 }
 
 .ann-payment-info {
-  background: $gh-black;
-  border: 1px solid #2b2b2b;
+  background: $gh-deep;
+  border: 1px solid rgba(239, 208, 127, 0.16);
   border-radius: 14px;
   padding: 18px 20px;
   display: flex;
@@ -778,7 +932,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   justify-content: space-between;
   gap: 12px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #232323;
+  border-bottom: 1px solid rgba(239, 208, 127, 0.12);
 
   &:last-child {
     padding-bottom: 0;
@@ -935,7 +1089,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
     padding-top: 0;
     border-top: none;
     padding-left: 24px;
-    border-left: 1px solid #2a271f;
+    border-left: 1px solid rgba(239, 208, 127, 0.14);
 
     &:first-child {
       padding-left: 0;
@@ -954,11 +1108,33 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   .ann-exp-card--wide {
     grid-column: span 2;
   }
+
+  .ann-banner--venue {
+    aspect-ratio: auto;
+    height: clamp(460px, 58vw, 820px);
+
+    .ann-banner-caption {
+      padding: 120px max(20px, calc((100% - 1100px) / 2 + 20px)) 40px;
+
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .ann-band-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ann-banner-caption p {
+    display: block;
+  }
 }
 
 /* --- 列印樣式 --- */
 @media print {
-  .no-print {
+  .no-print,
+  .ann-glitter {
     display: none !important;
   }
 

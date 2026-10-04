@@ -1,5 +1,7 @@
 <div class="ann-page">
 
+  <img class="ann-glitter ann-glitter--tr" src="images/uploads/anniversary/deco/glitter-tr.webp" alt="" aria-hidden="true" fetchpriority="low">
+
   <!-- Section 1：封面導言 & 雙館巨獻 -->
   <section class="ann-hero">
     <div class="ann-container">
@@ -55,8 +57,21 @@
     </div>
   </section>
 
+  <!-- 場地大圖 -->
+  <section class="ann-venue">
+    <div class="ann-banner ann-banner--venue" (click)="openLightbox(venue)">
+      <img [src]="venue.src" [alt]="venue.alt" fetchpriority="high">
+      <div class="ann-banner-caption">
+        <span class="ann-eyebrow-gold">{{ venue.tag }}</span>
+        <h2>{{ venue.title }}</h2>
+        <p>{{ venue.caption }}</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 2：尊榮方案與會員特權 -->
   <section class="ann-privilege">
+    <img class="ann-glitter ann-glitter--wave" src="images/uploads/anniversary/deco/gold-wave.webp" alt="" aria-hidden="true" loading="lazy">
     <div class="ann-container">
       <div class="ann-hr"></div>
 
@@ -67,10 +82,10 @@
           <div class="ann-privilege-body">
             <span class="ann-eyebrow-gold"><span class="ann-eyebrow-gold-dot"></span>會員專屬禮遇</span>
             <h3 class="ann-privilege-title">
-              銀河會所正式會員 <br>
-              <span class="ann-gold-text">免費攜伴一位女伴出席</span>
+              銀河會所正式會員及常客 <br>
+              <span class="ann-gold-text">特殊貴賓禮遇</span>
             </h3>
-            <p>為答謝天母館與松山館會員一年來的厚愛，凡銀河會所正式會員報名參與，即享尊榮攜伴特權——<strong>同行女伴完全不收費（免入場費）</strong>。與重要佳人一同沉浸在美酒、雪茄與古典樂聲中。</p>
+            <p>為答謝天母館與松山館會員一年來的厚愛，宴請貴賓享受美好的夜晚，欣賞銀河的亮麗。與重要佳人一同沉浸在美酒、雪茄與古典樂聲中。</p>
           </div>
 
           <div class="ann-privilege-foot">
@@ -125,6 +140,11 @@
       <div class="ann-experience-grid">
         @for (item of experiences; track item.no) {
           <div class="ann-exp-card" [class.ann-exp-card--wide]="item.wide">
+            @if (item.image) {
+              <div class="ann-exp-photo">
+                <img [src]="item.image" [alt]="item.title" [style.object-position]="item.imagePos" loading="lazy">
+              </div>
+            }
             <div>
               <div class="ann-exp-top">
                 <span class="ann-exp-no">{{ item.no }}</span>
@@ -134,6 +154,19 @@
               <p>{{ item.desc }}</p>
             </div>
             <div class="ann-exp-note">{{ item.note }}</div>
+          </div>
+        }
+      </div>
+
+      <div class="ann-band-pair">
+        @for (b of bands; track b.src) {
+          <div class="ann-banner ann-banner--band" (click)="openLightbox(b)">
+            <img [src]="b.src" [alt]="b.alt" [style.object-position]="b.pos" loading="lazy">
+            <div class="ann-banner-caption">
+              <span class="ann-eyebrow-gold">{{ b.tag }}</span>
+              <h2>{{ b.title }}</h2>
+              <p>{{ b.caption }}</p>
+            </div>
           </div>
         }
       </div>
@@ -228,7 +261,7 @@
 
           <ul class="ann-payment-notes">
             <li>轉帳後麻煩提供匯款帳號末五碼，以利核對確認。</li>
-            <li>因活動需提前安排場地與物資，請於 <strong>2026 年 10 月 15 日前</strong>完成報名費匯款。</li>
+            <li>因活動需提前安排場地與物資，請於 <strong>2026 年 10 月 31 日前</strong>完成報名費匯款。</li>
             <li>報名後恕不退款。</li>
           </ul>
         </div>
@@ -247,6 +280,9 @@
       </div>
     </div>
   </footer>
+
+  <img class="ann-glitter ann-glitter--bl" src="images/uploads/anniversary/deco/glitter-bl.webp" alt="" aria-hidden="true" loading="lazy">
+  <img class="ann-glitter ann-glitter--br" src="images/uploads/anniversary/deco/glitter-tr.webp" alt="" aria-hidden="true" loading="lazy">
 
   <!-- 圖片放大燈箱 -->
   @if (showLightbox && activeImage) {
