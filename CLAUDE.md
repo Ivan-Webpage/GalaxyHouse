@@ -61,3 +61,8 @@ npm run publish         # commit+push 原始碼到 main，build，並把靜態�
 - 內文含大量繁體中文字串（頁面文案、SEO meta），修改時保留原文風格，不要翻譯或改寫非必要文字。
 - `projects/lib` 是共用套件，修改時要考慮多個頁面共用的影響範圍。
 - `scripts/` 底下的 Node 工具（`add-article.js`、`publish.js`、`generate-sitemap.js`）會執行 git commit/push，屬於會影響共用/遠端狀態的操作，修改這些腳本或代替使用者執行 `npm run publish` 前要特別小心，確認使用者真的要現在發佈。
+- **改動前先同步遠端**：這個 repo 不只有使用者本機在改。財務系統（`C:\Users\ivany\OneDrive\Desktop\gh_finance`）會觸發本 repo 的 GitHub Actions（`.github/workflows/add-article.yml`、`sync-reservation.yml`），由 `galaxyhouse-bot` 直接在 GitHub 的 `main` 上 commit（更新 `public/data/` 下的文章、訂位資料等），所以遠端 `main` 隨時可能比本機新，本機完全不會知道。
+  - **開始任何修改之前**，先執行 `git pull --rebase --autostash`（會暫存尚未 commit 的變更、拉下機器人的新 commit、再放回去）。
+  - **push 之前**（或代替使用者跑 `npm run publish` 之前）再確認一次本機沒有落後遠端；若 push 被拒絕（non-fast-forward），重新 `git pull --rebase --autostash` 再推，**不要**用 `git push -f` 強推，否則會蓋掉機器人的 commit。
+  - 若 pull 時遇到衝突，常見於 `public/data/articles.json`、`public/data/reservations.json` 這類機器人也會改的檔案，要保留雙方的內容，不確定時先問使用者，不要自行挑一邊覆蓋。
+  - `npm run publish` 是先 push `main` 才 build 並部署 gh-pages，所以 `main` 推不上去時腳本會中止、不會拿過期資料部署，這是安全網，不是可以跳過 pull 的理由。
