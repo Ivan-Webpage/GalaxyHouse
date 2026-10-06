@@ -38,6 +38,41 @@ npm run article:add
 
 公司內部財務系統新增「漫霧與音樂之約」或「包場公告」活動時，會自動呼叫 GitHub 觸發 `.github/workflows/add-article.yml` 這個 workflow：非互動地執行 `scripts/add-article-from-template.js`，用跟上面兩個套版完全一樣的規則產生文章（標題/簡短介紹自動產生的規則一致），寫入資料後自動 build 並發佈到 GitHub Pages——全程不需要人工介入。可以到 `https://github.com/Ivan-Webpage/GalaxyHouse/actions` 看執行紀錄，確認有沒有成功。
 
+## 方法三：分店訂位月曆同步（財務系統自動觸發）
+
+分店頁 `/branchShop/:id` 的「訂位資訊」月曆讀取 `public/data/reservations.json`。資料來源是財務系統（gh_finance）既有的「活動管理」資料（`mkt.activity_records`）。
+
+**使用者已拍板：不另外建立訂位資料表。** 原因是活動管理的資料已經足以呈現，再多一張表還得維持兩邊一致，反而更麻煩。
+
+同步流程：
+
+1. 財務系統在活動新增、編輯、刪除或取消時，送出 `repository_dispatch`（`event_type: sync-reservation`）。
+2. 收到 dispatch 後，[.github/workflows/sync-reservation.yml](../.github/workflows/sync-reservation.yml) 執行 [scripts/manage-reservation.js](../scripts/manage-reservation.js)，以 `sourceEventId` 為鍵對 JSON 做 upsert 或 delete，接著跑 `publish.js` 部署。
+3. 這支 workflow 和 `add-article.yml` 共用同一個 concurrency group，兩邊會排隊執行，避免同時 push 造成衝突。
+
+`reservations.json` 格式：
+
+```json
+{
+  "Songshan": [
+    { "date": "2026-09-30", "startTime": "20:00", "endTime": "23:00",
+      "label": "9/30漫霧與音樂之約", "sourceEventId": "176" }
+  ],
+  "Tianmu": []
+}
+```
+
+- **只放公開資訊**：只放日期、時段和顯示文字，不放客戶姓名、金額、備註。
+- **`label`**：月曆上顯示的文字。值是「公休」時會顯示成灰色公休樣式，例如 `sourceEventId` 為 `closure-…` 的店休日。
+- **每週一公休**：這是前端元件的預設值，不需要寫進 JSON。
+- **不要手動清空或覆蓋**：這份檔案由機器人維護。以前曾經在本機清除測試資料時，rebase 撞到機器人剛同步進來的真實資料（id=176），最後是保留真實資料、只刪除測試資料。
+
+## LINE@ 連結格式
+
+- **一律使用 `https://line.me/ti/p/@392kgxba`**，這是加好友或開啟對話的連結，桌機和手機都能用。松山店官方帳號是 `@392kgxba`；分店頁從 `branch-shops.json` 的 `lineID` 組出連結。
+- **不要用 `https://line.me/R/oaMessage/@…/?預填文字`**：這種可以預填訊息的連結只有在已安裝 LINE App 的手機上有效，桌機瀏覽器會被導回 LINE 首頁。使用者實測後決定改回 `/ti/p/`，接受客人需要自己輸入訊息。
+- **這和 LINE Login 無關**：LINE Login 是登入用的 OAuth 機制，不能拿來解決上面的問題。
+
 ## 發佈網站（`npm run publish`）
 
 ```bash
@@ -55,7 +90,7 @@ npm run publish
 
 ## 什麼時候要重新發佈
 
-- 新增/修改文章、活動之後（透過財務系統觸發的不用管，workflow 會自動發佈）
+- 新增或修改文章、活動之後。透過財務系統觸發的文章與訂位月曆同步不用管，workflow 會自動發佈。
 - 修改分店資訊、菜單、職缺（目前這些要直接編輯 `public/data/branch-shops.json` / `apply.json`，沒有互動式工具，改完存檔即可）
 - 修改任何頁面的程式碼或文案之後
 
@@ -71,6 +106,7 @@ npm run publish
 
 ## 注意事項
 
+- **`push` 被拒絕（`rejected … fetch first`）**：這代表機器人在遠端新增了 commit，不是你的修改遺失了。若上一次 publish 已經 commit 成功、只是 push 失敗，再跑一次時會顯示「沒有新變更，略過 commit」，這是正常的。處理方式是先跑 `git pull --rebase --autostash`，再重新 `npm run publish`。**不要**用 `git push -f`。
 - `npm run publish` 會直接 push 到 GitHub 的 `main` 與 `gh-pages` 分支，這兩個分支都是「正式」分支，push 之後會立即反映在對外網站上——執行前確認自己真的要發佈。
 - 第一次執行 `npm run article:add` 或 `npm run publish` 前，這台電腦要先能用 git 存取 `https://github.com/Ivan-Webpage/GalaxyHouse.git`（例如已經登入過 GitHub CLI 或設定好認證），否則 push 那一步會失敗。
 - `scripts/publish.js` 寫死 push 到本地分支 `main`（[scripts/publish.js:52](../scripts/publish.js)）。如果在新環境（例如換電腦、重新 clone）跑 `npm run publish` 時卡在 push 這步，先確認本地分支叫 `main` 而不是 `master`（`git branch` 檢查；不對的話 `git branch -m master main`）——GitHub 遠端上的預設分支是 `main`，沒有 `master`。同樣道理，第一次在新環境跑之前也要記得先 `npm install`（`node_modules` 不會進 git，沒裝過的話 `ng build` 會直接失敗）。

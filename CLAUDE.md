@@ -49,10 +49,10 @@ npm run publish         # commit+push 原始碼到 main，build，並把靜態�
 ## docs 索引
 
 - [docs/architecture.md](docs/architecture.md) — 現況整體架構（純靜態 + prerender + GitHub Pages 部署）
-- [docs/frontend-structure.md](docs/frontend-structure.md) — Angular app 與 lib 的詳細結構
+- [docs/frontend-structure.md](docs/frontend-structure.md) — Angular app 與 lib 的詳細結構，包括菜單「杯 / 瓶」格式、分店訂位月曆、週年慶頁 `/anniversary` 的設計決定
 - [docs/backend-api-reference.md](docs/backend-api-reference.md) — 舊後端 API 規格（歷史參考，說明 `public/data/*.json` 裡每個欄位原本從哪裡來）
 - [docs/refactor-plan.md](docs/refactor-plan.md) — 移除後端的重構記錄（已完成，含詳細遷移過程與已知取捨）
-- [docs/content-editing.md](docs/content-editing.md) — 日常新增活動/文章、發佈網站的操作說明
+- [docs/content-editing.md](docs/content-editing.md) — 日常新增活動和文章、財務系統自動同步（文章與訂位月曆 `reservations.json`）、LINE@ 連結格式、發佈網站的操作說明
 
 ## 給 AI agent 的協作提醒
 

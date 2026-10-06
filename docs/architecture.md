@@ -39,7 +39,9 @@ Angular workspace 啟用了 SSR + build-time prerender（`app.config.server.ts`�
 - `public/data/branch-shops.json` — 依分店英文名（`Songshan`/`Tianmu`）分組，包含分店資訊、菜單（已依 menuType 分組）、相簿。內容變動不頻繁，目前是遷移時一次性產生，沒有工具重新產生（如需更新，手動編輯這個檔案，或參考 [refactor-plan.md](refactor-plan.md) 裡遷移腳本的邏輯重新產生）。
 - `public/data/apply.json` — 依分店分組的職缺清單，跟上面一樣屬於低頻更新資料。
 - `public/data/news-types.json` — 文章分類定義（公告/最新活動/活動花絮），低頻更新。
-- `public/data/articles.json` — **唯一設計成常態更新的資料**，`scripts/add-article.js` 會自動 append 新文章進去。
+- `public/data/articles.json` — 常態更新的資料。`scripts/add-article.js` 會自動 append 新文章；財務系統則透過 `add-article.yml` 自動新增。
+- `public/data/reservations.json` — 分店頁「訂位資訊」月曆的時段資料，依分店英文名分組。這份檔案由財務系統透過 `sync-reservation.yml` 自動 upsert 或 delete，通常不需要手動編輯，詳見 [content-editing.md](content-editing.md) 的「方法三」。
+- **遠端 `main` 可能比本機新**：上面兩份檔案會由 `galaxyhouse-bot` 直接在 GitHub 上 commit。本機修改前要先 `git pull --rebase --autostash`，規則見 [CLAUDE.md](../CLAUDE.md)。
 - 圖片都在 `public/images/uploads/<類型>/`，檔名沿用舊後端上傳時的原始檔名（含中文檔名，這在 GitHub Pages 上運作正常，跟專案原本 `public/images/` 的既有慣例一致）。
 
 `projects/lib/src/lib/service/content.service.ts` 是唯一讀取這些 JSON 的地方，並在前端重建原本後端的業務邏輯（文章上下架/到期日過濾、排序、9 篇上限、菜單分組、職缺分組）。詳見 [frontend-structure.md](frontend-structure.md)。
