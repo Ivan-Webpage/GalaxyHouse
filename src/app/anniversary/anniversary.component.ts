@@ -43,13 +43,13 @@ export class AnniversaryComponent implements OnInit {
   };
 
   experiences: ExperienceItem[] = [
-    { no: '01', tag: '炭烤串物・極致美味', title: '特色烤肉串燒 · 戶外炙烤熱饗', desc: '頂級海陸串燒現烤出爐！特選肉串與新鮮時蔬在炭火上滋滋作響，搭配主廚特調醬汁，香氣四溢，為您帶來最熱情豪邁的戶外饗宴。', note: '✦ 產地海鮮 ‧ 現烤串物', image: 'images/uploads/anniversary/炭火串烤現場.jpg', imagePos: '50% 40%' },
-    { no: '02', tag: '炭火慢烤・酥脆鮮嫩', title: '烤全豬', desc: '視覺與味覺的雙重震撼！現場炭火慢烤全豬，外皮金黃酥脆、肉質鮮嫩多汁，完美鎖住最純粹的脂香，為盛宴增添一份頂級的野味享受。', note: '✦ 紅白酒 ‧ 雞尾酒暢酩', image: 'images/uploads/anniversary/烤滷豬.jpg', imagePos: '50% 55%' },
-    { no: '03', tag: '專業調酒・微醺時光', title: '現場專屬調酒', desc: '專業調酒師駐場，為您客製化專屬飲品。隨著絢麗的調酒技法，將各式基酒與新鮮素材完美融合，打造出一杯杯視覺與味蕾的微醺藝術品。', note: '✦ 現場提供鑑賞與選購', image: 'images/uploads/anniversary/當晚特調酒單.jpg', imagePos: '50% 45%' },
-    { no: '04', tag: '鮮果特調・清爽沁涼', title: '鮮果雞尾酒 ╳ 特調茶水 ', desc: '沁涼清爽的派對必備！現場提供多款色彩繽紛的鮮果特調、無酒精雞尾酒 (Mocktail) 與冷泡茶飲，果香四溢、清甜解膩，隨時為您補充派對能量。', note: '✦ 現場提供鑑賞與選購', image: 'images/uploads/anniversary/雞尾酒.jpg', imagePos: '50% 45%' },
-    { no: '05', tag: '沉浸式沙龍・古典饗宴', title: '古典弦樂 · 優雅室內樂合奏', desc: '由氣質優雅的弦樂重奏（大提琴、小提琴）帶來動人心弦的古典樂章。在悠揚的琴聲交織中，為盛宴注入一抹浪漫且精緻的藝術氣息。', note: '✦ 沉浸式沙龍音樂饗宴', image: 'images/uploads/anniversary/現場樂手陣容.jpg', imagePos: '50% 45%'  },
-    { no: '06', tag: '爵士靈魂・經典熱唱', title: '實力歌手現場演唱 · 點亮星夜高潮', desc: '邀請實力派駐唱歌手與 Live Band 登台演出（鍵盤 王奕凡｜歌手 貝拉｜吉他 JAYWU）。從慵懶爵士到經典流行，用迷人的嗓音與現場魅力，將派對氣氛推向最高潮！', note: '✦ 爵士靈魂 ‧ 經典熱唱', wide: false, image: 'images/uploads/anniversary/現場演出樂團.jpg', imagePos: '50% 45%'  },
-    { no: '07', tag: '幸運時刻・好禮相贈', title: '驚喜抽獎時刻', desc: '盛宴中最令人期待的環節！我們精心準備了豐富的神祕大獎，隨著精緻封蠟信封的開啟，見證幸運兒的誕生，為完美的夜晚留下最難忘的回憶。', note: '✦ 爵士靈魂 ‧ 經典熱唱', wide: false, image: 'images/uploads/anniversary/抽獎.jpg', imagePos: '50% 45%'  },
+    { no: '01', tag: '炭烤串物・極致美味', title: '特色烤肉餐車 ‧ 戶外炙烤熱饗', desc: '海鮮、牛、豬羊、蔬菜串燒美食', note: '火宴晚餐', image: 'images/uploads/anniversary/炭火串烤現場.jpg', imagePos: '50% 40%' },
+    { no: '02', tag: '炭火慢烤・酥脆鮮嫩', title: '烤滷豬', desc: '70公斤大烤豬', note: '特製烤肉', image: 'images/uploads/anniversary/烤滷豬.jpg', imagePos: '50% 55%' },
+    { no: '03', tag: '專業調酒・微醺時光', title: '現場調酒', desc: '百杯調酒', note: '暢飲', image: 'images/uploads/anniversary/當晚特調酒單.jpg', imagePos: '50% 45%' },
+    { no: '04', tag: '鮮果特調・清爽沁涼', title: '雞尾酒 ╳ 茶水', desc: '雞尾酒、水果無酒精飲料、啤酒、茶水', note: '暢飲', image: 'images/uploads/anniversary/雞尾酒.jpg', imagePos: '50% 45%' },
+    { no: '05', tag: '沉浸式沙龍・古典饗宴', title: '古典弦樂 ‧ 優雅室內樂合奏', desc: '藝人御用古典樂手', note: '低音大提琴 ｜ 小提琴 ｜ 鍵盤', image: 'images/uploads/anniversary/現場樂手陣容.jpg', imagePos: '50% 45%'  },
+    { no: '06', tag: '爵士靈魂・經典熱唱', title: '實力歌手現場演唱 ‧ 點亮星夜高潮', desc: '年輕活力樂團獻唱', note: '鍵盤 王奕凡 ｜ 歌手 貝拉 ｜ 吉他 JAYWU', wide: false, image: 'images/uploads/anniversary/現場演出樂團.jpg', imagePos: '50% 45%'  },
+    { no: '07', tag: '幸運時刻・好禮相贈', title: '抽獎', desc: '萬元禮卷', note: '現場購買抽獎禮卷、一張/100元換大獎', wide: false, image: 'images/uploads/anniversary/抽獎.jpg', imagePos: '50% 45%'  },
   ];
 
   gallery: GalleryItem[] = [
