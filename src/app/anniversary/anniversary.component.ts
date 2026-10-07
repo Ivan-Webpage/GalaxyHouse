@@ -45,12 +45,12 @@ export class AnniversaryComponent implements OnInit {
   experiences: ExperienceItem[] = [
     { no: '01', tag: '炭烤串物・極致美味', title: '特色烤肉餐車 ‧ 戶外炙烤熱饗', desc: '海鮮、牛、豬羊、蔬菜串燒美食', note: '火宴晚餐', image: 'images/uploads/anniversary/炭火串烤現場.jpg', imagePos: '50% 40%' },
     { no: '02', tag: '炭火慢烤・酥脆鮮嫩', title: '烤滷豬', desc: '70公斤大烤豬', note: '特製烤肉', image: 'images/uploads/anniversary/烤滷豬.jpg', imagePos: '50% 55%' },
-    { no: '03', tag: '專業調酒・微醺時光', title: '現場調酒', desc: '百杯調酒', note: '暢飲', image: 'images/uploads/anniversary/當晚特調酒單.jpg', imagePos: '50% 45%' },
+    { no: '03', tag: '專業調酒・微醺時光', title: '現場調酒', desc: '百杯調酒，13-15種', note: '暢飲', image: 'images/uploads/anniversary/當晚特調酒單.jpg', imagePos: '50% 45%' },
     { no: '04', tag: '鮮果特調・清爽沁涼', title: '雞尾酒 ╳ 茶水', desc: '雞尾酒、水果無酒精飲料、啤酒、茶水', note: '暢飲', image: 'images/uploads/anniversary/雞尾酒.jpg', imagePos: '50% 45%' },
     { no: '05', tag: '沉浸式沙龍・古典饗宴', title: '古典弦樂 ‧ 優雅室內樂合奏', desc: '藝人御用古典樂手', note: '低音大提琴 ｜ 小提琴 ｜ 鍵盤', image: 'images/uploads/anniversary/現場樂手陣容.jpg', imagePos: '50% 45%'  },
     { no: '06', tag: '爵士靈魂・經典熱唱', title: '實力歌手現場演唱 ‧ 點亮星夜高潮', desc: '年輕活力樂團獻唱', note: '鍵盤 王奕凡 ｜ 歌手 貝拉 ｜ 吉他 JAYWU', wide: false, image: 'images/uploads/anniversary/現場演出樂團.jpg', imagePos: '50% 45%'  },
     { no: '07', tag: '幸運時刻・好禮相贈', title: '抽獎', desc: '萬元禮卷', note: '現場購買抽獎禮卷、一張/100元換大獎', image: 'images/uploads/anniversary/抽獎.jpg', imagePos: '50% 45%'  },
-    { no: '08', tag: '品飲美酒', title: '現場購買', desc: '威士忌、紅酒、白酒，和精選一隻品味', note: '未滿18歲請勿飲酒抽煙', image: 'images/uploads/anniversary/酒類.jpg', imagePos: '50% 45%'  },
+    { no: '08', tag: '品飲美酒', title: '現場購買', desc: '威士忌、紅酒、白酒，和精選木葉一隻', note: '極致品味', image: 'images/uploads/anniversary/酒類.jpg', imagePos: '50% 45%'  },
   ];
 
   gallery: GalleryItem[] = [
@@ -80,7 +80,7 @@ export class AnniversaryComponent implements OnInit {
       '雙館週年慶',
       '天母松山銀河會所週年慶 歲末私享盛典 會員攜伴優惠',
       'Galaxy House 銀河會所天母館與松山館首度聯合舉辦歲末週年慶盛典，2026/12/05 傍晚登場。現烤海陸百匯、星級調酒、威士忌、古典弦樂與歌手現場演唱，正式會員免費攜伴一位女伴出席，名額僅限 100～140 位，即刻線上響應出席。',
-      'https://thegalaxyhouse.com/images/uploads/anniversary/海鮮炭烤拼盤.jpg'
+      'https://thegalaxyhouse.com/images/uploads/anniversary/場地夜景.jpg'
     );
   }
 

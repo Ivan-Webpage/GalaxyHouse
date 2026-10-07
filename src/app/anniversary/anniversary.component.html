@@ -123,10 +123,10 @@
         @for (img of gallery; track img.src) {
         <div class="ann-gallery-item" (click)="openLightbox(img)">
           <img [src]="img.src" [alt]="img.alt" loading="lazy">
-          <div class="ann-gallery-caption">
+          <!-- <div class="ann-gallery-caption">
             <span>{{ img.tag }}</span>
             <p>{{ img.caption }}</p>
-          </div>
+          </div> -->
         </div>
         }
       </div>
