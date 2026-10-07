@@ -50,7 +50,7 @@ export class AnniversaryComponent implements OnInit {
     { no: '05', tag: '沉浸式沙龍・古典饗宴', title: '古典弦樂 ‧ 優雅室內樂合奏', desc: '藝人御用古典樂手', note: '低音大提琴 ｜ 小提琴 ｜ 鍵盤', image: 'images/uploads/anniversary/現場樂手陣容.jpg', imagePos: '50% 45%'  },
     { no: '06', tag: '爵士靈魂・經典熱唱', title: '實力歌手現場演唱 ‧ 點亮星夜高潮', desc: '年輕活力樂團獻唱', note: '鍵盤 王奕凡 ｜ 歌手 貝拉 ｜ 吉他 JAYWU', wide: false, image: 'images/uploads/anniversary/現場演出樂團.jpg', imagePos: '50% 45%'  },
     { no: '07', tag: '幸運時刻・好禮相贈', title: '抽獎', desc: '萬元禮卷', note: '現場購買抽獎禮卷、一張/100元換大獎', image: 'images/uploads/anniversary/抽獎.jpg', imagePos: '50% 45%'  },
-    { no: '08', tag: '品飲美酒', title: '現場購買', desc: '威士忌、紅酒、白酒', note: '未滿18歲請勿飲酒抽煙', image: 'images/uploads/anniversary/酒類.jpg', imagePos: '50% 45%'  },
+    { no: '08', tag: '品飲美酒', title: '現場購買', desc: '威士忌、紅酒、白酒，和精選一隻品味', note: '未滿18歲請勿飲酒抽煙', image: 'images/uploads/anniversary/酒類.jpg', imagePos: '50% 45%'  },
   ];
 
   gallery: GalleryItem[] = [

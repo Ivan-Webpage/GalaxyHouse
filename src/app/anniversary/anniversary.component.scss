@@ -27,7 +27,7 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   color: $gh-gray;
   font-family: 'Microsoft JhengHei', 'PMingLiU', serif;
   padding-top: 110px;
-  padding-bottom: clamp(140px, 24vw, 300px);
+  padding-bottom: clamp(140px, 24vw, 30px);
   position: relative;
   overflow-x: hidden;
 
@@ -992,8 +992,8 @@ $gh-border-strong: rgba(239, 208, 127, 0.45);
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  font-size: 11px;
-  color: $gh-gray-dim;
+  font-size: 31px;
+  color: $gh-gold;
   letter-spacing: 0.05em;
 }
 
