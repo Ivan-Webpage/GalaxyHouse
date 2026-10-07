@@ -45,7 +45,7 @@ export class AnniversaryComponent implements OnInit {
   experiences: ExperienceItem[] = [
     { no: '01', tag: '炭烤串物・極致美味', title: '特色烤肉餐車 ‧ 戶外炙烤熱饗', desc: '海鮮、牛、豬羊、蔬菜串燒美食', note: '火宴晚餐', image: 'images/uploads/anniversary/炭火串烤現場.jpg', imagePos: '50% 40%' },
     { no: '02', tag: '炭火慢烤・酥脆鮮嫩', title: '烤滷豬', desc: '70公斤大烤豬', note: '特製烤肉', image: 'images/uploads/anniversary/烤滷豬.jpg', imagePos: '50% 55%' },
-    { no: '03', tag: '專業調酒・微醺時光', title: '現場調酒', desc: '百杯調酒，13-15種', note: '暢飲', image: 'images/uploads/anniversary/當晚特調酒單.jpg', imagePos: '50% 45%' },
+    { no: '03', tag: '專業調酒・微醺時光', title: '現場調酒', desc: '13～15種現場調酒', note: '暢飲', image: 'images/uploads/anniversary/當晚特調酒單.jpg', imagePos: '50% 45%' },
     { no: '04', tag: '鮮果特調・清爽沁涼', title: '雞尾酒 ╳ 茶水', desc: '雞尾酒、水果無酒精飲料、啤酒、茶水', note: '暢飲', image: 'images/uploads/anniversary/雞尾酒.jpg', imagePos: '50% 45%' },
     { no: '05', tag: '沉浸式沙龍・古典饗宴', title: '古典弦樂 ‧ 優雅室內樂合奏', desc: '藝人御用古典樂手', note: '低音大提琴 ｜ 小提琴 ｜ 鍵盤', image: 'images/uploads/anniversary/現場樂手陣容.jpg', imagePos: '50% 45%'  },
     { no: '06', tag: '爵士靈魂・經典熱唱', title: '實力歌手現場演唱 ‧ 點亮星夜高潮', desc: '年輕活力樂團獻唱', note: '鍵盤 王奕凡 ｜ 歌手 貝拉 ｜ 吉他 JAYWU', wide: false, image: 'images/uploads/anniversary/現場演出樂團.jpg', imagePos: '50% 45%'  },
@@ -59,6 +59,7 @@ export class AnniversaryComponent implements OnInit {
     { src: 'images/uploads/anniversary/威士忌.jpg', tag: '頂級酩酒品鑑', caption: '於優雅靜謐的沙龍角落品味珍稀佳釀，為名流貴賓打造極具隱密性與高質感的專屬社交時光。', alt: '於優雅靜謐的沙龍角落品味珍稀佳釀，為名流貴賓打造極具隱密性與高質感的專屬社交時光。' },
     { src: 'images/uploads/anniversary/調酒2.jpg', tag: '絢麗派對特調', caption: '迷幻光影與色彩繽紛的特調雞尾酒相互輝映。多款基酒精心調配，點燃慶典夜晚的狂歡靈魂。', alt: '迷幻光影與色彩繽紛的特調雞尾酒相互輝映。多款基酒精心調配，點燃慶典夜晚的狂歡靈魂。' },
     { src: 'images/uploads/anniversary/冰鎮啤酒.jpg', tag: '暢飲冰鎮啤酒', caption: '派對絕對少不了的暢快滋味！精選知名品牌啤酒沁涼伺候，讓您盡情舉杯，享受不間斷的熱情氛圍。', alt: '派對絕對少不了的暢快滋味！精選知名品牌啤酒沁涼伺候，讓您盡情舉杯，享受不間斷的熱情氛圍。' },
+    { src: 'images/uploads/anniversary/天母活動.jpg', tag: '活動照片', caption: '過去在天母辦的活動，至今還是難以忘懷', alt: '過去在天母辦的活動，至今還是難以忘懷。' },
   ];
 
   showLightbox = false;
