@@ -29,7 +29,7 @@
             "price": 180
           },
           {
-            "subTitle": "拿鐵咖啡",
+            "subTitle": "拿鐵",
             "price": 240
           },
           {
@@ -67,7 +67,7 @@
             "price": 230
           },
           {
-            "subTitle": "柚香蜜茶",
+            "subTitle": "香柚蜜茶",
             "price": 150
           },
           {
@@ -108,26 +108,26 @@
         "subMenu": [
           {
             "subTitle": "可樂",
-            "price": 120
+            "price": 130
           },
           {
             "subTitle": "雪碧",
-            "price": 120
+            "price": 130
           },
           {
             "subTitle": "通寧水",
-            "price": 120
+            "price": 130
           },
           {
             "subTitle": "檸檬氣泡飲",
-            "price": 120
+            "price": 130
           },
           {
             "subTitle": "柚香檸檬氣泡飲",
             "price": 180
           },
           {
-            "subTitle": "芒果蜜香器泡飲",
+            "subTitle": "芒果蜜香氣泡飲",
             "price": 180
           },
           {
@@ -153,62 +153,12 @@
         "image": "images/uploads/menu-types/1746868943851_1.jpg",
         "subMenu": [
           {
-            "subTitle": "特選布朗尼",
-            "price": 150
-          },
-          {
-            "subTitle": "OREO提拉米蘇",
-            "price": 150
-          },
-          {
-            "subTitle": "巴斯克乳酪蛋糕",
-            "price": 150
-          },
-          {
-            "subTitle": "銀河檸檬塔",
-            "price": 170
-          },
-          {
-            "subTitle": "可麗露",
-            "price": 170
-          },
-          {
-            "subTitle": "瑪德蓮",
-            "price": 200
-          },
-          {
             "subTitle": "冰淇淋聖代",
             "price": 230
-          }
-        ]
-      },
-      {
-        "title": "堡類",
-        "image": "images/uploads/menu-types/1746868943825_1.jpg",
-        "subMenu": [
-          {
-            "subTitle": "香濃奶油泡芙",
-            "price": 170
           },
           {
-            "subTitle": "銀河楓糖炸雞可颂",
+            "subTitle": "銀河楓糖炸雞可頌",
             "price": 260
-          },
-          {
-            "subTitle": "銀河楓糖炸雞貝果",
-            "price": 260
-          },
-          {
-            "subTitle": "原味奶油貝果",
-            "price": 200
-          },
-          {
-            "subTitle": "藍莓奶油貝果",
-            "price": 230
-          },
-          {
-            "subTitle": "焦糖奶油貝果",
-            "price": 230
           }
         ]
       },
@@ -221,27 +171,27 @@
             "price": 290
           },
           {
-            "subTitle": "桂花糖醋魚飯",
+            "subTitle": "桂花釀糖醋魚飯",
             "price": 290
           },
           {
             "subTitle": "麻油猴頭菇燴飯",
-            "price": 320
+            "price": 350
           },
           {
             "subTitle": "匈牙利牛肉飯",
-            "price": 340
+            "price": 350
           },
           {
             "subTitle": "紅燒牛肉燴飯",
-            "price": 350
+            "price": 360
           },
           {
-            "subTitle": "嫩煎豬排",
-            "price": 350
+            "subTitle": "主廚豬排",
+            "price": 380
           },
           {
-            "subTitle": "嫩肩牛排",
+            "subTitle": "主廚牛排",
             "price": 480
           }
         ]
@@ -255,20 +205,28 @@
             "price": 220
           },
           {
-            "subTitle": "銀河鹹豬肉",
+            "subTitle": "飛魚卵香腸",
             "price": 230
           },
           {
-            "subTitle": "高麗菜手工水餃",
+            "subTitle": "銀河鹹豬肉",
             "price": 250
           },
           {
+            "subTitle": "香腸鹹豬肉拼盤",
+            "price": 450
+          },
+          {
+            "subTitle": "高麗菜手工水餃",
+            "price": 260
+          },
+          {
             "subTitle": "韭菜手工水餃",
-            "price": 280
+            "price": 290
           },
           {
             "subTitle": "鮮蝦手工水餃",
-            "price": 300
+            "price": 320
           },
           {
             "subTitle": "風味起司火腿拼盤",
@@ -293,19 +251,15 @@
             "price": 130
           },
           {
-            "subTitle": "檸檬香雞柳",
-            "price": 160
-          },
-          {
             "subTitle": "原味薯條",
             "price": 200
           },
           {
             "subTitle": "松露薯條",
-            "price": 240
+            "price": 280
           },
           {
-            "subTitle": "紐澳良炸雞翅",
+            "subTitle": "紐澳良雞翅",
             "price": 240
           },
           {
@@ -314,11 +268,11 @@
           },
           {
             "subTitle": "炸魚",
-            "price": 230
+            "price": 235
           },
           {
             "subTitle": "炸蝦",
-            "price": 230
+            "price": 245
           },
           {
             "subTitle": "炸魷魚圈",
@@ -355,17 +309,17 @@
           {
             "subTitle": "格蘭多納12年",
             "price": 350,
-            "priceAlt": 3200
+            "priceAlt": 3500
           },
           {
             "subTitle": "亞伯樂12年",
             "price": 350,
-            "priceAlt": 3200
+            "priceAlt": 3500
           },
           {
             "subTitle": "費特肯12年",
             "price": 350,
-            "priceAlt": 3300
+            "priceAlt": 3400
           },
           {
             "subTitle": "格蘭菲迪12年",
@@ -375,47 +329,47 @@
           {
             "subTitle": "百富12年",
             "price": 400,
-            "priceAlt": 3800
+            "priceAlt": 3900
           },
           {
             "subTitle": "百富14年",
             "price": 450,
-            "priceAlt": 4200
+            "priceAlt": 4350
           },
           {
             "subTitle": "慕赫12年",
             "price": 400,
-            "priceAlt": 3800
+            "priceAlt": 3900
           },
           {
             "subTitle": "慕赫16年",
-            "price": 450,
-            "priceAlt": 4900
+            "price": 500,
+            "priceAlt": 4950
           },
           {
             "subTitle": "大摩12年",
             "price": 400,
-            "priceAlt": 3900
+            "priceAlt": 3950
           },
           {
             "subTitle": "大摩15年",
-            "price": 500,
-            "priceAlt": 5100
+            "price": 550,
+            "priceAlt": 5300
           },
           {
             "subTitle": "大摩18年",
-            "price": 1500,
-            "priceAlt": 13000
+            "price": 1550,
+            "priceAlt": 14900
           },
           {
             "subTitle": "麥卡倫12年",
-            "price": 400,
-            "priceAlt": 4200
+            "price": 450,
+            "priceAlt": 4450
           },
           {
             "subTitle": "新響",
-            "price": 450,
-            "priceAlt": 4900
+            "price": 500,
+            "priceAlt": 5100
           }
         ]
       },
@@ -432,12 +386,12 @@
           {
             "subTitle": "雅柏10年",
             "price": 400,
-            "priceAlt": 3900
+            "priceAlt": 3950
           },
           {
             "subTitle": "拉佛格10年",
-            "price": 350,
-            "priceAlt": 3300
+            "price": 400,
+            "priceAlt": 3600
           }
         ]
       },
@@ -446,16 +400,24 @@
         "image": "images/uploads/Line@/IMG_20250907_133715.jpg",
         "subMenu": [
           {
+            "subTitle": "約翰走路 黑牌12年（杯）",
+            "price": 350
+          },
+          {
+            "subTitle": "約翰走路 黑牌12年（瓶）",
+            "price": 2300
+          },
+          {
             "subTitle": "約翰走路 XR21年（杯）",
-            "price": 450
+            "price": 500
           },
           {
             "subTitle": "約翰走路 XR21年（瓶）",
-            "price": 4900
+            "price": 5100
           },
           {
             "subTitle": "皇家禮炮（杯）",
-            "price": 450
+            "price": 500
           },
           {
             "subTitle": "皇家禮炮（瓶）",
@@ -463,11 +425,11 @@
           },
           {
             "subTitle": "百齡潭30年（杯）",
-            "price": 1500
+            "price": 1550
           },
           {
             "subTitle": "百齡潭30年（瓶）",
-            "price": 14000
+            "price": 14500
           }
         ]
       },
@@ -486,10 +448,6 @@
           {
             "subTitle": "Joly de Trébuis Réserve Brut Champagne（法國香檳區）",
             "price": 2800
-          },
-          {
-            "subTitle": "Moet & Chandon（法國香檳區）",
-            "price": 3500
           }
         ]
       },
@@ -508,6 +466,10 @@
           {
             "subTitle": "Adobe Sauvignon White 2021（智利）",
             "price": 1600
+          },
+          {
+            "subTitle": "Francois Confuron Gindre Bourgogne 2020（法國）",
+            "price": 2300
           }
         ]
       },
@@ -533,7 +495,7 @@
           },
           {
             "subTitle": "Saint-Estephe Calon Segur 卡隆賽古堡三軍 2015（法國）",
-            "price": 3500
+            "price": 3000
           }
         ]
       }
